@@ -1,19 +1,15 @@
 ﻿using Dapper;
+using SmartShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
 {
-    
+
     public  class EmployeeRepository:IDisposable, IBaseRepository<EmployeeInformation>
     {
 
@@ -32,8 +28,6 @@ namespace SmartShop.Repository
             throw new NotImplementedException();
         }
 
-       
-
         public void Dispose()
         {
             _sqlConnection.Dispose();
@@ -42,7 +36,6 @@ namespace SmartShop.Repository
         public IEnumerable<EmployeeInformation> Get()
         {
             throw new NotImplementedException();
-            
         }
 
         public EmployeeInformation Get(object id)
@@ -65,15 +58,10 @@ namespace SmartShop.Repository
                 dr.Fill(dt);
                 _sqlConnection.Close();
                 return dt;
-
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
-
             }
             return null;
         }
@@ -87,10 +75,10 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("EmployeeInformation_sp", new
-            {@AccountCode= user.AccountCode,@UserName=user.UserName,@UserEmail=user.UserEmail,@Password=user.Password,@ConfirmPassword=user.ConfirmPassword,@FirstName=user.FirstName,
-                @LastName=user.LastName,@FullName=user.FullName,@EmployeeId=user.EmployeeId,@ReportingPerson=user.ReportingPerson,@OfficeLocation=user.OfficeLocation,@MobileNo=user.MobileNo,
-                @IpPhone=user.IpPhone,@DeviceName=user.DeviceName,@DeviceQty=user.DeviceQty,@DeviceSerial=user.DeviceSerial,@IMEINo=user.DeviceIMEINo1,@ProfilePhoto=user.ProfilePhoto,@Department=user.Department,
-                @Designation=user.Designation,@BasicSalary=user.BasicSalary,@HouseRent=user.HouseRent,@MedicalAllonce=user.MedicalAllonce,@DainingAllonce=user.DainingAllonce, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
+            {@AccountCode= user.AccountCode,@UserName=user.UserName,@UserEmail=user.UserEmail,@FirstName=user.FirstName,
+                @LastName=user.LastName,@FullName=user.FullName,@ReportingPerson=user.ReportingPerson,@MobileNo=user.MobileNo
+                ,@DeviceName=user.DeviceName,@DeviceQty=user.DeviceQty,@IMEINo=user.IMEINo,@ProfilePhoto=user.Photo,@Department=user.DepartmentCode,
+                @Designation=user.DesiCode,@BasicSalary=user.BasicSalary,@HouseRent=user.HouseRent,@MedicalAllonce=user.MedicalAllonce,@DainingAllonce=user.DainingAllonce, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 

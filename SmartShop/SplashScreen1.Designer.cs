@@ -84,7 +84,7 @@
             // peLogo
             // 
             this.peLogo.EditValue = ((object)(resources.GetObject("peLogo.EditValue")));
-            this.peLogo.Location = new System.Drawing.Point(494, 307);
+            this.peLogo.Location = new System.Drawing.Point(507, 307);
             this.peLogo.Margin = new System.Windows.Forms.Padding(4);
             this.peLogo.Name = "peLogo";
             this.peLogo.Properties.AllowFocused = false;
@@ -94,7 +94,7 @@
             this.peLogo.Properties.ReadOnly = true;
             this.peLogo.Properties.ShowMenu = false;
             this.peLogo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.peLogo.Size = new System.Drawing.Size(76, 79);
+            this.peLogo.Size = new System.Drawing.Size(63, 74);
             this.peLogo.TabIndex = 8;
             // 
             // SplashScreen1

@@ -10,6 +10,6 @@ namespace SmartShop.Dtos
   public class PurchaseCreateDto
     {
         public PurchaseParent purchaseParent { get; set; }
-        public List<PurchaseChild> purchaseChil { get; set; }
+        public List<PurchaseChild> purchaseChild { get; set; }
     }
 }

@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using SmartShop.Models;
 using SmartShop.Repository;
+using System;
+using System.Linq;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Desktop_Helper_Form
@@ -19,13 +12,13 @@ namespace SmartShop.Desktop_Helper_Form
         IBaseRepository<SupplyerInformation> baseRepository = new SupplyerInformationRepository();
         SupplyerInformationRepository supplyerInformation = new SupplyerInformationRepository();
 
-
         public Command.DbCommand dbAccess;
         public string supplyerName;
         public frmSupplyerEntry()
         {
            // layoutControl1.AllowCustomization = false;
             InitializeComponent();
+            layoutControl1.AllowCustomization = false;
         }
         public void LoadSupplyer(string name)
         {
@@ -42,20 +35,6 @@ namespace SmartShop.Desktop_Helper_Form
         {
             baseRepository.Update(name);
         }
-        //private void btnUpdate_Click(object sender, EventArgs e)
-        //{
-        //    SupplyerUpate(new SupplyerInformation()
-        //    {
-        //        SupplyerName = txtName.EditValue.ToString(),
-        //        Address = txtAddress.EditValue.ToString(),
-        //        ContactPerson = txtContactPerson.EditValue.ToString(),
-        //        ContactPersonMobileNo = txtContactPerson.EditValue.ToString(),
-        //        Mobile = txtMobile1.EditValue.ToString(),
-        //        Email = txtEmail.EditValue.ToString(),
-        //        Logo = (byte[])pictureEdit1.EditValue
-        //    });
-        //    XtraMessageBox.Show(@"supplier Update Successfully");
-        //}
         private void btnSave_Click_1(object sender, EventArgs e)
         {
             if (ValidationProvider.Validate())
@@ -67,6 +46,7 @@ namespace SmartShop.Desktop_Helper_Form
                 dbValue.ContactPersonMobileNo = (string)txtContactPerson.EditValue;
                 dbValue.Mobile = (string)txtMobile1.EditValue.ToString();
                 dbValue.Email = (string)txtEmail.EditValue.ToString();
+                dbValue.Status = (bool)Activeted.EditValue;
                 dbValue.Logo = (byte[])pictureEdit1.EditValue;
                 if (dbAccess == Command.DbCommand.Create)
                 {

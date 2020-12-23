@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Dapper;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using SmartShop.Models;
-using SmartShop.Repository;
-using static SmartShop.Interface.Interface;
 using SmartShop.Properties;
+using SmartShop.Repository;
+using System;
+using System.Linq;
+using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Desktop_Helper_Form
 {
@@ -51,7 +43,7 @@ namespace SmartShop.Desktop_Helper_Form
                         CategoryName = (string)txtCategoryName.EditValue,
                         Logo = (byte[])pictureEdit1.EditValue,
                         Status = chkActiveation.EditValue.ToString(),
-                        CreateBy =Settings.Default.UserName
+                        CreateBy = Settings.Default.UserName
                     };
 
                     if (dbAccess == Command.DbCommand.Create)
@@ -66,7 +58,7 @@ namespace SmartShop.Desktop_Helper_Form
             }
             catch (Exception exception)
             {
-                XtraMessageBox.Show("Smart Shop Alert!- Categories Save Error",exception.Message);
+                XtraMessageBox.Show("Smart Shop Alert!- Categories Save Error", exception.Message);
             }
         }
         private void UpdateCategory(CategoriesSetup name)
@@ -82,7 +74,7 @@ namespace SmartShop.Desktop_Helper_Form
             }
             else
             {
-               CategoriesLoad(categoriesName);
+                CategoriesLoad(categoriesName);
             }
         }
 

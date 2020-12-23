@@ -53,11 +53,13 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnSells = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnPurchases = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.btnPurchaseByFile = new DevExpress.XtraBars.BarButtonItem();
+            this.btnApproved = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
@@ -71,6 +73,7 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSels = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +96,7 @@
             this.barButtonItem17.Caption = "Supplyer List";
             this.barButtonItem17.Id = 18;
             this.barButtonItem17.Name = "barButtonItem17";
+            this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
             // 
             // ribbonPage7
             // 
@@ -142,7 +146,7 @@
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "Admin";
             // 
             // barButtonItem5
             // 
@@ -218,7 +222,7 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Payroll";
             // 
             // ribbonPage4
             // 
@@ -232,8 +236,9 @@
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barBtnSells);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem19);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Sells";
             // 
             // barBtnSells
             // 
@@ -250,6 +255,12 @@
             this.barButtonItem19.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem19.ImageOptions.SvgImage")));
             this.barButtonItem19.Name = "barButtonItem19";
             // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "Sells By Manual Search";
+            this.barButtonItem4.Id = 24;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -263,8 +274,9 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.btnPurchases);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem16);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnPurchaseByFile);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnApproved);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Purchases Detils";
             // 
             // btnPurchases
             // 
@@ -289,6 +301,14 @@
             this.btnPurchaseByFile.Name = "btnPurchaseByFile";
             this.btnPurchaseByFile.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPurchaseByFile_ItemClick);
             // 
+            // btnApproved
+            // 
+            this.btnApproved.Caption = "Approved Purchase";
+            this.btnApproved.Id = 23;
+            this.btnApproved.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnApproved.ImageOptions.SvgImage")));
+            this.btnApproved.Name = "btnApproved";
+            this.btnApproved.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnApproved_ItemClick);
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -304,7 +324,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem14);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Customer Informaiton";
             // 
             // barButtonItem12
             // 
@@ -356,9 +376,11 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Caption = "DashBoard";
             this.barButtonItem1.Id = 1;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -393,10 +415,12 @@
             this.barButtonItem18,
             this.barButtonItem19,
             this.barButtonItem16,
-            this.btnPurchaseByFile});
+            this.btnPurchaseByFile,
+            this.btnApproved,
+            this.barButtonItem4});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 23;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -415,13 +439,25 @@
             this.barButtonItem18.Id = 19;
             this.barButtonItem18.Name = "barButtonItem18";
             // 
+            // btnSels
+            // 
+            this.btnSels.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSels.ImageOptions.SvgImage")));
+            this.btnSels.Location = new System.Drawing.Point(0, 212);
+            this.btnSels.Name = "btnSels";
+            this.btnSels.Size = new System.Drawing.Size(86, 86);
+            this.btnSels.TabIndex = 2;
+            this.btnSels.Text = "Sales ";
+            this.btnSels.Click += new System.EventHandler(this.btnSels_Click);
+            // 
             // SShopMainMenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1770, 789);
+            this.ClientSize = new System.Drawing.Size(1770, 817);
+            this.Controls.Add(this.btnSels);
             this.Controls.Add(this.ribbonControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.HelpButton = true;
+            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -482,6 +518,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem btnPurchaseByFile;
+        private DevExpress.XtraBars.BarButtonItem btnApproved;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraEditors.SimpleButton btnSels;
     }
 }
 

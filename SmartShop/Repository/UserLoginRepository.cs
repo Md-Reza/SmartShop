@@ -1,23 +1,21 @@
-﻿using System;
+﻿using Dapper;
+using SmartShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
 {
     public class UserLoginRepository : IDisposable, IBaseRepository<UserLogin>
     {
+        SqlConnection _connection = new SqlConnection(Connection.GetConnectionString());
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _connection.Close();
         }
-
         public IEnumerable<UserLogin> Get()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
@@ -25,11 +23,10 @@ namespace SmartShop.Repository
             connection.Close();
             return returnValue;
         }
-
         public DataTable GetAllUser()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            DataTable dt =Connection.GetDataTable ("Select * from UserLogin ");
+            DataTable dt = Connection.GetDataTable("Select * from UserLogin ");
             connection.Close();
             return dt;
         }
@@ -38,7 +35,7 @@ namespace SmartShop.Repository
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             bool flag = false;
-            IEnumerable<Models.UserLogin> returnValue = connection.Query<Models.UserLogin>(@"Select * from UserLogin where LoginName = @LoginName and password = @password", new { LoginName, password });
+            IEnumerable<Models.UserLogin> returnValue = connection.Query<Models.UserLogin>(@"Select * from UserLogin where LoginName = @LoginName and password = @password and UserStatus=1", new { LoginName, password });
             connection.Close();
             if (returnValue.Count() == 1)
                 flag = true;

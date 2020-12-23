@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraSplashScreen;
+﻿using DevExpress.XtraEditors;
 using SmartShop.Desktop_Helper_Form;
 using SmartShop.Models;
 using SmartShop.Repository;
+using SmartShop.SmartReports;
+using System;
+using System.Windows.Forms;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Desktop_Forms_Control
@@ -25,7 +18,6 @@ namespace SmartShop.Desktop_Forms_Control
             layoutControl1.AllowCustomization = false;
         }
         IBaseRepository<ProductName> baseRepository = new ProductNameRepository();
-        IBaseRepository<UserLogin> useRepository = new UserLoginRepository();
         private void OpenForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadGrid();
@@ -63,7 +55,7 @@ namespace SmartShop.Desktop_Forms_Control
                     frmProductNameEntry openForm = new frmProductNameEntry
                     {
                         dbAccess = Command.DbCommand.Update,
-                        code = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Code").ToString()
+                        code = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ProductCode").ToString()
                     };
                     openForm.FormClosed += OpenForm_FormClosed;
                     openForm.ShowDialog();
@@ -79,9 +71,26 @@ namespace SmartShop.Desktop_Forms_Control
 
         private void frmProductSetup_Load(object sender, EventArgs e)
         {
-            SplashScreenManager.ShowForm(this,typeof(WaitForm1),useFadeIn:true,useFadeOut:true);
+            //SplashScreenManager.ShowForm(this,typeof(WaitForm1),useFadeIn:true,useFadeOut:true);
             gridControl1.DataSource = baseRepository.Get();
-            SplashScreenManager.CloseForm();
+            ///SplashScreenManager.CloseForm();
+        }
+
+        private void layoutControlGroup2_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        {
+            if (e.Button.Properties.Caption == "Customize")
+                gridView1.ColumnsCustomization();
+            else
+                gridView1.DestroyCustomization();
+        }
+
+        private void btnBarcode_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ReportViewer openForm = new ReportViewer("Report_9", Command.SettingValue.NotApplicable.ToString())
+            {
+                // KeyFieldCode = date
+            };
+            openForm.ShowDialog();
         }
     }
 }

@@ -54,197 +54,207 @@
     <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v19.1" />
-    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v20.2" />
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.CodeConverter.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.CodeConverter.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Data.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Data.v19.1" />
-    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v20.2" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.DemoData.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DemoData.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.DemoData.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DemoData.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Dialogs.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Docs.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dialogs.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataVisualization.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Map.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.TreeMap.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Mvvm.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeMap.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Docs.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Map.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Mvvm.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Printing.v19.1.Core" />
-    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.SpellChecker.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Spreadsheet.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v20.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Utils.v19.1" />
-    <Reference Include="DevExpress.Web.ASPxGauges.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.SpellChecker.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Spreadsheet.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxPivotGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxRichEdit.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v20.2" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxGauges.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxScheduler.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxSpellChecker.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxThemes.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.ASPxTreeList.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Web.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Carousel.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxThemes.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Charts.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.ASPxTreeList.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Controls.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Web.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Core.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Carousel.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Core.v19.1.Extensions, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Charts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.DemoBase.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Controls.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Docking.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.DocumentViewer.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Core.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Gauges.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Core.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Grid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.DemoBase.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Grid.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Docking.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Grid.v19.1.Extensions, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.DocumentViewer.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Layout.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Gauges.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.LayoutControl.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Grid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Map.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Grid.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.NavBar.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Grid.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.PdfViewer.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Layout.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.PivotGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.LayoutControl.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Printing.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Map.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.PropertyGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.NavBar.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.ReportDesigner.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.PdfViewer.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.PivotGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Themes.HybridApp.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Printing.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Themes.LightGray.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.PropertyGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Themes.MetropolisDark.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.ReportDesigner.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Themes.HybridApp.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Xpo.v19.1.Extensions, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Themes.LightGray.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisDark.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v19.1" />
-    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
-    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpf.Themes.MetropolisLight.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v19.1.Web, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraDialogs.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpo.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v19.1" />
-    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v19.1.Presets, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v20.2" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v20.2.Web, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraDialogs.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraMap.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraEditors.v20.2" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v20.2.Presets, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.Pdf.v19.1.Drawing, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraPdfViewer.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraMap.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v20.2.Drawing, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPdfViewer.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v19.1.Service, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v19.1.Web, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v20.2.Service, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v20.2.Web, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v19.1.Extensions, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v19.1.Reporting, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v19.1.Reporting.Extensions, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core.Desktop, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraSpellChecker.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraSpreadsheet.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Reporting, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v20.2.Reporting.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
-    <Reference Include="DevExpress.XtraWizard.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraSpellChecker.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -254,8 +264,27 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Desktop Forms Control\frmApprovePurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmApprovePurchase.Designer.cs">
+      <DependentUpon>frmApprovePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmBank.Designer.cs">
+      <DependentUpon>frmBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmBankTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmBankTransaction.Designer.cs">
+      <DependentUpon>frmBankTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desktop Forms Control\frmCategoriesInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +296,46 @@
     </Compile>
     <Compile Include="Desktop Forms Control\frmCompanyInformation.Designer.cs">
       <DependentUpon>frmCompanyInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmCustomerDues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmCustomerDues.Designer.cs" />
+    <Compile Include="Desktop Forms Control\frmCustomerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmCustomerInformation.Designer.cs">
+      <DependentUpon>frmCustomerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmDueCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmDueCollection.Designer.cs">
+      <DependentUpon>frmDueCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmExpenseEntryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmExpenseEntryList.Designer.cs">
+      <DependentUpon>frmExpenseEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmExpensesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmExpensesList.Designer.cs">
+      <DependentUpon>frmExpensesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmMonthWiseStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmMonthWiseStock.Designer.cs">
+      <DependentUpon>frmMonthWiseStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Desktop Forms Control\frmProductSetup.cs">
       <SubType>Form</SubType>
@@ -280,11 +349,101 @@
     <Compile Include="Desktop Forms Control\frmSupplyerInformations.Designer.cs">
       <DependentUpon>frmSupplyerInformations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desktop Forms Control\frmUserAccessPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmUserAccessPermission.Designer.cs">
+      <DependentUpon>frmUserAccessPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmUserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmUserRegistration.Designer.cs">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmViewDateWisePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\frmViewDateWisePayment.Designer.cs">
+      <DependentUpon>frmViewDateWisePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\SalesMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\SalesMainForm.Designer.cs">
+      <DependentUpon>SalesMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Forms Control\WaitingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\WaitingForm.Designer.cs">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmAutoGeneratePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmAutoGeneratePassword.Designer.cs">
+      <DependentUpon>frmAutoGeneratePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBankEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBankEntry.Designer.cs">
+      <DependentUpon>frmBankEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBankTransactionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBankTransactionEntry.Designer.cs">
+      <DependentUpon>frmBankTransactionEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBarcodeCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmBarcodeCreate.Designer.cs">
+      <DependentUpon>frmBarcodeCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desktop Helper Form\frmCategoriesSetupEntry.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Desktop Helper Form\frmCategoriesSetupEntry.Designer.cs">
       <DependentUpon>frmCategoriesSetupEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmCustomerEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmCustomerEntry.Designer.cs">
+      <DependentUpon>frmCustomerEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmExpensesEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmExpensesEntry.Designer.cs">
+      <DependentUpon>frmExpensesEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmExpensesListCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmExpensesListCreate.Designer.cs">
+      <DependentUpon>frmExpensesListCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmNewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmNewLogin.Designer.cs">
+      <DependentUpon>frmNewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmNewSells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmNewSells.Designer.cs">
+      <DependentUpon>frmNewSells.cs</DependentUpon>
     </Compile>
     <Compile Include="Desktop Helper Form\frmOfficeEntry.cs">
       <SubType>Form</SubType>
@@ -316,24 +475,87 @@
     <Compile Include="Desktop Helper Form\frmSales.Designer.cs">
       <DependentUpon>frmSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desktop Helper Form\frmSalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmSalesReturn.Designer.cs">
+      <DependentUpon>frmSalesReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmSpeech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmSpeech.Designer.cs">
+      <DependentUpon>frmSpeech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmStock.Designer.cs">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmStockList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmStockList.Designer.cs">
+      <DependentUpon>frmStockList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desktop Helper Form\frmSupplyerEntry.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Desktop Helper Form\frmSupplyerEntry.Designer.cs">
       <DependentUpon>frmSupplyerEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desktop Helper Form\frmUserRegistrationEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmUserRegistrationEntry.Designer.cs">
+      <DependentUpon>frmUserRegistrationEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dtos\PurchaseCreateDto.cs" />
-    <Compile Include="FormsHelper\FormsHelper.cs" />
+    <Compile Include="FormsHelper\FormsHelperMessageBox.cs" />
+    <Compile Include="FormsHelper\SmartShopMessageBoxIcon.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\BankInterface.cs" />
+    <Compile Include="Interface\BankTransactionInterface.cs" />
+    <Compile Include="Interface\BusinessInterface.cs" />
+    <Compile Include="Interface\CustomerInfoInterface.cs" />
     <Compile Include="Interface\DefultSettings.cs" />
+    <Compile Include="Interface\DueCollection.cs" />
+    <Compile Include="Interface\Expenses.cs" />
+    <Compile Include="Interface\Gender.cs" />
+    <Compile Include="Interface\IBusinessInterface.cs" />
+    <Compile Include="Interface\IDepartment.cs" />
+    <Compile Include="Interface\IExpensesExecute.cs" />
     <Compile Include="Interface\Interface.cs" />
+    <Compile Include="Interface\ISalesReturn.cs" />
+    <Compile Include="Interface\ISmartReports.cs" />
+    <Compile Include="Interface\IUserRegistration.cs" />
+    <Compile Include="Interface\MonthSummaryInterface.cs" />
+    <Compile Include="Interface\StockList.cs" />
+    <Compile Include="ApplicationMessageBox.cs" />
+    <Compile Include="Models\ArrearCollection.cs" />
+    <Compile Include="Models\Bank.cs" />
+    <Compile Include="Models\BankTransaction.cs" />
+    <Compile Include="Models\CustomerArrear.cs" />
+    <Compile Include="Models\CustomerInformation.cs" />
+    <Compile Include="Models\ExpensesEntry.cs" />
+    <Compile Include="Models\ExpensesList.cs" />
+    <Compile Include="Models\Grammars.cs" />
+    <Compile Include="Models\MonthSummary.cs" />
+    <Compile Include="Models\ObjectCommand.cs" />
     <Compile Include="Models\PurchaseChild.cs" />
     <Compile Include="Models\PurchaseParent.cs" />
+    <Compile Include="Models\Reports.cs" />
+    <Compile Include="Models\SalesRegister.cs" />
+    <Compile Include="Models\SalesReturn.cs" />
+    <Compile Include="Models\SellesChild.cs" />
+    <Compile Include="Models\SellsPrent.cs" />
+    <Compile Include="Models\SequencePopulate.cs" />
     <Compile Include="Models\Size.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -348,15 +570,143 @@
     <Compile Include="Models\EmployeeInformation.cs" />
     <Compile Include="Models\ItemOrder.cs" />
     <Compile Include="Models\ProductName.cs" />
+    <Compile Include="Models\Speak.cs" />
+    <Compile Include="Models\Stock.cs" />
     <Compile Include="Models\SupplyerInformation.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Models\UserRegistration.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsForm\frmReportsParaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsForm\frmReportsParaForm.Designer.cs">
+      <DependentUpon>frmReportsParaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\BankRepository.cs" />
+    <Compile Include="Repository\BankTransactionRepository.cs" />
+    <Compile Include="Repository\BusinessCommandRepository.cs" />
+    <Compile Include="Repository\BusinessObjectRepository.cs" />
+    <Compile Include="Repository\CustomersRepository.cs" />
+    <Compile Include="Repository\DepartmentRepository.cs" />
+    <Compile Include="Repository\DueCollectionRepository.cs" />
+    <Compile Include="Repository\ExpensesEntryRepository.cs" />
+    <Compile Include="Repository\ExpensesRepository.cs" />
+    <Compile Include="Repository\IBusinessInterface.cs" />
+    <Compile Include="Repository\MonthSummaryRepository.cs" />
+    <Compile Include="Repository\SalesReturnRepository.cs" />
+    <Compile Include="Repository\SellsRepository.cs" />
+    <Compile Include="Repository\StockRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="SmartReports\IReports.cs" />
+    <Compile Include="SmartReports\ISmartShopReport.cs" />
+    <Compile Include="SmartReports\Register.cs" />
+    <Compile Include="SmartReports\ReportsHelper.cs" />
+    <Compile Include="SmartReports\ReportsRepositories\PurchaseReportsRepositories.cs" />
+    <Compile Include="SmartReports\ReportsRepositories\RegisterRepository.cs" />
+    <Compile Include="SmartReports\ReportsRepositories\ReportsRepository.cs" />
+    <Compile Include="SmartReports\ReportsRepositories\SellsReportsRepositories.cs" />
+    <Compile Include="SmartReports\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartReports\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptBarcodeListPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptBarcodeListPrint.Designer.cs">
+      <DependentUpon>rptBarcodeListPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptCustomerDueList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptCustomerDueList.Designer.cs">
+      <DependentUpon>rptCustomerDueList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptDueCollectionReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptDueCollectionReports.Designer.cs">
+      <DependentUpon>rptDueCollectionReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptExpensesEntryReports.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptExpensesEntryReports.Designer.cs">
+      <DependentUpon>rptExpensesEntryReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptMonthOverView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptMonthOverView.Designer.cs">
+      <DependentUpon>rptMonthOverView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptPosInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptPosInvoice.Designer.cs">
+      <DependentUpon>rptPosInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptPosRePrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptPosRePrint.Designer.cs">
+      <DependentUpon>rptPosRePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptProductBarcodePrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptProductBarcodePrint.Designer.cs">
+      <DependentUpon>rptProductBarcodePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptPurchaseRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptPurchaseRegister.Designer.cs">
+      <DependentUpon>rptPurchaseRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptSalesRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptSalesRegister.Designer.cs">
+      <DependentUpon>rptSalesRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptSellsInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptSellsInvoice.Designer.cs">
+      <DependentUpon>rptSellsInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptStockList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptStockList.Designer.cs">
+      <DependentUpon>rptStockList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptStockListingBySupplier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptStockListingBySupplier.Designer.cs">
+      <DependentUpon>rptStockListingBySupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\rptStockListingSupplier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SmartReports\rptStockListingSupplier.Designer.cs">
+      <DependentUpon>rptStockListingSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartReports\SmartShopReports.cs" />
+    <Compile Include="SmartReports\SReports.cs" />
     <Compile Include="Repository\CategoriesRepository.cs" />
     <Compile Include="Repository\ComapnySetupRepository.cs" />
     <Compile Include="Repository\Connection.cs" />
     <Compile Include="Repository\DesiganationRepository.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />
-    <Compile Include="Repository\GetAllForms.cs" />
+    <Compile Include="Repository\GetByAllSequence.cs" />
     <Compile Include="Repository\GlobalVeriable.cs" />
     <Compile Include="Repository\ItemOrderRepository.cs" />
     <Compile Include="Repository\ProductNameRepository.cs" />
@@ -377,6 +727,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UcActivation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcActivation.Designer.cs">
+      <DependentUpon>UcActivation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Voice.cs" />
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
@@ -384,11 +740,39 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Desktop Forms Control\frmApprovePurchase.resx">
+      <DependentUpon>frmApprovePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmBank.resx">
+      <DependentUpon>frmBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmBankTransaction.resx">
+      <DependentUpon>frmBankTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Desktop Forms Control\frmCategoriesInformation.resx">
       <DependentUpon>frmCategoriesInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Forms Control\frmCompanyInformation.resx">
       <DependentUpon>frmCompanyInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmCustomerDues.resx" />
+    <EmbeddedResource Include="Desktop Forms Control\frmCustomerInformation.resx">
+      <DependentUpon>frmCustomerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmDueCollection.resx">
+      <DependentUpon>frmDueCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmExpenseEntryList.resx">
+      <DependentUpon>frmExpenseEntryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmExpensesList.resx">
+      <DependentUpon>frmExpensesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmMonthWiseStock.resx">
+      <DependentUpon>frmMonthWiseStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Forms Control\frmProductSetup.resx">
       <DependentUpon>frmProductSetup.cs</DependentUpon>
@@ -396,8 +780,53 @@
     <EmbeddedResource Include="Desktop Forms Control\frmSupplyerInformations.resx">
       <DependentUpon>frmSupplyerInformations.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmUserAccessPermission.resx">
+      <DependentUpon>frmUserAccessPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmUserRegistration.resx">
+      <DependentUpon>frmUserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\frmViewDateWisePayment.resx">
+      <DependentUpon>frmViewDateWisePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\SalesMainForm.resx">
+      <DependentUpon>SalesMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\WaitingForm.resx">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmAutoGeneratePassword.resx">
+      <DependentUpon>frmAutoGeneratePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmBankEntry.resx">
+      <DependentUpon>frmBankEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmBankTransactionEntry.resx">
+      <DependentUpon>frmBankTransactionEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmBarcodeCreate.resx">
+      <DependentUpon>frmBarcodeCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmCategoriesSetupEntry.resx">
       <DependentUpon>frmCategoriesSetupEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmCustomerEntry.resx">
+      <DependentUpon>frmCustomerEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmExpensesEntry.resx">
+      <DependentUpon>frmExpensesEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmExpensesListCreate.resx">
+      <DependentUpon>frmExpensesListCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmNewLogin.resx">
+      <DependentUpon>frmNewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmNewSells.resx">
+      <DependentUpon>frmNewSells.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmOfficeEntry.resx">
       <DependentUpon>frmOfficeEntry.cs</DependentUpon>
@@ -414,11 +843,74 @@
     <EmbeddedResource Include="Desktop Helper Form\frmSales.resx">
       <DependentUpon>frmSales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmSalesReturn.resx">
+      <DependentUpon>frmSalesReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmSpeech.resx">
+      <DependentUpon>frmSpeech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmStock.resx">
+      <DependentUpon>frmStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmStockList.resx">
+      <DependentUpon>frmStockList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmSupplyerEntry.resx">
       <DependentUpon>frmSupplyerEntry.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmUserRegistrationEntry.resx">
+      <DependentUpon>frmUserRegistrationEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsForm\frmReportsParaForm.resx">
+      <DependentUpon>frmReportsParaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptBarcodeListPrint.resx">
+      <DependentUpon>rptBarcodeListPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptCustomerDueList.resx">
+      <DependentUpon>rptCustomerDueList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptDueCollectionReports.resx">
+      <DependentUpon>rptDueCollectionReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptExpensesEntryReports.resx">
+      <DependentUpon>rptExpensesEntryReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptMonthOverView.resx">
+      <DependentUpon>rptMonthOverView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptPosInvoice.resx">
+      <DependentUpon>rptPosInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptPosRePrint.resx">
+      <DependentUpon>rptPosRePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptProductBarcodePrint.resx">
+      <DependentUpon>rptProductBarcodePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptPurchaseRegister.resx">
+      <DependentUpon>rptPurchaseRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptSalesRegister.resx">
+      <DependentUpon>rptSalesRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptSellsInvoice.resx">
+      <DependentUpon>rptSellsInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptStockList.resx">
+      <DependentUpon>rptStockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptStockListingBySupplier.resx">
+      <DependentUpon>rptStockListingBySupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartReports\rptStockListingSupplier.resx">
+      <DependentUpon>rptStockListingSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
@@ -428,14 +920,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="UcActivation.resx">
+      <DependentUpon>UcActivation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,11 +943,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Report\" />
-    <Folder Include="Resources\" />
+    <Folder Include="ReportsModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Information_Blue.bmp" />
+    <Content Include="Resources\Information_Blue.png" />
+    <Content Include="Resources\Information_Red.png" />
+    <Content Include="Resources\Question_Red.png" />
+    <Content Include="Resources\Successfull_64x64.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

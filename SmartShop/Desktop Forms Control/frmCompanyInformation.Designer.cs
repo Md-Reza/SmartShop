@@ -81,11 +81,11 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 53);
+            this.gridControl1.Location = new System.Drawing.Point(12, 45);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1734, 555);
+            this.gridControl1.Size = new System.Drawing.Size(1734, 563);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -105,6 +105,7 @@
             this.AppInstallDate});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // OfficeCode
@@ -242,7 +243,7 @@
             // 
             // barBtnAdd
             // 
-            this.barBtnAdd.Caption = "Add New";
+            this.barBtnAdd.Caption = "New";
             this.barBtnAdd.Id = 0;
             this.barBtnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnAdd.ImageOptions.SvgImage")));
             this.barBtnAdd.Name = "barBtnAdd";
@@ -253,7 +254,8 @@
             // 
             this.barBtnEdit.Caption = "Edit";
             this.barBtnEdit.Id = 1;
-            this.barBtnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barBtnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnEdit.ImageOptions.Image")));
+            this.barBtnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnEdit.ImageOptions.LargeImage")));
             this.barBtnEdit.Name = "barBtnEdit";
             this.barBtnEdit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barBtnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnEdit_ItemClick);
@@ -272,7 +274,7 @@
             this.standaloneBarDockControl1.Location = new System.Drawing.Point(12, 12);
             this.standaloneBarDockControl1.Manager = this.barManager1;
             this.standaloneBarDockControl1.Name = "standaloneBarDockControl1";
-            this.standaloneBarDockControl1.Size = new System.Drawing.Size(1734, 37);
+            this.standaloneBarDockControl1.Size = new System.Drawing.Size(1734, 29);
             this.standaloneBarDockControl1.Text = "standaloneBarDockControl1";
             // 
             // barDockControlTop
@@ -323,16 +325,16 @@
             this.layoutControlItem1.Control = this.standaloneBarDockControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1738, 41);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1738, 33);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 41);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 33);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1738, 559);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1738, 567);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -357,10 +359,9 @@
             this.Controls.Add(this.barDockControlTop);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-           // this.Name = "frmCompanyInformation";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCompanyInformation";
+            this.Text = "Company Information";
             this.Load += new System.EventHandler(this.frmCompanyInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

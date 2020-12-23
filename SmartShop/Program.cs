@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DevExpress.Skins;
+using DevExpress.UserSkins;
+using SmartShop.Desktop_Helper_Form;
+using System;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
-using DevExpress.Skins;
 
 namespace SmartShop
 {
@@ -20,8 +20,9 @@ namespace SmartShop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             BonusSkins.Register();
-            Application.Run(new frmLogin());
+            Application.Run(new frmNewLogin());
             //Application.Run(new WaitingForm());
+            //Application.Run(new frmAutoGeneratePassword());
         }
     }
 }

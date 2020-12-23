@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using SmartShop.Desktop_Helper_Form;
 using SmartShop.Models;
 using SmartShop.Repository;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SmartShop.Desktop_Forms_Control
 {
@@ -60,7 +54,8 @@ namespace SmartShop.Desktop_Forms_Control
             {
                 frmOfficeEntry openForm = new frmOfficeEntry
                 {
-                    Name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Name").ToString(),
+                    dbAccess = Command.DbCommand.Update,
+                    Name = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Name).ToString(),
                 };
                 openForm.FormClosed += OpenForm_FormClosed;
                 openForm.ShowDialog();

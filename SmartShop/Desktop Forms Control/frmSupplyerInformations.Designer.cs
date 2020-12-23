@@ -76,10 +76,9 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1760, 669);
+            this.layoutControl1.Size = new System.Drawing.Size(1760, 686);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            this.layoutControl1.UseWaitCursor = true;
             // 
             // standaloneBarDockControl1
             // 
@@ -89,7 +88,6 @@
             this.standaloneBarDockControl1.Name = "standaloneBarDockControl1";
             this.standaloneBarDockControl1.Size = new System.Drawing.Size(1736, 29);
             this.standaloneBarDockControl1.Text = "standaloneBarDockControl1";
-            this.standaloneBarDockControl1.UseWaitCursor = true;
             // 
             // barManager1
             // 
@@ -129,7 +127,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Caption = "New Supplyer ";
+            this.btnCreate.Caption = "New";
             this.btnCreate.Id = 0;
             this.btnCreate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCreate.ImageOptions.SvgImage")));
             this.btnCreate.Name = "btnCreate";
@@ -140,7 +138,8 @@
             // 
             this.btnEdit.Caption = "Edit";
             this.btnEdit.Id = 1;
-            this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
+            this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
+            this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
@@ -169,16 +168,14 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(1760, 0);
-            this.barDockControlTop.UseWaitCursor = true;
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 669);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 686);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1760, 0);
-            this.barDockControlBottom.UseWaitCursor = true;
             // 
             // barDockControlLeft
             // 
@@ -186,8 +183,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 669);
-            this.barDockControlLeft.UseWaitCursor = true;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 686);
             // 
             // barDockControlRight
             // 
@@ -195,18 +191,15 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1760, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 669);
-            this.barDockControlRight.UseWaitCursor = true;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 686);
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.UseWaitCursor = true;
             this.gridControl1.Location = new System.Drawing.Point(12, 45);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1736, 612);
+            this.gridControl1.Size = new System.Drawing.Size(1736, 629);
             this.gridControl1.TabIndex = 4;
-            this.gridControl1.UseWaitCursor = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -348,7 +341,7 @@
             this.layoutControlItem1,
             this.layoutControlItem2});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1760, 669);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1760, 686);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -356,7 +349,7 @@
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 33);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1740, 616);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1740, 633);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -373,7 +366,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1760, 669);
+            this.ClientSize = new System.Drawing.Size(1760, 686);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -384,8 +377,7 @@
             this.Name = "frmSupplyerInformations";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSupplyerInformations";
-            this.UseWaitCursor = true;
+            this.Text = "Supplyer Informations";
             this.Load += new System.EventHandler(this.frmSupplyerInformations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

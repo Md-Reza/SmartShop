@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using SmartShop.Interface;
+﻿using DevExpress.XtraEditors;
 using SmartShop.Models;
 using SmartShop.Properties;
 using SmartShop.Repository;
+using System;
+using System.Windows.Forms;
+using SmartShop.Desktop_Forms_Control;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop
@@ -36,14 +29,15 @@ namespace SmartShop
             {
                 if (ValidationProvider.Validate())
                 {
-                    if (userLogin.UserValidation(txtUserName.EditValue.ToString(),txtPassword.EditValue.ToString()))
+                    if (userLogin.UserValidation(txtUserName.EditValue.ToString(), txtPassword.EditValue.ToString()))
                     {
                         Settings.Default.UserName = txtUserName.EditValue.ToString();
-                        Settings.Default.LoginName=txtUserName.EditValue.ToString();
+                        Settings.Default.LoginName = txtUserName.EditValue.ToString();
                         Settings.Default.Password = txtPassword.EditValue.ToString();
-                        SShopMainMenue mnuSells = new SShopMainMenue();
+                       // SShopMainMenue mnuSells = new SShopMainMenue();
+                       SalesMainForm mnuSells=new SalesMainForm();
+                       this.Hide();
                         mnuSells.ShowDialog();
-                        this.Hide();
                         progressBarControl1.PerformStep();
                         progressBarControl1.Update();
                     }
@@ -57,6 +51,37 @@ namespace SmartShop
             catch (Exception exception)
             {
                 XtraMessageBox.Show(exception.Message);
+            }
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            txtPassword.SelectAll();
+            txtPassword.Focus();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            if (ValidationProvider.Validate())
+            {
+                if (userLogin.UserValidation(txtUserName.EditValue.ToString(), txtPassword.EditValue.ToString()))
+                {
+                    Settings.Default.UserName = txtUserName.EditValue.ToString();
+                    Settings.Default.LoginName = txtUserName.EditValue.ToString();
+                    Settings.Default.Password = txtPassword.EditValue.ToString();
+                    SalesMainForm mnuSells = new SalesMainForm();
+                    this.Hide();
+                    mnuSells.ShowDialog();
+                    progressBarControl1.PerformStep();
+                    progressBarControl1.Update();
+                }
+                else
+                {
+                    XtraMessageBox.Show("User id password invalid");
+                }
+
             }
         }
     }

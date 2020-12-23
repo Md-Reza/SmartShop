@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SmartShop.Models;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using SmartShop.Models;
 
 
 namespace SmartShop.Repository
@@ -16,7 +11,7 @@ namespace SmartShop.Repository
     {
         public static UserLogin gUserLoginInformation;
         public static DataTable DataTable;
-        public static bool FncInitCompanyInfo(string UserName , string Password)
+        public static bool FncInitCompanyInfo(string UserName, string Password)
         {
             string sql = "select * from UserLogin where userStatus='A'";
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
@@ -26,7 +21,7 @@ namespace SmartShop.Repository
                 DataRow or = or1.Rows[0];
                 try
                 {
-                    gUserLoginInformation =new UserLogin();
+                    gUserLoginInformation = new UserLogin();
                     gUserLoginInformation.UserName = or["Name"].ToString();
                     gUserLoginInformation.NickName = or["LoginName"].ToString();
                     gUserLoginInformation.LoginName = or["LoginName"].ToString();

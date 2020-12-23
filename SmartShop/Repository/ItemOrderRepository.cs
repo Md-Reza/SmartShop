@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Dapper;
+using SmartShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
@@ -17,7 +14,6 @@ namespace SmartShop.Repository
         {
             throw new NotImplementedException();
         }
-
         public IEnumerable<ItemOrder> Get()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
@@ -36,7 +32,7 @@ namespace SmartShop.Repository
         public IEnumerable<ProductName> GetItemOrderPrice(string Code)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"select * from ProductName where code='"+ Code+"'");
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"select * from ProductName where code='" + Code + "'");
             connection.Close();
             return returnValue;
         }
@@ -50,7 +46,7 @@ namespace SmartShop.Repository
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
-            connection.Execute("PurchaseRequisitionTable_sp", new { @OrderInvoice=obj.OrderInvoice,@OrderDate =obj.OrderDate, @CategoryId=obj.CategoryId, @CompanyId=obj.CompanyId, @Code=obj.Code, @Qty=obj.Qty, @PurchasePrice=obj.PurchasePrice, @DelivaryDate=obj.DelivaryDate, @VatPercent=obj.VatPercent, @Comments =obj.Comments, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
+            connection.Execute("PurchaseRequisitionTable_sp", new { @OrderInvoice = obj.OrderInvoice, @OrderDate = obj.OrderDate, @CategoryId = obj.CategoryId, @CompanyId = obj.CompanyId, @Code = obj.Code, @Qty = obj.Qty, @PurchasePrice = obj.PurchasePrice, @DelivaryDate = obj.DelivaryDate, @VatPercent = obj.VatPercent, @Comments = obj.Comments, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 
@@ -66,7 +62,7 @@ namespace SmartShop.Repository
         public IEnumerable<ItemOrder> GetAllItemOrder()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ItemOrder> returnValue = connection.Query<Models. ItemOrder, ProductName,CategoriesSetup, SupplyerInformation, ItemOrder>
+            IEnumerable<ItemOrder> returnValue = connection.Query<Models.ItemOrder, ProductName, CategoriesSetup, SupplyerInformation, ItemOrder>
             (@"select a.* from
             (
             Select 
@@ -89,7 +85,7 @@ namespace SmartShop.Repository
 			inner join ProductName as p on pr.Code=p.Code
 			inner join CategoriesTable as c on p.CatagoryId=c.Id
 			inner join SupplyerTable as s on p.CompanyId=s.id
-          )a", 
+          )a",
                 map: (pr, p, c, s) =>
                 {
                     pr.ProductName = p;
@@ -104,7 +100,6 @@ namespace SmartShop.Repository
         {
             throw new NotImplementedException();
         }
-
         public ItemOrder GetByAll(object id)
         {
             throw new NotImplementedException();

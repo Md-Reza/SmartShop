@@ -42,7 +42,6 @@ namespace SmartShop.Desktop_Helper_Form
                     comapnySetupRepository.CompanyInsert(company);
                     XtraMessageBox.Show("Company save successfully");
                 }
-
             }
             catch (Exception ex)
             {
@@ -64,7 +63,14 @@ namespace SmartShop.Desktop_Helper_Form
         }
         private void frmOfficeEntry_Load(object sender, EventArgs e)
         {
-            getOfficeData();
+            if (dbAccess == Command.DbCommand.Create)
+            {
+               
+            }
+            else
+            {
+                getOfficeData();
+            }
         }
         private void btnClose_Click(object sender, EventArgs e)
         {

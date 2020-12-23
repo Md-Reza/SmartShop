@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartShop.Models
 {
@@ -10,6 +7,7 @@ namespace SmartShop.Models
     {
         public int PurchaseId { get; set; }
         public DateTime PurchaseDate { get; set; }
+        public string SalesMonth { get; set; }
         public string PurchaseInvoice { get; set; }
         public string CompanyInvoice { get; set; }
         public string SupplyerId { get; set; }

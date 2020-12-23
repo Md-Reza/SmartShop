@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmartShop.Models
+﻿namespace SmartShop.Models
 {
- public  class Command : BaseEntity
+    public class Command : BaseEntity
     {
         public enum DbCommand
         {
@@ -18,6 +12,11 @@ namespace SmartShop.Models
             Transfer,
             Assign,
             Inspection
+        }
+        public enum Transaction
+        {
+            Debit,
+            Credit
         }
         public enum FormType
         {
@@ -45,11 +44,18 @@ namespace SmartShop.Models
             InProgress,
             Rectified
         }
-     
-
+        public enum ReportModule
+        {
+            SmartShop
+        }
         public enum ReportType
         {
-            
+            OPERR
         }
+        public enum SettingValue
+        {
+            NotApplicable
+        }
+
     }
 }

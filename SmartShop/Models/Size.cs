@@ -9,7 +9,7 @@ namespace SmartShop.Models
     public class Size
     {
         public int SizeId { get; set; }
-        public String SizeName { get; set; }
+        public string SizeName { get; set; }
         public bool Status { get; set; }
 
     }

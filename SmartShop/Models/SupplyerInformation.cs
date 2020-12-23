@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartShop.Models
 {
@@ -15,7 +11,7 @@ namespace SmartShop.Models
         public string ContactPersonMobileNo { get; set; }
         public string Mobile { get; set; }
         public string Email { get; set; }
-        public string Status { get; set; }
+        public bool Status { get; set; }
         public byte[] Logo { get; set; }
         public string CreateBy { get; set; }
         public DateTime CreateDate { get; set; }

@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Dapper;
+using SmartShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
@@ -18,39 +15,44 @@ namespace SmartShop.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ProductName> GetByAll( string code)
+        public IEnumerable<ProductName> GetByAll(string code)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName where Code=@code", new { code = @code });
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName where ProductCode=@code", new { code = @code });
             connection.Close();
             return returnValue;
         }
 
+
         public IEnumerable<ProductName> Get()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName, CategoriesSetup, SupplyerInformation,Brand,Colour,Size, ProductName>(@"Select 
-            p.Code,            
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName, CategoriesSetup, SupplyerInformation, Brand, Colour, Size, ProductName>(@"Select 
+            p.ProductCode,            
             p.ProductName as Name,
             p.Description,
-            p.ProductPrice,
+            p.PurchasePrice,
             p.SellingPrice,
             p.VatPercent,
+            p.DisCountPercent,
             p.ReorderLebel,
             p.CreateDate, 
             p.CategoryId,
             p.CompanyId,
+            p.ColurId,
+            p.SizeId,
+            p.BrandId,
             c.CategoryName,
             s.SupplyerName ,
             b.BrandName,
 			col.ColourName,
 			sz.SizeName
-            from ProductName p,CategoriesTable c,SupplyerTable s,BrandTable b,ColourTable col,SizeTable sz
-            where p.CategoryId=c.Id
-                and p.CompanyId=s.id
-                and p.BrandId=b.BrandId
-				and p.ColourId=col.ColourId
-				and p.SizeId=sz.SizeId", map: (p, c, s,b,col,sz) =>
+            from ProductName p 
+            inner join CategoriesTable as c on p.CategoryId=c.Id
+			inner join SupplyerTable as s on p.CompanyId=s.id
+			left join BrandTable  as b on b.BrandId=p.BrandId
+			left join ColourTable as col on col.ColurId=p.ColurId
+			left join SizeTable as sz on sz.SizeId=p.SizeId", map: (p, c, s, b, col, sz) =>
             {
                 p.CategoryName = c;
                 p.SupplyerName = s;
@@ -59,6 +61,35 @@ namespace SmartShop.Repository
                 p.Size = sz;
                 return p;
             }, splitOn: "CategoryName, SupplyerName,BrandName,ColourName,SizeName");
+
+
+            connection.Close();
+            return returnValue;
+        }
+
+        public IEnumerable<ProductName> GetAllProductWithStock()
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName, CategoriesSetup, SupplyerInformation,Stock,ProductName>(@"select 
+                        p.ProductCode,
+                        p.ProductName as Name,
+                        p.PurchasePrice,
+                        p.SellingPrice ,
+                        p.VatPercent,
+                        p.DisCountPercent,
+                        ct.CategoryName,
+                        sup.SupplyerName,
+                        isnull(s.QtyBalance,0)QtyBalance
+                        from ProductName as p 
+                        left join CategoriesTable as ct on p.CategoryId=ct.Id
+                        left join SupplyerTable as sup on p.CompanyId=sup.id
+                        left join Stock_vw as s on p.ProductCode=s.ProductCode and ct.Id=s.CategoryId and sup.id=s.CompanyId", map: (p, ct, sup, s) =>
+            {
+                p.CategoryName = ct;
+                p.SupplyerName = sup;
+                p.Stock = s;
+                return p;
+            }, splitOn: "CategoryName, SupplyerName,QtyBalance");
 
 
             connection.Close();
@@ -77,6 +108,29 @@ namespace SmartShop.Repository
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName ");
+            connection.Close();
+            return returnValue;
+        }
+        public IEnumerable<ProductName> GetByProductCode(string ProductCode)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName where ProductCode=@ProductCode",new { ProductCode = @ProductCode });
+            connection.Close();
+            return returnValue;
+        }
+
+        public IEnumerable<ProductName> GetAllItem(string code)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select SellingPrice from ProductName where ProductCode=@code", new { code = @code });
+            connection.Close();
+            return returnValue;
+        }
+
+        public IEnumerable<ProductName> GetAllPrice(string code)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<ProductName> returnValue = connection.Query<ProductName>(@"Select SellingPrice from ProductName where ProductCode=@code", new { code = @code });
             connection.Close();
             return returnValue;
         }
@@ -121,9 +175,25 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("ProductName_sp", new
-            { @Name = obj.Name, @Code = obj.Code, @CategoryId = obj.CategoryId, @CompanyId = obj.CompanyId, @ReorderLebel = obj.ReorderLebel, @logo = obj.logo,@Status=obj.Status, @ProductPrice = obj.ProductPrice,
-                @SellingPrice = obj.SellingPrice, @VatPercent = obj.VatPercent, @Description=obj.Description, @ColourId = obj.ColourId, @SizeId = obj.SizeId,
-                @BrandId = obj.BrandId, @DisCountPercent = obj.DisCountPercent, @CreateById =obj.CreateById, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
+            {
+                @Name = obj.Name,
+                @ProductCode = obj.ProductCode,
+                @CategoryId = obj.CategoryId,
+                @CompanyId = obj.CompanyId,
+                @ReorderLebel = obj.ReorderLebel,
+                @logo = obj.logo,
+                @Status = obj.Status,
+                @PurchasePrice = obj.PurchasePrice,
+                @SellingPrice = obj.SellingPrice,
+                @VatPercent = obj.VatPercent,
+                @Description = obj.Description,
+                @ColourId = obj.ColurId,
+                @SizeId = obj.SizeId,
+                @BrandId = obj.BrandId,
+                @DisCountPercent = obj.DisCountPercent,
+                @CreateById = obj.CreateById,
+                @StatementType = "Create"
+            }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 
@@ -132,7 +202,7 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("ProductName_sp", new
-                { @Name = obj.Name, @Code = obj.Code, @CatagoryId = obj.CategoryId, @CompanyId = obj.CompanyId, @ReorderLebel = obj.ReorderLebel, @logo = obj.logo,@Status=obj.Status, @ProductPrice = obj.ProductPrice, @SellingPrice = obj.@SellingPrice, @VatPercent=obj.VatPercent, @Description = obj.Description, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
+            { @Name = obj.Name, @Code = obj.ProductCode, @CatagoryId = obj.CategoryId, @CompanyId = obj.CompanyId, @ReorderLebel = obj.ReorderLebel, @logo = obj.logo, @Status = obj.Status, @ProductPrice = obj.PurchasePrice, @SellingPrice = obj.@SellingPrice, @VatPercent = obj.VatPercent, @Description = obj.Description, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 

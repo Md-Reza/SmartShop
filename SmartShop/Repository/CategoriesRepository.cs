@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿using Dapper;
+using SmartShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
-using SmartShop.Interface;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
 {
     public class CategoriesRepository : IDisposable, IBaseRepository<CategoriesSetup>
     {
-     
-
         public void Delete(object id)
         {
             throw new NotImplementedException();
@@ -38,7 +31,7 @@ namespace SmartShop.Repository
         public IEnumerable<CategoriesSetup> GetCategoriesName(string Name)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<CategoriesSetup> returnValue = connection.Query<Models.CategoriesSetup>(@"Select * from CategoriesTable where CategoryName = @Name", new { @Name = Name});
+            IEnumerable<CategoriesSetup> returnValue = connection.Query<Models.CategoriesSetup>(@"Select * from CategoriesTable where CategoryName = @Name", new { @Name = Name });
             connection.Close();
             return returnValue;
         }
@@ -63,7 +56,7 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("CategoriesTable_sp", new
-                { @Name = obj.CategoryName, @Logo = obj.Logo, CreateBy= obj.CreateBy, @Active=obj.Status, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
+            { @Name = obj.CategoryName, @Logo = obj.Logo, CreateBy = obj.CreateBy, @Active = obj.Status, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 
@@ -72,7 +65,7 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("CategoriesTable_sp", new
-                { @Name = obj.CategoryName, @Logo=obj.Logo, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
+            { @Name = obj.CategoryName, @Logo = obj.Logo, CreateBy = obj.CreateBy, @Active = obj.Status, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 

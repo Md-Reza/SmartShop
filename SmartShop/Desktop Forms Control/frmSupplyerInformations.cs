@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
-using DevExpress.XtraWaitForm;
 using SmartShop.Desktop_Helper_Form;
-using SmartShop.Repository;
 using SmartShop.Models;
+using SmartShop.Repository;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SmartShop.Desktop_Forms_Control
 {
@@ -28,7 +21,7 @@ namespace SmartShop.Desktop_Forms_Control
         private void LoadGrid()
         {
             gridControl1.DataSource = baseRepository.Get();
-            
+
         }
         private void OpenForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -37,9 +30,9 @@ namespace SmartShop.Desktop_Forms_Control
 
         private void frmSupplyerInformations_Load(object sender, EventArgs e)
         {
-            SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
+            // SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
             gridControl1.DataSource = baseRepository.Get();
-            SplashScreenManager.CloseForm();
+            // SplashScreenManager.CloseForm();
         }
 
 
@@ -49,7 +42,6 @@ namespace SmartShop.Desktop_Forms_Control
             LoadGrid();
             SplashScreenManager.CloseForm();
         }
-
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gridView1.SelectedRowsCount == 1)
@@ -65,7 +57,6 @@ namespace SmartShop.Desktop_Forms_Control
             else
                 XtraMessageBox.Show("Smart Shop Alert!:- Please Select a suppler name ");
         }
-
         private void btnCreate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
@@ -78,11 +69,10 @@ namespace SmartShop.Desktop_Forms_Control
                     openForm.FormClosed += OpenForm_FormClosed;
                     openForm.ShowDialog();
                 }
-
             }
             catch (Exception exception)
             {
-                XtraMessageBox.Show("Smart Shop Alert!:- Data Error");
+                XtraMessageBox.Show("Smart Shop Alert!:- Data Error" + exception.Message);
             }
         }
     }

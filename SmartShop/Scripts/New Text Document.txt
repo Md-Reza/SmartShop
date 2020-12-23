@@ -1,0 +1,39 @@
+
+create proc MonthSummaryDetils(@SalesMonth nvarchar(6)) as 
+begin
+set nocount on;
+	set xact_abort on;
+select p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,sc.SalesMonth,
+sum(TotalAmount) as TotalAmount,sum(VatAmount )as VatAmount,sum(DiscountAmount)as DiscountAmount
+from SellesChild as sc
+inner join ProductName as p on sc.ProductCode=p.ProductCode
+group by p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,sc.SalesMonth;
+end;
+
+
+select p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,pc.SalesMonth,
+sum(TotalAmount) as TotalAmount,sum(DiscountAmount)as DiscountAmount from PurchaseChildTable as pc
+inner join ProductName as p on pc.ProductCode=p.ProductCode
+group by p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,pc.SalesMonth;
+
+
+
+
+create view StockSalesByMonth_vw as 
+select p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,sc.SalesMonth,
+sum(TotalAmount) as TotalAmount,sum(VatAmount )as VatAmount,sum(DiscountAmount)as DiscountAmount
+from SellesChild as sc
+inner join ProductName as p on sc.ProductCode=p.ProductCode
+group by p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,sc.SalesMonth
+
+
+create view StockPurchaseByMonth_vw as 
+select p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,pc.SalesMonth,
+sum(TotalAmount) as TotalAmount,null as VatAmount ,sum(DiscountAmount)as DiscountAmount 
+from PurchaseChildTable as pc
+inner join ProductName as p on pc.ProductCode=p.ProductCode
+group by p.CategoryId,p.CompanyId,p.ProductCode,p.ProductName,pc.SalesMonth
+
+
+select * from StockPurchaseByMonth_vw as sv
+left join StockSalesByMonth_vw as pv on pv.ProductCode=sv.ProductCode

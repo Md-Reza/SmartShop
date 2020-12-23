@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Dapper;
+using SmartShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
@@ -26,7 +23,7 @@ namespace SmartShop.Repository
         public IEnumerable<Desiganation> Get()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<Desiganation> returnValue = connection.Query<Models.Desiganation>(@"Select * from DesignationTable");
+            IEnumerable<Desiganation> returnValue = connection.Query<Models.Desiganation>(@"Select * from Designations");
             connection.Close();
             return returnValue;
         }
@@ -34,7 +31,7 @@ namespace SmartShop.Repository
         public IEnumerable<Desiganation> GetByCode(string Name)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<Desiganation> returnValue = connection.Query<Models.Desiganation>(@"Select * from DesignationTable where DesiName='"+Name+"'");
+            IEnumerable<Desiganation> returnValue = connection.Query<Models.Desiganation>(@"Select * from DesignationTable where DesiName='" + Name + "'");
             connection.Close();
             return returnValue;
         }
@@ -54,7 +51,7 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("DesiganationInformation", new
-                { @DesiCode = obj.DesiCode, @Name = obj.DesiName, @Status=obj.Status, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
+            { @DesiCode = obj.DesiCode, @Name = obj.DesiName, @Status = obj.Status, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 
@@ -71,7 +68,7 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("DesiganationInformation", new
-                { @DesiCode = obj.DesiCode, @Name = obj.DesiName, @Status = obj.Status, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
+            { @DesiCode = obj.DesiCode, @Name = obj.DesiName, @Status = obj.Status, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 

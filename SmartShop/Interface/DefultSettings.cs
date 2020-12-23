@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartShop.Interface
 {
-   public class DefultSettings
+    public class DefultSettings
     {
         public static int GetNewId(DataTable dataTable)
         {

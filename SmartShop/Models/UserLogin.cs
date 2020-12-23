@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmartShop.Models
+﻿namespace SmartShop.Models
 {
- public class UserLogin : BaseEntity
+    public class UserLogin : BaseEntity
     {
         public string UserName { get; set; }
         public string NickName { get; set; }
@@ -19,5 +13,6 @@ namespace SmartShop.Models
         public string CreateBy { get; set; }
         public byte EmployeePhoto { get; set; }
         public string DesiCode { get; set; }
+        public string ActiationCode { get; set; }
     }
 }

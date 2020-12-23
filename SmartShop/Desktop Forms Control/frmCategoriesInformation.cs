@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraSplashScreen;
+﻿using DevExpress.XtraEditors;
 using SmartShop.Desktop_Helper_Form;
 using SmartShop.Models;
 using SmartShop.Repository;
+using System;
+using System.Windows.Forms;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Desktop_Forms_Control
@@ -33,9 +25,9 @@ namespace SmartShop.Desktop_Forms_Control
         }
         private void frmCategoriesInformation_Load(object sender, EventArgs e)
         {
-            SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
+            // SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
             gridControl1.DataSource = baseRepository.Get();
-            SplashScreenManager.CloseForm();
+            // SplashScreenManager.CloseForm();
         }
 
         private void btnAdd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -53,7 +45,7 @@ namespace SmartShop.Desktop_Forms_Control
             }
             catch (Exception exception)
             {
-                XtraMessageBox.Show("Smart Shop Alert!:- Data Error",exception.Message);
+                XtraMessageBox.Show("Smart Shop Alert!:- Data Error", exception.Message);
             }
         }
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

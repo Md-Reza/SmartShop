@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductSetup));
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gProductName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Code = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ProductPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ProductCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PurchasePrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SellingPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.VatPercent = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ReorderLebel = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,6 +52,7 @@
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBarcode = new DevExpress.XtraBars.BarButtonItem();
             this.standaloneBarDockControl1 = new DevExpress.XtraBars.StandaloneBarDockControl();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -58,6 +60,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -66,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,18 +80,19 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(997, 346, 812, 500);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1745, 657);
+            this.layoutControl1.Size = new System.Drawing.Size(1766, 663);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 45);
+            this.gridControl1.Location = new System.Drawing.Point(15, 75);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1721, 600);
+            this.gridControl1.Size = new System.Drawing.Size(1736, 573);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -96,8 +101,8 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gProductName,
-            this.Code,
-            this.ProductPrice,
+            this.ProductCode,
+            this.PurchasePrice,
             this.SellingPrice,
             this.VatPercent,
             this.ReorderLebel,
@@ -112,7 +117,12 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsSelection.CheckBoxSelectorColumnWidth = 25;
+            this.gridView1.OptionsSelection.MultiSelect = true;
+            this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.OptionsView.ShowIndicator = false;
             // 
             // gProductName
             // 
@@ -121,28 +131,28 @@
             this.gProductName.MinWidth = 25;
             this.gProductName.Name = "gProductName";
             this.gProductName.Visible = true;
-            this.gProductName.VisibleIndex = 1;
+            this.gProductName.VisibleIndex = 2;
             this.gProductName.Width = 94;
             // 
-            // Code
+            // ProductCode
             // 
-            this.Code.Caption = "Code";
-            this.Code.FieldName = "Code";
-            this.Code.MinWidth = 25;
-            this.Code.Name = "Code";
-            this.Code.Visible = true;
-            this.Code.VisibleIndex = 0;
-            this.Code.Width = 94;
+            this.ProductCode.Caption = "Code";
+            this.ProductCode.FieldName = "ProductCode";
+            this.ProductCode.MinWidth = 25;
+            this.ProductCode.Name = "ProductCode";
+            this.ProductCode.Visible = true;
+            this.ProductCode.VisibleIndex = 1;
+            this.ProductCode.Width = 94;
             // 
-            // ProductPrice
+            // PurchasePrice
             // 
-            this.ProductPrice.Caption = "Product Price";
-            this.ProductPrice.FieldName = "ProductPrice";
-            this.ProductPrice.MinWidth = 25;
-            this.ProductPrice.Name = "ProductPrice";
-            this.ProductPrice.Visible = true;
-            this.ProductPrice.VisibleIndex = 2;
-            this.ProductPrice.Width = 94;
+            this.PurchasePrice.Caption = "Product Price";
+            this.PurchasePrice.FieldName = "PurchasePrice";
+            this.PurchasePrice.MinWidth = 25;
+            this.PurchasePrice.Name = "PurchasePrice";
+            this.PurchasePrice.Visible = true;
+            this.PurchasePrice.VisibleIndex = 3;
+            this.PurchasePrice.Width = 94;
             // 
             // SellingPrice
             // 
@@ -150,8 +160,6 @@
             this.SellingPrice.FieldName = "SellingPrice";
             this.SellingPrice.MinWidth = 25;
             this.SellingPrice.Name = "SellingPrice";
-            this.SellingPrice.Visible = true;
-            this.SellingPrice.VisibleIndex = 3;
             this.SellingPrice.Width = 94;
             // 
             // VatPercent
@@ -170,8 +178,6 @@
             this.ReorderLebel.FieldName = "ReorderLebel";
             this.ReorderLebel.MinWidth = 25;
             this.ReorderLebel.Name = "ReorderLebel";
-            this.ReorderLebel.Visible = true;
-            this.ReorderLebel.VisibleIndex = 5;
             this.ReorderLebel.Width = 94;
             // 
             // CategoryName
@@ -181,7 +187,7 @@
             this.CategoryName.MinWidth = 25;
             this.CategoryName.Name = "CategoryName";
             this.CategoryName.Visible = true;
-            this.CategoryName.VisibleIndex = 6;
+            this.CategoryName.VisibleIndex = 5;
             this.CategoryName.Width = 94;
             // 
             // SupplyerName
@@ -191,7 +197,7 @@
             this.SupplyerName.MinWidth = 25;
             this.SupplyerName.Name = "SupplyerName";
             this.SupplyerName.Visible = true;
-            this.SupplyerName.VisibleIndex = 7;
+            this.SupplyerName.VisibleIndex = 6;
             this.SupplyerName.Width = 94;
             // 
             // Description
@@ -200,8 +206,6 @@
             this.Description.FieldName = "Description";
             this.Description.MinWidth = 25;
             this.Description.Name = "Description";
-            this.Description.Visible = true;
-            this.Description.VisibleIndex = 8;
             this.Description.Width = 94;
             // 
             // BrandName
@@ -211,7 +215,7 @@
             this.BrandName.MinWidth = 25;
             this.BrandName.Name = "BrandName";
             this.BrandName.Visible = true;
-            this.BrandName.VisibleIndex = 9;
+            this.BrandName.VisibleIndex = 7;
             this.BrandName.Width = 94;
             // 
             // ColourName
@@ -221,7 +225,7 @@
             this.ColourName.MinWidth = 25;
             this.ColourName.Name = "ColourName";
             this.ColourName.Visible = true;
-            this.ColourName.VisibleIndex = 10;
+            this.ColourName.VisibleIndex = 8;
             this.ColourName.Width = 94;
             // 
             // SizeName
@@ -231,7 +235,7 @@
             this.SizeName.MinWidth = 25;
             this.SizeName.Name = "SizeName";
             this.SizeName.Visible = true;
-            this.SizeName.VisibleIndex = 11;
+            this.SizeName.VisibleIndex = 9;
             this.SizeName.Width = 94;
             // 
             // DisCountPercent
@@ -240,8 +244,6 @@
             this.DisCountPercent.FieldName = "DisCountPercent";
             this.DisCountPercent.MinWidth = 25;
             this.DisCountPercent.Name = "DisCountPercent";
-            this.DisCountPercent.Visible = true;
-            this.DisCountPercent.VisibleIndex = 12;
             this.DisCountPercent.Width = 94;
             // 
             // barManager1
@@ -257,8 +259,9 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnAdd,
             this.btnEdit,
-            this.barButtonItem3});
-            this.barManager1.MaxItemId = 3;
+            this.barButtonItem3,
+            this.btnBarcode});
+            this.barManager1.MaxItemId = 4;
             // 
             // bar1
             // 
@@ -269,7 +272,8 @@
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnAdd),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBarcode)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.OptionsBar.DrawBorder = false;
             this.bar1.OptionsBar.DrawDragBorder = false;
@@ -279,7 +283,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Caption = "Add New";
+            this.btnAdd.Caption = "New";
             this.btnAdd.Id = 0;
             this.btnAdd.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdd.ImageOptions.SvgImage")));
             this.btnAdd.Name = "btnAdd";
@@ -288,7 +292,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Caption = "Edit Product";
+            this.btnEdit.Caption = "Edit";
             this.btnEdit.Id = 1;
             this.btnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEdit.ImageOptions.SvgImage")));
             this.btnEdit.Name = "btnEdit";
@@ -303,13 +307,22 @@
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
+            // btnBarcode
+            // 
+            this.btnBarcode.Caption = "Print Barcode";
+            this.btnBarcode.Id = 3;
+            this.btnBarcode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBarcode.ImageOptions.SvgImage")));
+            this.btnBarcode.Name = "btnBarcode";
+            this.btnBarcode.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnBarcode.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBarcode_ItemClick);
+            // 
             // standaloneBarDockControl1
             // 
             this.standaloneBarDockControl1.CausesValidation = false;
             this.standaloneBarDockControl1.Location = new System.Drawing.Point(12, 12);
             this.standaloneBarDockControl1.Manager = this.barManager1;
             this.standaloneBarDockControl1.Name = "standaloneBarDockControl1";
-            this.standaloneBarDockControl1.Size = new System.Drawing.Size(1721, 29);
+            this.standaloneBarDockControl1.Size = new System.Drawing.Size(1742, 29);
             this.standaloneBarDockControl1.Text = "standaloneBarDockControl1";
             // 
             // barDockControlTop
@@ -318,15 +331,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1745, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1766, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 657);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 663);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1745, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1766, 0);
             // 
             // barDockControlLeft
             // 
@@ -334,15 +347,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 657);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 663);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1745, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1766, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 657);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 663);
             // 
             // layoutControlGroup1
             // 
@@ -350,9 +363,9 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem2});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1745, 657);
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1766, 663);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -360,16 +373,31 @@
             this.layoutControlItem1.Control = this.standaloneBarDockControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1725, 33);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1746, 33);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlGroup2
+            // 
+            buttonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions1.Image")));
+            this.layoutControlGroup2.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Customize", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
+            this.layoutControlGroup2.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 33);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1746, 610);
+            this.layoutControlGroup2.Text = "Product Setup Information";
+            this.layoutControlGroup2.CustomButtonClick += new DevExpress.XtraBars.Docking2010.BaseButtonEventHandler(this.layoutControlGroup2_CustomButtonClick);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 33);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1725, 604);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1740, 577);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -377,7 +405,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1745, 657);
+            this.ClientSize = new System.Drawing.Size(1766, 663);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -397,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -425,8 +454,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn VatPercent;
         private DevExpress.XtraGrid.Columns.GridColumn ReorderLebel;
         private DevExpress.XtraGrid.Columns.GridColumn CategoryName;
-        private DevExpress.XtraGrid.Columns.GridColumn Code;
-        private DevExpress.XtraGrid.Columns.GridColumn ProductPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn ProductCode;
+        private DevExpress.XtraGrid.Columns.GridColumn PurchasePrice;
         private DevExpress.XtraGrid.Columns.GridColumn SellingPrice;
         private DevExpress.XtraGrid.Columns.GridColumn SupplyerName;
         private DevExpress.XtraGrid.Columns.GridColumn Description;
@@ -434,5 +463,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn ColourName;
         private DevExpress.XtraGrid.Columns.GridColumn SizeName;
         private DevExpress.XtraGrid.Columns.GridColumn DisCountPercent;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnBarcode;
     }
 }

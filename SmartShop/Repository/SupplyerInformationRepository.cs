@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Dapper;
+using SmartShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dapper;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
@@ -54,7 +51,7 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("SupplyerInformation", new
-                { @Name=obj.SupplyerName, @Address=obj.Address, @ContactPerson=obj.ContactPerson, @ContactPersonMobileNo=obj.ContactPersonMobileNo, @Mobile=obj.Mobile, @Email=obj.Email, @logo=obj.Logo, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
+            { @Name = obj.SupplyerName, @Address = obj.Address, @ContactPerson = obj.ContactPerson, @ContactPersonMobileNo = obj.ContactPersonMobileNo, @Mobile = obj.Mobile, @Email = obj.Email, @Status = obj.Status, @logo = obj.Logo, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
             connection.Close();
 
         }
@@ -72,7 +69,8 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("SupplyerInformation", new
-                { @Name = obj.SupplyerName, @Address = obj.Address, @ContactPerson = obj.ContactPerson, @ContactPersonMobileNo = obj.ContactPersonMobileNo, @Mobile = obj.Mobile, @Email = obj.Email, @logo = obj.Logo, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
+            { @Name = obj.SupplyerName, @Address = obj.Address, @ContactPerson = obj.ContactPerson, @ContactPersonMobileNo = obj.ContactPersonMobileNo, @Mobile = obj.Mobile, @Email = obj.Email,@Status=obj.Status, @logo = obj.Logo, @StatementType = "Update" },
+                commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 

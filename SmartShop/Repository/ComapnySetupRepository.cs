@@ -1,12 +1,9 @@
 ﻿using Dapper;
+using SmartShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SmartShop.Models;
 using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
@@ -23,6 +20,13 @@ namespace SmartShop.Repository
         public IEnumerable<CompanyInformation> Get()
         {
 
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<CompanyInformation> returnValue = connection.Query<Models.CompanyInformation>(@"Select * from CompanyTables ");
+            connection.Close();
+            return returnValue;
+        }
+        public static IEnumerable<CompanyInformation> CompanyReportsData()
+        {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             IEnumerable<CompanyInformation> returnValue = connection.Query<Models.CompanyInformation>(@"Select * from CompanyTables ");
             connection.Close();
@@ -54,6 +58,7 @@ namespace SmartShop.Repository
             { @Name = obj.Name, @Address = obj.Address, @FactoryAddress = obj.FactoryAddress, @ContactNo = obj.ContactNo, @Email = obj.Email, @Fax = obj.Fax, @Logo = obj.Logo, @CEO = obj.CEO, @AppInstallDate = obj.AppInstallDate, @AppVersion = obj.AppVersion, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
             connection.Close();
         }
+
 
         public CompanyInformation Get(object id)
         {

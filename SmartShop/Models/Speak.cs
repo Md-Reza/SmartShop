@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartShop.Repository
+namespace SmartShop.Models
 {
-   public class GetAllForms
+    class Speak
     {
     }
 }

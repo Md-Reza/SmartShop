@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartShop.Interface
 {
-   public class Interface
+    public class Interface
     {
         public interface IBaseRepository<T> where T : class
         {
@@ -18,7 +14,6 @@ namespace SmartShop.Interface
             void Update(T obj);
             void Delete(object id);
             DataTable GetAll();
-
         }
     }
 }
