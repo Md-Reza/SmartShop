@@ -34,7 +34,6 @@ namespace SmartShop.SmartReports.ReportsRepositories
             _connection.Close();
             return returnValue;
         }
-
         public IEnumerable<SalesRegister> GetAllPurchaseByDate(string SellsDateF, string SellsDateT)
         {
             _connection.Open();
