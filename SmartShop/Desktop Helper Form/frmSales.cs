@@ -48,7 +48,7 @@ namespace SmartShop.Desktop_Helper_Form
 
         private void frmSales_Load(object sender, EventArgs e)
         {
-            //  SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
+            //SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
             txtUserName.EditValue = Settings.Default.UserName;
             txtComputerName.EditValue = System.Net.Dns.GetHostName();
             txtDate.EditValue = DateTime.Now.ToString("dd-MMM-yyyy");

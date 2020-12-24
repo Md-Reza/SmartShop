@@ -18,9 +18,8 @@ namespace SmartShop.SmartReports
 
         private void xrLabel3_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-            XRTableCell xrTableCell30 = (XRTableCell)FindControl("xrTableCell56", true);
-
-            ((XRLabel)sender).Text = xrTableCell30.Value.ToString();
+            XRTableCell xrTableCell56 = (XRTableCell)FindControl("xrTableCell56", true);
+            ((XRLabel)sender).Text = xrTableCell56.Value.ToString();
         }
 
         private void xrLabel4_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

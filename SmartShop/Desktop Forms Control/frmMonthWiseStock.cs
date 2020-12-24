@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraSplashScreen;
 using SmartShop.Models;
 using SmartShop.Properties;
 using SmartShop.Repository;
@@ -20,6 +21,7 @@ namespace SmartShop.Desktop_Forms_Control
         }
         private void btnProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
             var SalesMonth = txtMonth.EditValue.ToString();
             Settings.Default.SalesMonth = SalesMonth;
             monthSummary.ExecuteMonthSummaryEntry(SalesMonth);
@@ -28,6 +30,7 @@ namespace SmartShop.Desktop_Forms_Control
                   FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
 
             gridControl1.DataSource = monthSummary.GetByMonthWiseStock(SalesMonth);
+            SplashScreenManager.CloseForm();
         }
 
         private void frmMonthWiseStock_Load(object sender, EventArgs e)
@@ -90,7 +93,7 @@ namespace SmartShop.Desktop_Forms_Control
 
         private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DialogResult result= XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Are you want to see stock details press Yes. or see summary No.?", "Smart Shop Alert! *?", new[] { DialogResult.Yes, DialogResult.No },
+            DialogResult result = XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Are you want to see stock details press Yes. or see summary No.?", "Smart Shop Alert! *?", new[] { DialogResult.Yes, DialogResult.No },
                 FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationBlue()));
             if (result == DialogResult.Yes)
             {
@@ -100,12 +103,12 @@ namespace SmartShop.Desktop_Forms_Control
                 };
                 openForm.ShowDialog();
             }
-            else if(result == DialogResult.No)
+            else if (result == DialogResult.No)
             {
                 ReportViewer openForm = new ReportViewer("Report_2", Command.SettingValue.NotApplicable.ToString());
                 openForm.ShowDialog();
             }
-            
+
         }
-    }   
+    }
 }
