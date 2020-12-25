@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using SmartShop.Models;
 using SmartShop.Properties;
 using SmartShop.Repository;
@@ -317,8 +318,7 @@ namespace SmartShop.Desktop_Helper_Form
 
                     txtInvoiceNo.EditValue = DateTime.Now.ToString("yyyyMMdd") + _getByAllSequence.GetByAll().Where(f => f.Code == "SInvoice").FirstOrDefault().StartWith;
                     gridControl3.DataSource = _sellsRepository.GetByLastSells(txtDate.EditValue.ToString());
-                    sellsChild.Clear();
-                    SellesChild.Clear();
+                    
                     if (!IsPrintable.Checked) return;
                     else
                         if (isChk.Checked)
@@ -327,9 +327,11 @@ namespace SmartShop.Desktop_Helper_Form
                         {
                             DataSource = sellsChild
                         };
-                        //Report_1.ShowPreview();
-                        //Report_1.PrintDialog();
+                        Report_1.ShowPreview();
+                        Report_1.PrintDialog();
                         Report_1.Print();
+                        sellsChild.Clear();
+                        SellesChild.Clear();
                     }
                     else
                     {
@@ -338,6 +340,8 @@ namespace SmartShop.Desktop_Helper_Form
                             KeyFieldCode = invoice
                         };
                         openForm.ShowDialog();
+                        sellsChild.Clear();
+                        SellesChild.Clear();
                     }
                 }
                 else
