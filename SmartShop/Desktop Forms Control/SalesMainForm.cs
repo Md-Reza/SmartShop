@@ -288,5 +288,11 @@ namespace SmartShop.Desktop_Forms_Control
             frmAutoGeneratePassword password = new frmAutoGeneratePassword();
             password.ShowDialog();
         }
+
+        private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmDamageListEntry damageListEntry = new frmDamageListEntry();
+            damageListEntry.ShowDialog();
+        }
     }
 }

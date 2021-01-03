@@ -1486,7 +1486,7 @@
             this.Controls.Add(this.layoutControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmNewSells";
+            //this.Name = "frmNewSells";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Smart Shop : New Sales";
             this.Load += new System.EventHandler(this.frmNewSells_Load);

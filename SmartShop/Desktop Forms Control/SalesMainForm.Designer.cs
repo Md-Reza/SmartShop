@@ -119,6 +119,7 @@
             this.btnProduct = new DevExpress.XtraEditors.SimpleButton();
             this.btnBarcode = new DevExpress.XtraEditors.SimpleButton();
             this.btnPurchases = new DevExpress.XtraEditors.SimpleButton();
+            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
@@ -229,9 +230,10 @@
             this.barButtonItem7,
             this.btnBank,
             this.btnBankTransaction,
-            this.btnMonthStock});
+            this.btnMonthStock,
+            this.barButtonItem30});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 50;
+            this.ribbon.MaxItemId = 51;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.digitalTimer);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -669,6 +671,7 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnSalesReturn);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem30);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Sales Information";
             // 
@@ -919,6 +922,14 @@
             this.btnPurchases.Text = "Purchases";
             this.btnPurchases.Click += new System.EventHandler(this.btnPurchases_Click);
             // 
+            // barButtonItem30
+            // 
+            this.barButtonItem30.Caption = "Damage Entry";
+            this.barButtonItem30.Id = 50;
+            this.barButtonItem30.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem30.ImageOptions.SvgImage")));
+            this.barButtonItem30.Name = "barButtonItem30";
+            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
+            // 
             // SalesMainForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -1043,5 +1054,6 @@
         private DevExpress.XtraBars.BarButtonItem btnBankTransaction;
         private DevExpress.XtraBars.BarButtonItem btnMonthStock;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem30;
     }
 }

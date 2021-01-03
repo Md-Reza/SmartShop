@@ -122,7 +122,7 @@ namespace SmartShop.Desktop_Helper_Form
                     VatPercent = Convert.ToDecimal(txtVat.EditValue),
                     logo = (byte[])pictureEdit1.EditValue,
                     Description = (string)txtDescription.EditValue,
-                    Status = Connection.ValueCheck(chkActivation).ToString(),
+                    Status =(bool)chkActivation.EditValue,
                     BrandId = Convert.ToInt16(cmbBrand.EditValue),
                     ColurId = Convert.ToInt16(cmbColour.EditValue),
                     SizeId = Convert.ToInt16(cmbSize.EditValue),
@@ -131,7 +131,8 @@ namespace SmartShop.Desktop_Helper_Form
                     CreateById = Settings.Default.UserName
                 };
                 baseRepository.Insert(product);
-                XtraMessageBox.Show("Smart Shop Alert:- Product save successfully");
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Smart Shop Alert:- Product save successfully", "System Message", new[] { DialogResult.OK },
+                  FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
             }
             else if (dbAccess == Command.DbCommand.Update)
             {
@@ -152,7 +153,7 @@ namespace SmartShop.Desktop_Helper_Form
                 logo = (byte[])pictureEdit1.EditValue,
                 Description = txtDescription.EditValue.ToString(),
                 ProductCode = txtCode.EditValue.ToString(),
-                Status = Connection.ValueCheck(chkActivation),
+                Status =(bool) chkActivation.EditValue,
                 BrandId = (int)cmbBrand.EditValue,
                 ColurId = (int)cmbColour.EditValue,
                 SizeId = (int)cmbSize.EditValue,

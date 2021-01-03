@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
 using SmartShop.Repository;
 using System;
 using System.Data.SqlClient;
@@ -56,15 +57,19 @@ namespace SmartShop.Desktop_Helper_Form
                 {
                     XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Please Select Directory Path", "System Message", new[] { DialogResult.OK },
                   FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                    return;
                 }
                 else
                 {
-                    string cmd = "BACKUP DATABASE[" + database + "] TO DISK ='" + nameDatabase + "\\" + "SalesDatabase" + "_" + DateTime.Now.ToString("yyyy-mm-MM-HH-mm-ss") + ".bak'";
+                    SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
+                    string cmd = "Backup Database[" + database + "] To Disk ='" + nameDatabase + "\\" + "SalesDatabase" + "_" + DateTime.Now.ToString("yyyy-mm-MM-HH-mm-ss") + ".bak'";
                     _connection.Open();
                      ExecuteStatment(cmd);
                     txtBrowse.Enabled = false;
+                    SplashScreenManager.CloseForm();
+                    _connection.Close();
                     XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, @" " + nameDatabase + "\\" + @"SalesDatabase" + "-" + DateTime.Now.ToString("yyyy-mm-MM--HH-mm-ss") + ".bak " + " DataBase Backup Complete Successfully ", "System Message", new[] { DialogResult.OK },
-                    FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                    FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen())); 
                 }
             }
             catch (Exception)

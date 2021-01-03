@@ -361,7 +361,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCompanyInformation";
+            //this.Name = "frmCompanyInformation";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Company Information";

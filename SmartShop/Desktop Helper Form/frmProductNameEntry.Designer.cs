@@ -167,18 +167,18 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(103, 12);
+            this.txtCode.Location = new System.Drawing.Point(104, 12);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(374, 23);
+            this.txtCode.Size = new System.Drawing.Size(373, 23);
             this.txtCode.StyleController = this.layoutControl1;
             this.txtCode.TabIndex = 4;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(103, 39);
+            this.txtName.Location = new System.Drawing.Point(104, 39);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(374, 23);
+            this.txtName.Size = new System.Drawing.Size(373, 23);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
             conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -188,7 +188,7 @@
             // 
             // cmbCategoryName
             // 
-            this.cmbCategoryName.Location = new System.Drawing.Point(418, 137);
+            this.cmbCategoryName.Location = new System.Drawing.Point(419, 137);
             this.cmbCategoryName.Name = "cmbCategoryName";
             this.cmbCategoryName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -199,7 +199,7 @@
             this.cmbCategoryName.Properties.NullText = "";
             this.cmbCategoryName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbCategoryName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.cmbCategoryName.Size = new System.Drawing.Size(167, 23);
+            this.cmbCategoryName.Size = new System.Drawing.Size(166, 23);
             this.cmbCategoryName.StyleController = this.layoutControl1;
             this.cmbCategoryName.TabIndex = 6;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -209,7 +209,7 @@
             // 
             // cmbSupplyerName
             // 
-            this.cmbSupplyerName.Location = new System.Drawing.Point(103, 137);
+            this.cmbSupplyerName.Location = new System.Drawing.Point(104, 137);
             this.cmbSupplyerName.Name = "cmbSupplyerName";
             this.cmbSupplyerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -219,7 +219,7 @@
             this.cmbSupplyerName.Properties.NullText = "";
             this.cmbSupplyerName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbSupplyerName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.cmbSupplyerName.Size = new System.Drawing.Size(188, 23);
+            this.cmbSupplyerName.Size = new System.Drawing.Size(187, 23);
             this.cmbSupplyerName.StyleController = this.layoutControl1;
             this.cmbSupplyerName.TabIndex = 7;
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -229,9 +229,9 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(103, 66);
+            this.txtDescription.Location = new System.Drawing.Point(104, 66);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(374, 67);
+            this.txtDescription.Size = new System.Drawing.Size(373, 67);
             this.txtDescription.StyleController = this.layoutControl1;
             this.txtDescription.TabIndex = 8;
             // 
@@ -248,7 +248,7 @@
             // 
             // btnCLose
             // 
-            this.btnCLose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCLose.ImageOptions.SvgImage")));
+            this.btnCLose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCLose.ImageOptions.Image")));
             this.btnCLose.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnCLose.Location = new System.Drawing.Point(550, 364);
             this.btnCLose.Name = "btnCLose";
@@ -260,7 +260,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNew.ImageOptions.SvgImage")));
+            this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
             this.btnNew.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnNew.Location = new System.Drawing.Point(12, 364);
             this.btnNew.Name = "btnNew";
@@ -271,7 +271,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnSave.Location = new System.Drawing.Point(477, 364);
             this.btnSave.Name = "btnSave";
@@ -288,13 +288,13 @@
             0,
             0,
             0});
-            this.txtReorderLevel.Location = new System.Drawing.Point(103, 226);
+            this.txtReorderLevel.Location = new System.Drawing.Point(104, 226);
             this.txtReorderLevel.Name = "txtReorderLevel";
             this.txtReorderLevel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtReorderLevel.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtReorderLevel.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtReorderLevel.Size = new System.Drawing.Size(209, 24);
+            this.txtReorderLevel.Size = new System.Drawing.Size(208, 24);
             this.txtReorderLevel.StyleController = this.layoutControl1;
             this.txtReorderLevel.TabIndex = 12;
             // 
@@ -305,13 +305,13 @@
             0,
             0,
             0});
-            this.txtProductPrice.Location = new System.Drawing.Point(103, 254);
+            this.txtProductPrice.Location = new System.Drawing.Point(104, 254);
             this.txtProductPrice.Name = "txtProductPrice";
             this.txtProductPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtProductPrice.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtProductPrice.Properties.Mask.EditMask = "n2";
-            this.txtProductPrice.Size = new System.Drawing.Size(114, 24);
+            this.txtProductPrice.Size = new System.Drawing.Size(113, 24);
             this.txtProductPrice.StyleController = this.layoutControl1;
             this.txtProductPrice.TabIndex = 9;
             conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -326,13 +326,13 @@
             0,
             0,
             0});
-            this.txtSellingPrice.Location = new System.Drawing.Point(312, 254);
+            this.txtSellingPrice.Location = new System.Drawing.Point(313, 254);
             this.txtSellingPrice.Name = "txtSellingPrice";
             this.txtSellingPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSellingPrice.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtSellingPrice.Properties.Mask.EditMask = "n2";
-            this.txtSellingPrice.Size = new System.Drawing.Size(95, 24);
+            this.txtSellingPrice.Size = new System.Drawing.Size(94, 24);
             this.txtSellingPrice.StyleController = this.layoutControl1;
             this.txtSellingPrice.TabIndex = 10;
             conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -347,13 +347,13 @@
             0,
             0,
             0});
-            this.txtVat.Location = new System.Drawing.Point(502, 254);
+            this.txtVat.Location = new System.Drawing.Point(503, 254);
             this.txtVat.Name = "txtVat";
             this.txtVat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtVat.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtVat.Properties.Mask.EditMask = "n2";
-            this.txtVat.Size = new System.Drawing.Size(115, 24);
+            this.txtVat.Size = new System.Drawing.Size(114, 24);
             this.txtVat.StyleController = this.layoutControl1;
             this.txtVat.TabIndex = 11;
             // 
@@ -368,7 +368,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnUpdate.Location = new System.Drawing.Point(89, 364);
             this.btnUpdate.Name = "btnUpdate";
@@ -380,7 +380,7 @@
             // 
             // cmbBrand
             // 
-            this.cmbBrand.Location = new System.Drawing.Point(103, 168);
+            this.cmbBrand.Location = new System.Drawing.Point(104, 168);
             this.cmbBrand.Name = "cmbBrand";
             this.cmbBrand.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -391,13 +391,13 @@
             this.cmbBrand.Properties.NullText = "";
             this.cmbBrand.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbBrand.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.cmbBrand.Size = new System.Drawing.Size(482, 23);
+            this.cmbBrand.Size = new System.Drawing.Size(481, 23);
             this.cmbBrand.StyleController = this.layoutControl1;
             this.cmbBrand.TabIndex = 21;
             // 
             // cmbSize
             // 
-            this.cmbSize.Location = new System.Drawing.Point(103, 199);
+            this.cmbSize.Location = new System.Drawing.Point(104, 199);
             this.cmbSize.Name = "cmbSize";
             this.cmbSize.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -407,13 +407,13 @@
             this.cmbSize.Properties.NullText = "";
             this.cmbSize.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbSize.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.cmbSize.Size = new System.Drawing.Size(209, 23);
+            this.cmbSize.Size = new System.Drawing.Size(208, 23);
             this.cmbSize.StyleController = this.layoutControl1;
             this.cmbSize.TabIndex = 20;
             // 
             // cmbColour
             // 
-            this.cmbColour.Location = new System.Drawing.Point(407, 199);
+            this.cmbColour.Location = new System.Drawing.Point(408, 199);
             this.cmbColour.Name = "cmbColour";
             this.cmbColour.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -423,7 +423,7 @@
             this.cmbColour.Properties.NullText = "";
             this.cmbColour.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbColour.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            this.cmbColour.Size = new System.Drawing.Size(210, 23);
+            this.cmbColour.Size = new System.Drawing.Size(209, 23);
             this.cmbColour.StyleController = this.layoutControl1;
             this.cmbColour.TabIndex = 22;
             // 
@@ -434,13 +434,13 @@
             0,
             0,
             0});
-            this.txtDiscountPercent.Location = new System.Drawing.Point(407, 226);
+            this.txtDiscountPercent.Location = new System.Drawing.Point(408, 226);
             this.txtDiscountPercent.Name = "txtDiscountPercent";
             this.txtDiscountPercent.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDiscountPercent.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtDiscountPercent.Properties.Mask.EditMask = "n2";
-            this.txtDiscountPercent.Size = new System.Drawing.Size(210, 24);
+            this.txtDiscountPercent.Size = new System.Drawing.Size(209, 24);
             this.txtDiscountPercent.StyleController = this.layoutControl1;
             this.txtDiscountPercent.TabIndex = 23;
             // 

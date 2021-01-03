@@ -421,6 +421,12 @@
     <Compile Include="Desktop Helper Form\frmCustomerEntry.Designer.cs">
       <DependentUpon>frmCustomerEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desktop Helper Form\frmDamageListEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmDamageListEntry.Designer.cs">
+      <DependentUpon>frmDamageListEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desktop Helper Form\frmExpensesEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -529,6 +535,7 @@
     <Compile Include="Interface\Expenses.cs" />
     <Compile Include="Interface\Gender.cs" />
     <Compile Include="Interface\IBusinessInterface.cs" />
+    <Compile Include="Interface\IDamageList.cs" />
     <Compile Include="Interface\IDepartment.cs" />
     <Compile Include="Interface\IExpensesExecute.cs" />
     <Compile Include="Interface\Interface.cs" />
@@ -543,6 +550,7 @@
     <Compile Include="Models\BankTransaction.cs" />
     <Compile Include="Models\CustomerArrear.cs" />
     <Compile Include="Models\CustomerInformation.cs" />
+    <Compile Include="Models\DamageList.cs" />
     <Compile Include="Models\ExpensesEntry.cs" />
     <Compile Include="Models\ExpensesList.cs" />
     <Compile Include="Models\Grammars.cs" />
@@ -591,6 +599,7 @@
     <Compile Include="Repository\BusinessCommandRepository.cs" />
     <Compile Include="Repository\BusinessObjectRepository.cs" />
     <Compile Include="Repository\CustomersRepository.cs" />
+    <Compile Include="Repository\DamageRepository.cs" />
     <Compile Include="Repository\DepartmentRepository.cs" />
     <Compile Include="Repository\DueCollectionRepository.cs" />
     <Compile Include="Repository\ExpensesEntryRepository.cs" />
@@ -815,6 +824,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmCustomerEntry.resx">
       <DependentUpon>frmCustomerEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmDamageListEntry.resx">
+      <DependentUpon>frmDamageListEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmExpensesEntry.resx">
       <DependentUpon>frmExpensesEntry.cs</DependentUpon>
