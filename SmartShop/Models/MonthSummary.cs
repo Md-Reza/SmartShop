@@ -22,5 +22,9 @@
         public int ArrearAmount { get; set; }
         public int ArrearCollAmt { get; set; }
         public int SalaryAmount { get; set; }
+        public int DamageQty { get; set; }
+        public int ReturnQty { get; set; }
+        public int ReturnAmt { get; set; }
+        public int DamageAmt { get; set; }
     }
 }

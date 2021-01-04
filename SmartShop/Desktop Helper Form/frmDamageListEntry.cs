@@ -107,6 +107,7 @@ namespace SmartShop.Desktop_Helper_Form
                 damageRepo.ExecuteDamageEntry(damageLists);
                 XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Damage Entry Sucessfully", "System Message", new[] { DialogResult.OK },
                            FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationBlue()));
+                gridControl1.DataSource = productNameRepository.GetAllProductWithStock();
             }
             else
             {

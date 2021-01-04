@@ -172,6 +172,10 @@ namespace SmartShop.Desktop_Helper_Form
                     TotalAmountByGrid();
                 }
             }
+            if (e.Button.Properties.Caption == "Refresh")
+            {
+                LoadProduct();
+            }
         }
         private void btnSales_Click(object sender, EventArgs e)
         {

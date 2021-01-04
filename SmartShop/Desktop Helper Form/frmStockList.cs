@@ -8,11 +8,13 @@ using SmartShop.SmartReports;
 using static SmartShop.Interface.Interface;
 using static SmartShop.Interface.StockList;
 using DevExpress.XtraEditors;
+using System.Windows.Forms;
 
 namespace SmartShop.Desktop_Helper_Form
 {
     public partial class frmStockList : DevExpress.XtraEditors.XtraForm
     {
+        private string gridGuid = null;
         IStockList<Stock> stock = new StockRepository();
         IBaseRepository<CategoriesSetup> categoryRepository = new CategoriesRepository();
         public frmStockList()
@@ -37,6 +39,7 @@ namespace SmartShop.Desktop_Helper_Form
         {
             CategoryLoad();
             StockList();
+            gridGuid = FileControl.SaveGridLayout(gridView1);
         }
 
         private void btnView_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -100,6 +103,32 @@ namespace SmartShop.Desktop_Helper_Form
         {
             ReportViewer openForm = new ReportViewer("Report_2", Command.SettingValue.NotApplicable.ToString());
             openForm.ShowDialog();
+        }
+
+        private void layoutControlGroup2_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        {
+            if (e.Button.Properties.Caption == "Customize")
+            {
+                if (gridView1.CustomizationForm == null)
+                    gridView1.ShowCustomization();
+                else
+                    gridView1.DestroyCustomization();
+            }
+            else if (e.Button.Properties.Caption == "Reset")
+            {
+                if (gridView1.CustomizationForm != null)
+                    gridView1.DestroyCustomization();
+                FileControl.RestoreGridLayout(gridView1, gridGuid);
+            }
+            else if (e.Button.Properties.Caption == "Export")
+            {
+
+                DialogResult pathSelected = SaveFileDialog.ShowDialog();
+                if (pathSelected == DialogResult.OK)
+                    FileControl.ExportGrid(gridView1, SaveFileDialog.FileName);
+
+            }
+
         }
     }
 }

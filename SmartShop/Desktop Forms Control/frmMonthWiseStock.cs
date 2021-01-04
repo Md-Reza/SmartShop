@@ -15,6 +15,7 @@ namespace SmartShop.Desktop_Forms_Control
     public partial class frmMonthWiseStock : DevExpress.XtraEditors.XtraForm
     {
         IMonthSummary<MonthSummary> monthSummary = new MonthSummaryRepository();
+        private string gridGuid = null;
         public frmMonthWiseStock()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace SmartShop.Desktop_Forms_Control
                   FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
 
             gridControl1.DataSource = monthSummary.GetByMonthWiseStock(SalesMonth);
+            layoutControlGroup2.Text = $@"Reports on month summary( { Settings.Default.SalesMonth}) ";
             SplashScreenManager.CloseForm();
         }
 
@@ -38,14 +40,18 @@ namespace SmartShop.Desktop_Forms_Control
             txtMonth.EditValue = DateTime.Now.ToString("yyyyMM");
             var SalesMonth = txtMonth.EditValue.ToString();
             Settings.Default.SalesMonth = SalesMonth;
+            gridGuid = FileControl.SaveGridLayout(gridView1);
         }
 
         private void btnView_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            layoutControlGroup1.Text = $@"Reports on month summary( { Settings.Default.SalesMonth}) ";
+            layoutControlGroup2.Text = $@"Reports on month summary( { Settings.Default.SalesMonth}) ";
             var SalesMonth = txtMonth.EditValue.ToString();
             Settings.Default.SalesMonth = SalesMonth;
             gridControl1.DataSource = null;
             gridControl1.DataSource = monthSummary.GetByMonthWiseStock(Settings.Default.SalesMonth);
+           
         }
 
         private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
@@ -109,6 +115,30 @@ namespace SmartShop.Desktop_Forms_Control
                 openForm.ShowDialog();
             }
 
+        }
+
+        private void layoutControlGroup2_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        {
+            if (e.Button.Properties.Caption == "Customize")
+            {
+                if (gridView1.CustomizationForm == null)
+                    gridView1.ShowCustomization();
+                else
+                    gridView1.DestroyCustomization();
+            }
+            else if (e.Button.Properties.Caption == "Reset")
+            {
+                if (gridView1.CustomizationForm != null)
+                    gridView1.DestroyCustomization();
+                FileControl.RestoreGridLayout(gridView1, gridGuid);
+            }
+            else if (e.Button.Properties.Caption == "Export")
+            {
+                DialogResult pathSelected = SaveFileDialog.ShowDialog();
+                if (pathSelected == DialogResult.OK)
+                    FileControl.ExportGrid(gridView1, SaveFileDialog.FileName);
+
+            }
         }
     }
 }

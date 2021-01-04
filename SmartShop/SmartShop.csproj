@@ -493,12 +493,6 @@
     <Compile Include="Desktop Helper Form\frmSpeech.Designer.cs">
       <DependentUpon>frmSpeech.cs</DependentUpon>
     </Compile>
-    <Compile Include="Desktop Helper Form\frmStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Desktop Helper Form\frmStock.Designer.cs">
-      <DependentUpon>frmStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="Desktop Helper Form\frmStockList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -604,6 +598,7 @@
     <Compile Include="Repository\DueCollectionRepository.cs" />
     <Compile Include="Repository\ExpensesEntryRepository.cs" />
     <Compile Include="Repository\ExpensesRepository.cs" />
+    <Compile Include="Repository\FileControl.cs" />
     <Compile Include="Repository\IBusinessInterface.cs" />
     <Compile Include="Repository\MonthSummaryRepository.cs" />
     <Compile Include="Repository\SalesReturnRepository.cs" />
@@ -701,12 +696,6 @@
     </Compile>
     <Compile Include="SmartReports\rptStockListingBySupplier.Designer.cs">
       <DependentUpon>rptStockListingBySupplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SmartReports\rptStockListingSupplier.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="SmartReports\rptStockListingSupplier.Designer.cs">
-      <DependentUpon>rptStockListingSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="SmartReports\SmartShopReports.cs" />
     <Compile Include="SmartReports\SReports.cs" />
@@ -861,9 +850,6 @@
     <EmbeddedResource Include="Desktop Helper Form\frmSpeech.resx">
       <DependentUpon>frmSpeech.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Desktop Helper Form\frmStock.resx">
-      <DependentUpon>frmStock.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmStockList.resx">
       <DependentUpon>frmStockList.cs</DependentUpon>
     </EmbeddedResource>
@@ -920,9 +906,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SmartReports\rptStockListingBySupplier.resx">
       <DependentUpon>rptStockListingBySupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SmartReports\rptStockListingSupplier.resx">
-      <DependentUpon>rptStockListingSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>

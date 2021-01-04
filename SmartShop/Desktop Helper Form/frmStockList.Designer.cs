@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStockList));
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions2 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
+            DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions3 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -42,6 +45,8 @@
             this.QtyBalance = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PurchasesAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SalesAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BalanceQtyWithReturn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SalesAmountWithReturn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BrandName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SizeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ColourName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,10 +65,14 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.BalanceQtyWithReturn = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SalesAmountWithReturn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SaveFileDialog = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
+            this.DamageQty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReturnQty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReturnAmt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DamageAmt = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -72,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repocmbCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProvider)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +93,7 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(992, 396, 812, 500);
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(1740, 724);
             this.layoutControl1.TabIndex = 0;
@@ -90,11 +101,11 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 45);
+            this.gridControl1.Location = new System.Drawing.Point(15, 75);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1716, 667);
+            this.gridControl1.Size = new System.Drawing.Size(1710, 634);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -108,10 +119,14 @@
             this.CategoryName,
             this.PurchaseQty,
             this.SalesQty,
+            this.DamageQty,
+            this.ReturnQty,
             this.QtyBalance,
+            this.BalanceQtyWithReturn,
             this.PurchasesAmount,
             this.SalesAmount,
-            this.BalanceQtyWithReturn,
+            this.ReturnAmt,
+            this.DamageAmt,
             this.SalesAmountWithReturn,
             this.BrandName,
             this.SizeName,
@@ -181,7 +196,7 @@
             // 
             this.SalesQty.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.SalesQty.AppearanceCell.Options.UseBackColor = true;
-            this.SalesQty.Caption = "SalesQty";
+            this.SalesQty.Caption = "Sales Qty";
             this.SalesQty.FieldName = "SalesQty";
             this.SalesQty.MinWidth = 25;
             this.SalesQty.Name = "SalesQty";
@@ -200,7 +215,7 @@
             this.QtyBalance.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "QtyBalance", "{0:0.##}")});
             this.QtyBalance.Visible = true;
-            this.QtyBalance.VisibleIndex = 6;
+            this.QtyBalance.VisibleIndex = 8;
             this.QtyBalance.Width = 94;
             // 
             // PurchasesAmount
@@ -214,7 +229,7 @@
             this.PurchasesAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PurchasesAmount", "{0:0.##}")});
             this.PurchasesAmount.Visible = true;
-            this.PurchasesAmount.VisibleIndex = 7;
+            this.PurchasesAmount.VisibleIndex = 10;
             this.PurchasesAmount.Width = 94;
             // 
             // SalesAmount
@@ -228,8 +243,28 @@
             this.SalesAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SalesAmount", "{0:0.##}")});
             this.SalesAmount.Visible = true;
-            this.SalesAmount.VisibleIndex = 8;
+            this.SalesAmount.VisibleIndex = 11;
             this.SalesAmount.Width = 94;
+            // 
+            // BalanceQtyWithReturn
+            // 
+            this.BalanceQtyWithReturn.Caption = "Balance Qty WithReturn";
+            this.BalanceQtyWithReturn.FieldName = "BalanceQtyWithReturn";
+            this.BalanceQtyWithReturn.MinWidth = 25;
+            this.BalanceQtyWithReturn.Name = "BalanceQtyWithReturn";
+            this.BalanceQtyWithReturn.Visible = true;
+            this.BalanceQtyWithReturn.VisibleIndex = 9;
+            this.BalanceQtyWithReturn.Width = 94;
+            // 
+            // SalesAmountWithReturn
+            // 
+            this.SalesAmountWithReturn.Caption = "Final Sells Amt";
+            this.SalesAmountWithReturn.FieldName = "SalesAmountWithReturn";
+            this.SalesAmountWithReturn.MinWidth = 25;
+            this.SalesAmountWithReturn.Name = "SalesAmountWithReturn";
+            this.SalesAmountWithReturn.Visible = true;
+            this.SalesAmountWithReturn.VisibleIndex = 14;
+            this.SalesAmountWithReturn.Width = 94;
             // 
             // BrandName
             // 
@@ -237,8 +272,6 @@
             this.BrandName.FieldName = "Brand.BrandName";
             this.BrandName.MinWidth = 25;
             this.BrandName.Name = "BrandName";
-            this.BrandName.Visible = true;
-            this.BrandName.VisibleIndex = 11;
             this.BrandName.Width = 94;
             // 
             // SizeName
@@ -247,8 +280,6 @@
             this.SizeName.FieldName = "Size.SizeName";
             this.SizeName.MinWidth = 25;
             this.SizeName.Name = "SizeName";
-            this.SizeName.Visible = true;
-            this.SizeName.VisibleIndex = 12;
             this.SizeName.Width = 94;
             // 
             // ColourName
@@ -257,8 +288,6 @@
             this.ColourName.FieldName = "Colour.ColourName";
             this.ColourName.MinWidth = 25;
             this.ColourName.Name = "ColourName";
-            this.ColourName.Visible = true;
-            this.ColourName.VisibleIndex = 13;
             this.ColourName.Width = 94;
             // 
             // barManager1
@@ -326,7 +355,8 @@
             // 
             this.btnView.Caption = "View";
             this.btnView.Id = 1;
-            this.btnView.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnView.ImageOptions.SvgImage")));
+            this.btnView.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnView.ImageOptions.Image")));
+            this.btnView.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnView.ImageOptions.LargeImage")));
             this.btnView.Name = "btnView";
             this.btnView.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnView.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnView_ItemClick);
@@ -335,7 +365,8 @@
             // 
             this.btnRefresh.Caption = "Refresh";
             this.btnRefresh.Id = 2;
-            this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh.ImageOptions.SvgImage")));
+            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
+            this.btnRefresh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.LargeImage")));
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefresh_ItemClick);
@@ -344,7 +375,8 @@
             // 
             this.barButtonItem1.Caption = "Print";
             this.barButtonItem1.Id = 3;
-            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
@@ -353,7 +385,8 @@
             // 
             this.barButtonItem2.Caption = "barButtonItem2";
             this.barButtonItem2.Id = 4;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
@@ -404,8 +437,8 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem2});
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1740, 724);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -418,34 +451,77 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // layoutControlGroup2
+            // 
+            buttonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions1.Image")));
+            buttonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions2.Image")));
+            buttonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("buttonImageOptions3.Image")));
+            this.layoutControlGroup2.CustomHeaderButtons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Export", true, buttonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1),
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Customize", true, buttonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1),
+            new DevExpress.XtraEditors.ButtonsPanelControl.GroupBoxButton("Reset", true, buttonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1)});
+            this.layoutControlGroup2.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 33);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1720, 671);
+            this.layoutControlGroup2.Text = "Stock Listing";
+            this.layoutControlGroup2.CustomButtonClick += new DevExpress.XtraBars.Docking2010.BaseButtonEventHandler(this.layoutControlGroup2_CustomButtonClick);
+            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 33);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1720, 671);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1714, 638);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // BalanceQtyWithReturn
+            // SaveFileDialog
             // 
-            this.BalanceQtyWithReturn.Caption = "Balance Qty WithReturn";
-            this.BalanceQtyWithReturn.FieldName = "BalanceQtyWithReturn";
-            this.BalanceQtyWithReturn.MinWidth = 25;
-            this.BalanceQtyWithReturn.Name = "BalanceQtyWithReturn";
-            this.BalanceQtyWithReturn.Visible = true;
-            this.BalanceQtyWithReturn.VisibleIndex = 9;
-            this.BalanceQtyWithReturn.Width = 94;
+            this.SaveFileDialog.FileName = "xtraSaveFileDialog1";
             // 
-            // SalesAmountWithReturn
+            // DamageQty
             // 
-            this.SalesAmountWithReturn.Caption = "SalesAmt WithReturn";
-            this.SalesAmountWithReturn.FieldName = "SalesAmountWithReturn";
-            this.SalesAmountWithReturn.MinWidth = 25;
-            this.SalesAmountWithReturn.Name = "SalesAmountWithReturn";
-            this.SalesAmountWithReturn.Visible = true;
-            this.SalesAmountWithReturn.VisibleIndex = 10;
-            this.SalesAmountWithReturn.Width = 94;
+            this.DamageQty.Caption = "Damage Qty";
+            this.DamageQty.FieldName = "DamageQty";
+            this.DamageQty.MinWidth = 25;
+            this.DamageQty.Name = "DamageQty";
+            this.DamageQty.Visible = true;
+            this.DamageQty.VisibleIndex = 6;
+            this.DamageQty.Width = 94;
+            // 
+            // ReturnQty
+            // 
+            this.ReturnQty.Caption = "Return Qty";
+            this.ReturnQty.FieldName = "ReturnQty";
+            this.ReturnQty.MinWidth = 25;
+            this.ReturnQty.Name = "ReturnQty";
+            this.ReturnQty.Visible = true;
+            this.ReturnQty.VisibleIndex = 7;
+            this.ReturnQty.Width = 94;
+            // 
+            // ReturnAmt
+            // 
+            this.ReturnAmt.Caption = "Return Amt";
+            this.ReturnAmt.FieldName = "ReturnAmt";
+            this.ReturnAmt.MinWidth = 25;
+            this.ReturnAmt.Name = "ReturnAmt";
+            this.ReturnAmt.Visible = true;
+            this.ReturnAmt.VisibleIndex = 12;
+            this.ReturnAmt.Width = 94;
+            // 
+            // DamageAmt
+            // 
+            this.DamageAmt.Caption = "Damage Amt";
+            this.DamageAmt.FieldName = "DamageAmt";
+            this.DamageAmt.MinWidth = 25;
+            this.DamageAmt.Name = "DamageAmt";
+            this.DamageAmt.Visible = true;
+            this.DamageAmt.VisibleIndex = 13;
+            this.DamageAmt.Width = 94;
             // 
             // frmStockList
             // 
@@ -470,6 +546,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repocmbCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValidationProvider)).EndInit();
             this.ResumeLayout(false);
@@ -513,5 +590,11 @@
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider ValidationProvider;
         private DevExpress.XtraGrid.Columns.GridColumn BalanceQtyWithReturn;
         private DevExpress.XtraGrid.Columns.GridColumn SalesAmountWithReturn;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraEditors.XtraSaveFileDialog SaveFileDialog;
+        private DevExpress.XtraGrid.Columns.GridColumn DamageQty;
+        private DevExpress.XtraGrid.Columns.GridColumn ReturnQty;
+        private DevExpress.XtraGrid.Columns.GridColumn ReturnAmt;
+        private DevExpress.XtraGrid.Columns.GridColumn DamageAmt;
     }
 }

@@ -10,9 +10,10 @@ namespace SmartShop.Repository
 {
     public class ProductNameRepository : IDisposable, IBaseRepository<ProductName>
     {
+        SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
         public void Dispose()
         {
-            throw new NotImplementedException();
+            connection.Dispose();
         }
 
         public IEnumerable<ProductName> GetByAll(string code)
@@ -79,11 +80,12 @@ namespace SmartShop.Repository
                         p.DisCountPercent,
                         ct.CategoryName,
                         sup.SupplyerName,
-                        isnull(s.QtyBalance,0)QtyBalance
+                        (ISnull(s.BalanceQtyWithReturn,0))QtyBalance
                         from ProductName as p 
                         left join CategoriesTable as ct on p.CategoryId=ct.Id
                         left join SupplyerTable as sup on p.CompanyId=sup.id
-                        left join Stock_vw as s on p.ProductCode=s.ProductCode and ct.Id=s.CategoryId and sup.id=s.CompanyId", map: (p, ct, sup, s) =>
+                        left join Stock_vw as s on p.ProductCode=s.ProductCode and ct.Id=s.CategoryId and sup.id=s.CompanyId
+             ", map: (p, ct, sup, s) =>
             {
                 p.CategoryName = ct;
                 p.SupplyerName = sup;

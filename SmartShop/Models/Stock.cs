@@ -22,5 +22,9 @@
         public int SalesAmount { get; set; }
         public int BalanceQtyWithReturn { get; set; }
         public int SalesAmountWithReturn { get; set; }
+        public int DamageQty { get; set; }
+        public int ReturnQty { get; set; }
+        public int ReturnAmt { get; set; }
+        public int DamageAmt { get; set; }
     }
 }
