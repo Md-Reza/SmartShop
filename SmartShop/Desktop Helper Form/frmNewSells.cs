@@ -50,7 +50,6 @@ namespace SmartShop.Desktop_Helper_Form
         }
         public void LoadProduct()
         {
-            //gridControl1.DataSource = baseRepository.Get().ToList();
             gridControl1.DataSource = productNameRepository.GetAllProductWithStock();
         }
         private void TotalAmountByGrid()
@@ -410,6 +409,15 @@ namespace SmartShop.Desktop_Helper_Form
                 return;
             }
             string invoice = txtReInvoice.EditValue.ToString();
+            var Invoice = _sellsRepository.All(invoice);
+            if (!Invoice.Any()) 
+            {
+                Console.Beep(5000, 800);
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "No Invoice Found", "System Message", new[] { DialogResult.OK },
+                                 FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                return;
+            };
+
             ReportViewer openForm = new ReportViewer("Report_8", Command.SettingValue.NotApplicable.ToString())
             {
                 KeyFieldCode = invoice

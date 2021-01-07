@@ -62,8 +62,6 @@ namespace SmartShop.Repository
                 p.Size = sz;
                 return p;
             }, splitOn: "CategoryName, SupplyerName,BrandName,ColourName,SizeName");
-
-
             connection.Close();
             return returnValue;
         }
@@ -84,8 +82,7 @@ namespace SmartShop.Repository
                         from ProductName as p 
                         left join CategoriesTable as ct on p.CategoryId=ct.Id
                         left join SupplyerTable as sup on p.CompanyId=sup.id
-                        left join Stock_vw as s on p.ProductCode=s.ProductCode and ct.Id=s.CategoryId and sup.id=s.CompanyId
-             ", map: (p, ct, sup, s) =>
+                        left join Stock_vw as s on p.ProductCode=s.ProductCode and ct.Id=s.CategoryId and sup.id=s.CompanyId ", map: (p, ct, sup, s) =>
             {
                 p.CategoryName = ct;
                 p.SupplyerName = sup;

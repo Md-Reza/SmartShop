@@ -15,7 +15,10 @@ namespace SmartShop.Repository
         SqlConnection _connection = new SqlConnection(Connection.GetConnectionString());
         public IEnumerable<SellesChild> All(object id)
         {
-            throw new NotImplementedException();
+            _connection.Open();
+            IEnumerable<SellesChild> returnValue = _connection.Query<Models.SellesChild>(@"select * from SellsParent where SellsInvoice =@SellsInvoice", new { SellsInvoice = id });
+            _connection.Close();
+            return returnValue;
         }
 
         public void Delete(object id)
