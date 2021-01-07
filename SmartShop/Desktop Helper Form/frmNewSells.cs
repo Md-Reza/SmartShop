@@ -85,6 +85,11 @@ namespace SmartShop.Desktop_Helper_Form
         {
             if (e.Button.Properties.Caption == "Add Item")
             {
+                if (gridView1.SelectedRowsCount <=0) {
+                    XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Please at least one item for sells", "System Message", new[] { DialogResult.OK },
+                                              FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                    return;
+                }
                 int[] selectedRowHandles = gridView1.GetSelectedRows();
                 foreach (int items in selectedRowHandles)
                 {
