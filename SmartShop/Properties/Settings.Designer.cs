@@ -118,5 +118,17 @@ namespace SmartShop.Properties {
                 this["ActiationCode"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7")]
+        public int Days {
+            get {
+                return ((int)(this["Days"]));
+            }
+            set {
+                this["Days"] = value;
+            }
+        }
     }
 }

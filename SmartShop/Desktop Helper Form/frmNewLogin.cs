@@ -6,6 +6,7 @@ using System;
 using static SmartShop.Interface.Interface;
 using SmartShop.Desktop_Forms_Control;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace SmartShop.Desktop_Helper_Form
 {
@@ -13,6 +14,7 @@ namespace SmartShop.Desktop_Helper_Form
     {
         IBaseRepository<UserLogin> baseRepository = new UserLoginRepository();
         UserLoginRepository userLogin = new UserLoginRepository();
+        ComapnySetupRepository comapnySetupRepository = new ComapnySetupRepository();
         string activationCode = "Pr0tecti0nbyReza";
         public frmNewLogin()
         {
@@ -22,8 +24,7 @@ namespace SmartShop.Desktop_Helper_Form
         {
             this.Close();
         }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void Login()
         {
             try
             {
@@ -35,13 +36,12 @@ namespace SmartShop.Desktop_Helper_Form
                                           FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
                         return;
                     }
-
+                    
                     if (userLogin.UserValidation(txtUser.EditValue.ToString(), txtPassword.EditValue.ToString()))
                     {
                         Settings.Default.UserName = txtUser.EditValue.ToString();
                         Settings.Default.LoginName = txtUser.EditValue.ToString();
                         Settings.Default.Password = txtPassword.EditValue.ToString();
-                        // SShopMainMenue mnuSells = new SShopMainMenue();
                         SalesMainForm mnuSells = new SalesMainForm();
                         this.Hide();
                         mnuSells.ShowDialog();
@@ -56,6 +56,11 @@ namespace SmartShop.Desktop_Helper_Form
             {
                 XtraMessageBox.Show(exception.Message);
             }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login();
         }
 
         private void txtUser_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)

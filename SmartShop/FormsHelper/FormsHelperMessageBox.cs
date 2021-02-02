@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors;
+using SmartShop.Repository;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -46,6 +48,11 @@ namespace SmartShop.FormsHelper
                 Icon icon = Icon.FromHandle(bitmap.GetHicon());
                 return icon;
             }
+        }
+
+        internal static XtraMessageBoxArgs Show(ComapnySetupRepository comapnySetupRepository, string v1, string v2, DialogResult[] dialogResults, Icon icon)
+        {
+            throw new NotImplementedException();
         }
     }
 }

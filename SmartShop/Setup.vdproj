@@ -296,20 +296,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6565888A587348A890B204E7B21E6F0E"
-            {
-            "Name" = "8:SmartShop"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:"
-            "Folder" = "8:_DE817443CE304847A37977A3FE9B7AA7"
-            "WorkingFolder" = "8:_DE817443CE304847A37977A3FE9B7AA7"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {

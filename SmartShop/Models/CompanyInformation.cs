@@ -15,6 +15,8 @@ namespace SmartShop.Models
         public string CEO { get; set; }
         public DateTime AppInstallDate { get; set; }
         public string AppVersion { get; set; }
+        public bool IsDemo { get; set; }
+        public int Days { get; set; }
 
     }
 }
