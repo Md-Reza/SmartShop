@@ -84,6 +84,8 @@
             this.btnBank = new DevExpress.XtraBars.BarButtonItem();
             this.btnBankTransaction = new DevExpress.XtraBars.BarButtonItem();
             this.btnMonthStock = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnItemOrder = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -92,6 +94,7 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -119,7 +122,6 @@
             this.btnProduct = new DevExpress.XtraEditors.SimpleButton();
             this.btnBarcode = new DevExpress.XtraEditors.SimpleButton();
             this.btnPurchases = new DevExpress.XtraEditors.SimpleButton();
-            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
@@ -231,9 +233,10 @@
             this.btnBank,
             this.btnBankTransaction,
             this.btnMonthStock,
-            this.barButtonItem30});
+            this.barButtonItem30,
+            this.btnItemOrder});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 51;
+            this.ribbon.MaxItemId = 52;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.digitalTimer);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -608,6 +611,23 @@
             this.btnMonthStock.Name = "btnMonthStock";
             this.btnMonthStock.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMonthStock_ItemClick);
             // 
+            // barButtonItem30
+            // 
+            this.barButtonItem30.Caption = "Damage Entry";
+            this.barButtonItem30.Id = 50;
+            this.barButtonItem30.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem30.ImageOptions.SvgImage")));
+            this.barButtonItem30.Name = "barButtonItem30";
+            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
+            // 
+            // btnItemOrder
+            // 
+            this.btnItemOrder.Caption = "New Order";
+            this.btnItemOrder.Id = 51;
+            this.btnItemOrder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemOrder.ImageOptions.Image")));
+            this.btnItemOrder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemOrder.ImageOptions.LargeImage")));
+            this.btnItemOrder.Name = "btnItemOrder";
+            this.btnItemOrder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemOrder_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -660,7 +680,8 @@
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup14});
             this.ribbonPage4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPage4.ImageOptions.SvgImage")));
             this.ribbonPage4.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.ribbonPage4.Name = "ribbonPage4";
@@ -674,6 +695,12 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem30);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Sales Information";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnItemOrder);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            this.ribbonPageGroup14.Text = "Restaurent Product";
             // 
             // ribbonPage5
             // 
@@ -922,14 +949,6 @@
             this.btnPurchases.Text = "Purchases";
             this.btnPurchases.Click += new System.EventHandler(this.btnPurchases_Click);
             // 
-            // barButtonItem30
-            // 
-            this.barButtonItem30.Caption = "Damage Entry";
-            this.barButtonItem30.Id = 50;
-            this.barButtonItem30.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem30.ImageOptions.SvgImage")));
-            this.barButtonItem30.Name = "barButtonItem30";
-            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
-            // 
             // SalesMainForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -1055,5 +1074,7 @@
         private DevExpress.XtraBars.BarButtonItem btnMonthStock;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
+        private DevExpress.XtraBars.BarButtonItem btnItemOrder;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
     }
 }

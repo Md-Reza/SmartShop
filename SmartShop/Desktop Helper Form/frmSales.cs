@@ -58,7 +58,8 @@ namespace SmartShop.Desktop_Helper_Form
             txtProductCode.Focus();
             LoadCustomer();
             // SplashScreenManager.CloseForm();
-        }
+        }     
+
         public void LoadCustomer()
         {
             cmbCustomerName.Properties.DataSource = _custRepository.GetAllCustomer();
@@ -85,6 +86,8 @@ namespace SmartShop.Desktop_Helper_Form
         private void txtProductCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+            IEnumerable<ProductName> listOfProduct = _sellsRepository.GetByAllSellsProduct(Convert.ToString(txtProductCode.EditValue.ToString()));          
+            txtProductCode.EditValue = listOfProduct.ToList();
             if (txtProductCode.EditValue == null)
             {
                 XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Please scan product code first", "System Message", new[] { DialogResult.OK },
@@ -427,6 +430,14 @@ namespace SmartShop.Desktop_Helper_Form
         private void OpenForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadCustomer();
+        }
+
+        private void txtProductCode_TextChanged(object sender, EventArgs e)
+        {
+            IEnumerable<ProductName> listOfProduct = _sellsRepository.GetByAllSellsProducts();
+            if (txtProductCode.EditValue == null) return;
+            txtProductCode.EditValue = listOfProduct.ToList();
+
         }
     }
 }

@@ -19,12 +19,10 @@ namespace SmartShop.Repository
         public IEnumerable<ProductName> GetByAll(string code)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName where ProductCode=@code", new { code = @code });
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select ProductName as Name,* from ProductName where ProductCode=@code", new { code = @code });
             connection.Close();
             return returnValue;
         }
-
-
         public IEnumerable<ProductName> Get()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
@@ -37,6 +35,7 @@ namespace SmartShop.Repository
             p.VatPercent,
             p.DisCountPercent,
             p.ReorderLebel,
+            p.logo,
             p.CreateDate, 
             p.CategoryId,
             p.CompanyId,
@@ -65,7 +64,6 @@ namespace SmartShop.Repository
             connection.Close();
             return returnValue;
         }
-
         public IEnumerable<ProductName> GetAllProductWithStock()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
@@ -89,12 +87,9 @@ namespace SmartShop.Repository
                 p.Stock = s;
                 return p;
             }, splitOn: "CategoryName, SupplyerName,QtyBalance");
-
-
             connection.Close();
             return returnValue;
         }
-
         public IEnumerable<SupplyerInformation> GetAllSupplyerInformations()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
@@ -106,7 +101,7 @@ namespace SmartShop.Repository
         public IEnumerable<ProductName> GetAllProduct()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName ");
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select ProductName as Name,* from ProductName ");
             connection.Close();
             return returnValue;
         }
@@ -201,7 +196,51 @@ namespace SmartShop.Repository
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("ProductName_sp", new
-            { @Name = obj.Name, @Code = obj.ProductCode, @CatagoryId = obj.CategoryId, @CompanyId = obj.CompanyId, @ReorderLebel = obj.ReorderLebel, @logo = obj.logo, @Status = obj.Status, @ProductPrice = obj.PurchasePrice, @SellingPrice = obj.@SellingPrice, @VatPercent = obj.VatPercent, @Description = obj.Description, @StatementType = "Update" }, commandType: CommandType.StoredProcedure);
+            {   @Name = obj.Name, 
+                @CategoryId = obj.CategoryId, 
+                @CompanyId = obj.CompanyId, 
+                @ReorderLebel = obj.ReorderLebel, 
+                @logo = obj.logo,  
+                @PurchasePrice = obj.PurchasePrice, 
+                @SellingPrice = obj.@SellingPrice, 
+                @VatPercent = obj.VatPercent,
+                @Status = obj.Status,
+                @Description = obj.Description, 
+                @ColourId=obj.CategoryId,
+                @SizeId=obj.SizeId, 
+                @BrandId=obj.BrandId, 
+                @DisCountPercent=obj.DisCountPercent,
+                @ProductCode = obj.ProductCode,
+                @CreateById= obj.CreateById,
+                @StatementType = "Update"  }, 
+                commandType: CommandType.StoredProcedure);
+            connection.Close();
+        }
+
+        public void UpdateProducts(ProductName obj)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            connection.Open();
+            connection.Execute("ProductName_sp", new
+            {
+                @Name = obj.Name,
+                @CategoryId = obj.CategoryId,
+                @CompanyId = obj.CompanyId,
+                @ReorderLebel = obj.ReorderLebel,
+                @logo = obj.logo,
+                @PurchasePrice = obj.PurchasePrice,
+                @SellingPrice = obj.@SellingPrice,
+                @VatPercent = obj.VatPercent,
+                @Status = obj.Status,
+                @Description = obj.Description,
+                @ColourId = obj.CategoryId,
+                @SizeId = obj.SizeId,
+                @BrandId = obj.BrandId,
+                @DisCountPercent = obj.DisCountPercent,
+                @ProductCode = obj.ProductCode,
+                @StatementType = "Update"
+            },
+                commandType: CommandType.StoredProcedure);
             connection.Close();
         }
 
@@ -218,6 +257,18 @@ namespace SmartShop.Repository
         public IEnumerable<ProductName> All(object id)
         {
             throw new NotImplementedException();
+        }
+        public IEnumerable<ProductName> GetByProductCodeName(string name)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(
+                    @"select *
+                    from
+                    (
+                    select ProductCode+' '+ProductName as ProCodeName,* from ProductName )a
+                    where a.ProCodeName like('%@ProCodeName%')", new { @ProCodeName = name });
+            connection.Close();
+            return returnValue;
         }
     }
 }

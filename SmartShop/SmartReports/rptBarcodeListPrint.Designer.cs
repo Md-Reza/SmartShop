@@ -32,10 +32,10 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -46,7 +46,7 @@
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 39.6667F;
+            this.BottomMargin.HeightF = 40F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -55,36 +55,22 @@
             this.xrTable1,
             this.xrBarCode1});
             this.Detail.Font = new System.Drawing.Font("Arial", 8F);
-            this.Detail.HeightF = 73.33333F;
-            this.Detail.MultiColumn.ColumnCount = 8;
+            this.Detail.HeightF = 78.16666F;
+            this.Detail.MultiColumn.ColumnCount = 7;
             this.Detail.MultiColumn.Layout = DevExpress.XtraPrinting.ColumnLayout.AcrossThenDown;
             this.Detail.MultiColumn.Mode = DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount;
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseFont = false;
             // 
-            // xrBarCode1
-            // 
-            this.xrBarCode1.AutoModule = true;
-            this.xrBarCode1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ProductCode]")});
-            this.xrBarCode1.Font = new System.Drawing.Font("Arial", 8F);
-            this.xrBarCode1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrBarCode1.Name = "xrBarCode1";
-            this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
-            this.xrBarCode1.ShowText = false;
-            this.xrBarCode1.SizeF = new System.Drawing.SizeF(97.37501F, 45.83333F);
-            this.xrBarCode1.StylePriority.UseFont = false;
-            this.xrBarCode1.Symbology = code128Generator1;
-            // 
             // xrTable1
             // 
             this.xrTable1.Font = new System.Drawing.Font("Arial", 8F);
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(10F, 45.83333F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 5.833333F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(87.37501F, 17.5F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(101.2857F, 17.5F);
             this.xrTable1.StylePriority.UseFont = false;
             // 
             // xrTableRow1
@@ -98,11 +84,26 @@
             // 
             this.xrTableCell1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Price \'+ [SellingPrice]")});
+            this.xrTableCell1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
             this.xrTableCell1.Multiline = true;
             this.xrTableCell1.Name = "xrTableCell1";
+            this.xrTableCell1.StylePriority.UseFont = false;
             this.xrTableCell1.Text = "xrTableCell1";
             this.xrTableCell1.TextFormatString = "{0:n1}";
             this.xrTableCell1.Weight = 1D;
+            // 
+            // xrBarCode1
+            // 
+            this.xrBarCode1.AutoModule = true;
+            this.xrBarCode1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ProductCode]")});
+            this.xrBarCode1.Font = new System.Drawing.Font("Arial", 8F);
+            this.xrBarCode1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 23.33333F);
+            this.xrBarCode1.Name = "xrBarCode1";
+            this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
+            this.xrBarCode1.SizeF = new System.Drawing.SizeF(111.2857F, 54.83332F);
+            this.xrBarCode1.StylePriority.UseFont = false;
+            this.xrBarCode1.Symbology = code128Generator1;
             // 
             // rptBarcodeListPrint
             // 
@@ -111,8 +112,8 @@
             this.BottomMargin,
             this.Detail});
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(34, 37, 38, 40);
-            this.Version = "19.2";
+            this.Margins = new System.Drawing.Printing.Margins(33, 37, 38, 40);
+            this.Version = "20.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

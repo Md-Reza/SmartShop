@@ -61,6 +61,7 @@ namespace SmartShop.Desktop_Helper_Form
             cmbBrand.EditValue = list.BrandId;
             cmbSize.EditValue = list.SizeId;
             txtDiscountPercent.EditValue = list.DisCountPercent;
+            pictureEdit1.EditValue = list.logo;
         }
 
         public void ProductNameUpdate(ProductName code)
@@ -95,23 +96,6 @@ namespace SmartShop.Desktop_Helper_Form
             if (dbAccess == Command.DbCommand.Create)
             {
                 ProductName product = new ProductName()
-                //product.Name = txtName.EditValue.ToString();
-                //product.CategoryId = (int)cmbCategoryName.EditValue;
-                //product.CompanyId = (int)cmbSupplyerName.EditValue;
-                //product.ReorderLebel = Convert.ToInt16(txtReorderLevel.EditValue);
-                //product.PurchasePrice = Convert.ToDecimal(txtProductPrice.EditValue);
-                //product.SellingPrice = Convert.ToDecimal(txtSellingPrice.EditValue);
-                //product.VatPercent = Convert.ToDecimal(txtVat.EditValue);
-                //product.logo = (byte[])pictureEdit1.EditValue;
-                //product.Description = (string)txtDescription.EditValue;
-                //product.Status = Connection.ValueCheck(chkActivation).ToString();
-                //product.BrandId = Convert.ToInt16(cmbBrand.EditValue);
-                //product.ColurId = (int)cmbColour.EditValue;
-                //product.SizeId = (int)cmbSize.EditValue;
-                ////DisCountPercent = Convert.ToDecimal(txtDiscountPercent.EditValue),
-                //product.DisCountPercent = (decimal)txtDiscountPercent.EditValue;
-                //product.CreateById = Settings.Default.UserName;
-
                 {
                     Name = txtName.EditValue.ToString(),
                     CategoryId = (int)cmbCategoryName.EditValue,
@@ -122,11 +106,10 @@ namespace SmartShop.Desktop_Helper_Form
                     VatPercent = Convert.ToDecimal(txtVat.EditValue),
                     logo = (byte[])pictureEdit1.EditValue,
                     Description = (string)txtDescription.EditValue,
-                    Status =(bool)chkActivation.EditValue,
+                    Status = (bool)chkActivation.EditValue,
                     BrandId = Convert.ToInt16(cmbBrand.EditValue),
                     ColurId = Convert.ToInt16(cmbColour.EditValue),
                     SizeId = Convert.ToInt16(cmbSize.EditValue),
-                    //DisCountPercent = Convert.ToDecimal(txtDiscountPercent.EditValue),
                     DisCountPercent = Convert.ToDecimal(txtDiscountPercent.EditValue),
                     CreateById = Settings.Default.UserName
                 };
@@ -136,33 +119,76 @@ namespace SmartShop.Desktop_Helper_Form
             }
             else if (dbAccess == Command.DbCommand.Update)
             {
-
+                try
+                {
+                    ProductName product = new ProductName()
+                    {
+                        Name = txtName.EditValue.ToString(),
+                        ProductCode=txtCode.EditValue.ToString(),
+                        CategoryId = (int)cmbCategoryName.EditValue,
+                        CompanyId = (int)cmbSupplyerName.EditValue,
+                        ReorderLebel = Convert.ToInt16(txtReorderLevel.EditValue),
+                        PurchasePrice = Convert.ToDecimal(txtProductPrice.EditValue),
+                        SellingPrice = Convert.ToDecimal(txtSellingPrice.EditValue),
+                        VatPercent = Convert.ToDecimal(txtVat.EditValue),
+                        logo = (byte[])pictureEdit1.EditValue,
+                        Description = (string)txtDescription.EditValue,
+                        Status = (bool)chkActivation.EditValue,
+                        BrandId = Convert.ToInt16(cmbBrand.EditValue),
+                        ColurId = Convert.ToInt16(cmbColour.EditValue),
+                        SizeId = Convert.ToInt16(cmbSize.EditValue),
+                        DisCountPercent = Convert.ToDecimal(txtDiscountPercent.EditValue),
+                        CreateById = Settings.Default.UserName
+                    };
+                    productNameRepository.Update(product);
+                    XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Smart Shop Alert:- Product update successfully", "System Message", new[] { DialogResult.OK },
+                           FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    Console.Beep(5000, 800);
+                    XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, ex.Message.ToString(), "System Message", new[] { DialogResult.OK },
+                            FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                    return;
+                }
             }
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            ProductNameUpdate(new ProductName()
+            try
             {
-                Name = txtName.EditValue.ToString(),
-                CompanyId = Convert.ToInt16(cmbSupplyerName.EditValue),
-                CategoryId = Convert.ToInt16(cmbCategoryName.EditValue),
-                PurchasePrice = Convert.ToDecimal(txtProductPrice.EditValue),
-                SellingPrice = Convert.ToDecimal(txtSellingPrice.EditValue),
-                VatPercent = Convert.ToDecimal(txtVat.EditValue),
-                ReorderLebel = Convert.ToInt16(txtReorderLevel.EditValue),
-                logo = (byte[])pictureEdit1.EditValue,
-                Description = txtDescription.EditValue.ToString(),
-                ProductCode = txtCode.EditValue.ToString(),
-                Status =(bool) chkActivation.EditValue,
-                BrandId = (int)cmbBrand.EditValue,
-                ColurId = (int)cmbColour.EditValue,
-                SizeId = (int)cmbSize.EditValue,
-                DisCountPercent = Convert.ToDecimal(txtDiscountPercent.EditValue),
-                CreateById = Settings.Default.LoginName
-            });
-            XtraMessageBox.Show("Smart Shop Alert:- Product update successfully");
+                ProductNameUpdate(new ProductName()
+                {
+                    Name = txtName.EditValue.ToString(),
+                    CompanyId = Convert.ToInt16(cmbSupplyerName.EditValue),
+                    CategoryId = Convert.ToInt16(cmbCategoryName.EditValue),
+                    PurchasePrice = Convert.ToDecimal(txtProductPrice.EditValue),
+                    SellingPrice = Convert.ToDecimal(txtSellingPrice.EditValue),
+                    VatPercent = Convert.ToDecimal(txtVat.EditValue),
+                    ReorderLebel = Convert.ToInt16(txtReorderLevel.EditValue),
+                    logo = (byte[])pictureEdit1.EditValue,
+                    Description = txtDescription.EditValue.ToString(),
+                    ProductCode = txtCode.EditValue.ToString(),
+                    Status = (bool)chkActivation.EditValue,
+                    BrandId = (int)cmbBrand.EditValue,
+                    ColurId = (int)cmbColour.EditValue,
+                    SizeId = (int)cmbSize.EditValue,
+                    DisCountPercent = Convert.ToDecimal(txtDiscountPercent.EditValue)
+                });
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Smart Shop Alert:- Product update successfully", "System Message", new[] { DialogResult.OK },
+                       FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                return;
+            }
+            catch (Exception ex)
+            {
+                Console.Beep(5000, 800);
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, ex.Message.ToString(), "System Message", new[] { DialogResult.OK },
+                        FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                return;
+            }
         }
-        
+
         private void OpenForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             cmbSupplyerName.Properties.DataSource = productNameRepository.GetAllSupplyerInformations().ToList();

@@ -70,6 +70,13 @@ namespace SmartShop.Repository
             _connection.Close();
             return returnValue;
         }
+        public IEnumerable<ProductName> GetByAllSellsProducts()
+        {
+            _connection.Open();
+            IEnumerable<ProductName> returnValue = _connection.Query<Models.ProductName>(@"Select id,ProductCode,ProductName as Name,CategoryId,CompanyId,ReorderLebel,logo,PurchasePrice,SellingPrice,VatPercent,Description,ColurId,SizeId,BrandId,DisCountPercent from ProductName");
+            _connection.Close();
+            return returnValue;
+        }
         public IEnumerable<SellesChild> GetByInvoiceSells(string PurchaseInvoice)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());

@@ -294,5 +294,11 @@ namespace SmartShop.Desktop_Forms_Control
             frmDamageListEntry damageListEntry = new frmDamageListEntry();
             damageListEntry.ShowDialog();
         }
+
+        private void btnItemOrder_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmResOrderItem frmResOrderItem = new frmResOrderItem();
+            OpenForm(frmResOrderItem);
+        }
     }
 }

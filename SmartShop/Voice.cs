@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Speech.Synthesis;
+﻿using System.Speech.Synthesis;
 
 namespace SmartShop
 {

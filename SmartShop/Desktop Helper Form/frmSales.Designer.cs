@@ -528,35 +528,35 @@
             // 
             // txtInvoiceNo
             // 
-            this.txtInvoiceNo.Location = new System.Drawing.Point(691, 67);
+            this.txtInvoiceNo.Location = new System.Drawing.Point(692, 67);
             this.txtInvoiceNo.Name = "txtInvoiceNo";
             this.txtInvoiceNo.Properties.ReadOnly = true;
-            this.txtInvoiceNo.Size = new System.Drawing.Size(197, 23);
+            this.txtInvoiceNo.Size = new System.Drawing.Size(196, 23);
             this.txtInvoiceNo.StyleController = this.layoutControl1;
             this.txtInvoiceNo.TabIndex = 5;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(135, 40);
+            this.txtUserName.Location = new System.Drawing.Point(136, 40);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.ReadOnly = true;
-            this.txtUserName.Size = new System.Drawing.Size(432, 23);
+            this.txtUserName.Size = new System.Drawing.Size(431, 23);
             this.txtUserName.StyleController = this.layoutControl1;
             this.txtUserName.TabIndex = 7;
             // 
             // txtComputerName
             // 
-            this.txtComputerName.Location = new System.Drawing.Point(691, 40);
+            this.txtComputerName.Location = new System.Drawing.Point(692, 40);
             this.txtComputerName.Name = "txtComputerName";
             this.txtComputerName.Properties.ReadOnly = true;
-            this.txtComputerName.Size = new System.Drawing.Size(197, 23);
+            this.txtComputerName.Size = new System.Drawing.Size(196, 23);
             this.txtComputerName.StyleController = this.layoutControl1;
             this.txtComputerName.TabIndex = 8;
             // 
             // txtDate
             // 
             this.txtDate.EditValue = null;
-            this.txtDate.Location = new System.Drawing.Point(135, 67);
+            this.txtDate.Location = new System.Drawing.Point(136, 67);
             this.txtDate.Name = "txtDate";
             this.txtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -568,19 +568,20 @@
             this.txtDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtDate.Properties.Mask.EditMask = "dd-MMM-yyyy hh:mm:ss tt";
             this.txtDate.Properties.ReadOnly = true;
-            this.txtDate.Size = new System.Drawing.Size(432, 23);
+            this.txtDate.Size = new System.Drawing.Size(431, 23);
             this.txtDate.StyleController = this.layoutControl1;
             this.txtDate.TabIndex = 4;
             // 
             // txtProductCode
             // 
-            this.txtProductCode.Location = new System.Drawing.Point(135, 94);
+            this.txtProductCode.Location = new System.Drawing.Point(136, 94);
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductCode.Properties.NullText = "Scan Product Code";
-            this.txtProductCode.Size = new System.Drawing.Size(432, 23);
+            this.txtProductCode.Size = new System.Drawing.Size(431, 23);
             this.txtProductCode.StyleController = this.layoutControl1;
             this.txtProductCode.TabIndex = 9;
+            this.txtProductCode.TextChanged += new System.EventHandler(this.txtProductCode_TextChanged);
             this.txtProductCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductCode_KeyDown);
             // 
             // btnNew
@@ -611,7 +612,7 @@
             // txtQty
             // 
             this.txtQty.EditValue = "1";
-            this.txtQty.Location = new System.Drawing.Point(691, 94);
+            this.txtQty.Location = new System.Drawing.Point(692, 94);
             this.txtQty.Name = "txtQty";
             this.txtQty.Properties.Appearance.BackColor = System.Drawing.Color.Tomato;
             this.txtQty.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -623,31 +624,31 @@
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(1015, 435);
+            this.txtTotalAmount.Location = new System.Drawing.Point(1016, 435);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtTotalAmount.Properties.ReadOnly = true;
-            this.txtTotalAmount.Size = new System.Drawing.Size(220, 23);
+            this.txtTotalAmount.Size = new System.Drawing.Size(219, 23);
             this.txtTotalAmount.StyleController = this.layoutControl1;
             this.txtTotalAmount.TabIndex = 17;
             // 
             // txtTotalQty
             // 
-            this.txtTotalQty.Location = new System.Drawing.Point(1015, 408);
+            this.txtTotalQty.Location = new System.Drawing.Point(1016, 408);
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTotalQty.Properties.Appearance.Options.UseBackColor = true;
             this.txtTotalQty.Properties.ReadOnly = true;
-            this.txtTotalQty.Size = new System.Drawing.Size(220, 23);
+            this.txtTotalQty.Size = new System.Drawing.Size(219, 23);
             this.txtTotalQty.StyleController = this.layoutControl1;
             this.txtTotalQty.TabIndex = 18;
             // 
             // txtPayAmount
             // 
-            this.txtPayAmount.Location = new System.Drawing.Point(1015, 462);
+            this.txtPayAmount.Location = new System.Drawing.Point(1016, 462);
             this.txtPayAmount.Name = "txtPayAmount";
-            this.txtPayAmount.Size = new System.Drawing.Size(220, 23);
+            this.txtPayAmount.Size = new System.Drawing.Size(219, 23);
             this.txtPayAmount.StyleController = this.layoutControl1;
             this.txtPayAmount.TabIndex = 19;
             this.txtPayAmount.EditValueChanged += new System.EventHandler(this.txtPayAmount_EditValueChanged);
@@ -655,12 +656,12 @@
             // 
             // txtReturnAmount
             // 
-            this.txtReturnAmount.Location = new System.Drawing.Point(1015, 516);
+            this.txtReturnAmount.Location = new System.Drawing.Point(1016, 516);
             this.txtReturnAmount.Name = "txtReturnAmount";
             this.txtReturnAmount.Properties.Appearance.BackColor = System.Drawing.Color.LightCoral;
             this.txtReturnAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtReturnAmount.Properties.ReadOnly = true;
-            this.txtReturnAmount.Size = new System.Drawing.Size(220, 23);
+            this.txtReturnAmount.Size = new System.Drawing.Size(219, 23);
             this.txtReturnAmount.StyleController = this.layoutControl1;
             this.txtReturnAmount.TabIndex = 20;
             // 
@@ -688,9 +689,9 @@
             // 
             // txtMobileNo
             // 
-            this.txtMobileNo.Location = new System.Drawing.Point(1015, 204);
+            this.txtMobileNo.Location = new System.Drawing.Point(1016, 204);
             this.txtMobileNo.Name = "txtMobileNo";
-            this.txtMobileNo.Size = new System.Drawing.Size(220, 23);
+            this.txtMobileNo.Size = new System.Drawing.Size(219, 23);
             this.txtMobileNo.StyleController = this.layoutControl1;
             this.txtMobileNo.TabIndex = 24;
             // 
@@ -719,15 +720,15 @@
             // 
             // txtReInvoice
             // 
-            this.txtReInvoice.Location = new System.Drawing.Point(1368, 743);
+            this.txtReInvoice.Location = new System.Drawing.Point(1369, 743);
             this.txtReInvoice.Name = "txtReInvoice";
-            this.txtReInvoice.Size = new System.Drawing.Size(136, 23);
+            this.txtReInvoice.Size = new System.Drawing.Size(135, 23);
             this.txtReInvoice.StyleController = this.layoutControl1;
             this.txtReInvoice.TabIndex = 27;
             // 
             // cmbCustomerName
             // 
-            this.cmbCustomerName.Location = new System.Drawing.Point(1015, 173);
+            this.cmbCustomerName.Location = new System.Drawing.Point(1016, 173);
             this.cmbCustomerName.Name = "cmbCustomerName";
             this.cmbCustomerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -738,30 +739,30 @@
             this.cmbCustomerName.Properties.NullText = "";
             this.cmbCustomerName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbCustomerName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSuggest;
-            this.cmbCustomerName.Size = new System.Drawing.Size(188, 23);
+            this.cmbCustomerName.Size = new System.Drawing.Size(187, 23);
             this.cmbCustomerName.StyleController = this.layoutControl1;
             this.cmbCustomerName.TabIndex = 23;
             this.cmbCustomerName.EditValueChanged += new System.EventHandler(this.cmbCustomerName_EditValueChanged);
             // 
             // txtCustomerDues
             // 
-            this.txtCustomerDues.Location = new System.Drawing.Point(1015, 231);
+            this.txtCustomerDues.Location = new System.Drawing.Point(1016, 231);
             this.txtCustomerDues.Name = "txtCustomerDues";
             this.txtCustomerDues.Properties.Appearance.BackColor = System.Drawing.Color.LightCoral;
             this.txtCustomerDues.Properties.Appearance.Options.UseBackColor = true;
             this.txtCustomerDues.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCustomerDues.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtCustomerDues.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtCustomerDues.Size = new System.Drawing.Size(220, 23);
+            this.txtCustomerDues.Size = new System.Drawing.Size(219, 23);
             this.txtCustomerDues.StyleController = this.layoutControl1;
             this.txtCustomerDues.TabIndex = 28;
             // 
             // txtDueAmount
             // 
-            this.txtDueAmount.Location = new System.Drawing.Point(1015, 489);
+            this.txtDueAmount.Location = new System.Drawing.Point(1016, 489);
             this.txtDueAmount.Name = "txtDueAmount";
             this.txtDueAmount.Properties.ReadOnly = true;
-            this.txtDueAmount.Size = new System.Drawing.Size(131, 23);
+            this.txtDueAmount.Size = new System.Drawing.Size(130, 23);
             this.txtDueAmount.StyleController = this.layoutControl1;
             this.txtDueAmount.TabIndex = 29;
             // 
@@ -894,7 +895,7 @@
             this.layoutControlItem7.Control = this.txtQty;
             this.layoutControlItem7.Location = new System.Drawing.Point(556, 54);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(186, 31);
+            this.layoutControlItem7.Size = new System.Drawing.Size(187, 31);
             this.layoutControlItem7.Text = "Qty";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(117, 16);
             // 
@@ -1076,9 +1077,9 @@
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(742, 54);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(743, 54);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(63, 31);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(62, 31);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup3
@@ -1201,6 +1202,7 @@
             this.Controls.Add(this.xtraTabControl2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            //this.Name = "frmSales";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales";
