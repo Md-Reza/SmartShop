@@ -646,7 +646,7 @@
             // Name
             // 
             this.Name.Caption = "Product Name";
-            this.Name.FieldName = "Name";
+            this.Name.FieldName = "ProductName";
             this.Name.MinWidth = 25;
             this.Name.Name = "Name";
             this.Name.OptionsColumn.AllowEdit = false;
@@ -1489,7 +1489,7 @@
             this.Controls.Add(this.layoutControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            //this.Name = "frmNewSells";
+           // this.Name = "frmNewSells";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Smart Shop : New Sales";
             this.Load += new System.EventHandler(this.frmNewSells_Load);

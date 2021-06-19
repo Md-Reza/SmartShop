@@ -2,10 +2,10 @@
 
 namespace SmartShop.Models
 {
-    public class ProductName : BaseEntity
+    public class Products : BaseEntity
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string ProductName { get; set; }
         public string ProductCode { get; set; }
         public int CategoryId { get; set; }
         public int CompanyId { get; set; }

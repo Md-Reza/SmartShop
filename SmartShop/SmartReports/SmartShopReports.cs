@@ -32,7 +32,7 @@ namespace SmartShop.SmartReports
         {
             return _smartShopReport.GetCompanyInformation();
         }
-        public static IEnumerable<ProductName> GetAllProductBarcode()
+        public static IEnumerable<Products> GetAllProductBarcode()
         {
             return _smartShopReport.GetAllProductBarcode();
         }

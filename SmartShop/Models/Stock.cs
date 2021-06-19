@@ -4,7 +4,7 @@
     {
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
-        public ProductName Name { get; set; }
+        public Products Name { get; set; }
         public SupplyerInformation SupplyerInformation { get; set; }
         public string CompanyId { get; set; }
         public string CategoryId { get; set; }

@@ -53,7 +53,6 @@ namespace SmartShop.Repository
             connection.Execute("SupplyerInformation", new
             { @Name = obj.SupplyerName, @Address = obj.Address, @ContactPerson = obj.ContactPerson, @ContactPersonMobileNo = obj.ContactPersonMobileNo, @Mobile = obj.Mobile, @Email = obj.Email, @Status = obj.Status, @logo = obj.Logo, @StatementType = "Create" }, commandType: CommandType.StoredProcedure);
             connection.Close();
-
         }
 
         public IEnumerable<SupplyerInformation> GetSupplyerData()

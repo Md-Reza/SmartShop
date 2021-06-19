@@ -12,7 +12,7 @@ namespace SmartShop.Desktop_Helper_Form
 {
     public partial class frmBarcodeCreate : DevExpress.XtraEditors.XtraForm
     {
-        IBaseRepository<ProductName> baseRepository = new ProductNameRepository();
+        IBaseRepository<Products> baseRepository = new ProductNameRepository();
         public frmBarcodeCreate()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace SmartShop.Desktop_Helper_Form
         }
         private void btnProcess_Click(object sender, System.EventArgs e)
         {
-            List<ProductName> productNames = new List<ProductName>();
+            List<Products> productNames = new List<Products>();
             int[] selectedRowHandles = gridView1.GetSelectedRows();
             int Count = Convert.ToInt16(txtBarcodeNo.EditValue);
             if (gridView1.SelectedRowsCount > 0)
@@ -39,7 +39,7 @@ namespace SmartShop.Desktop_Helper_Form
                     {
                         for (int i = 0; i < Count; i++)
                         {
-                            productNames.Add(new ProductName()
+                            productNames.Add(new Products()
                             {
                                 ProductCode = gridView1.GetRowCellValue(items, ProductCode).ToString(),
                                 SellingPrice = Convert.ToDecimal(gridView1.GetRowCellValue(items, SellingPrice))

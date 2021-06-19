@@ -66,11 +66,11 @@ namespace SmartShop.SmartReports.ReportsRepositories
                     INNER JOIN dbo.SellsParent AS sp ON sc.SellsInvoice = sp.SellsInvoice 
                    where cast(sp.SellsDate as date)>=cast( '{SellsDateF}' as date)" + $@" and cast(sp.SellsDate as date)<=cast( '{SellsDateT}' as date)";
 
-            IEnumerable<SellesChild> returnValue =_connection.Query<SellesChild, SalesReturn, ProductName, SellsParent, SellesChild>(sql, map:
+            IEnumerable<SellesChild> returnValue =_connection.Query<SellesChild, SalesReturn, Products, SellsParent, SellesChild>(sql, map:
                     (sc, ret, pn, sp) =>
                     {
                         sc.SalesReturn=ret;
-                        sc.ProductName = pn;
+                        sc.Products = pn;
                         sc.SellsParent = sp;
                         return sc;
                     }, splitOn: "ReturnQty,Name,DueAmount");

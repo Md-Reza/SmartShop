@@ -15,7 +15,7 @@ namespace SmartShop.SmartReports.ReportsRepositories
             _connection.Close();
         }
 
-        public IEnumerable<ProductName> GetAllProductBarcode()
+        public IEnumerable<Products> GetAllProductBarcode()
         {
             throw new NotImplementedException();
         }

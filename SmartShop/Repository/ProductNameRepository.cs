@@ -8,7 +8,7 @@ using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Repository
 {
-    public class ProductNameRepository : IDisposable, IBaseRepository<ProductName>
+    public class ProductNameRepository : IDisposable, IBaseRepository<Products>
     {
         SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
         public void Dispose()
@@ -16,19 +16,19 @@ namespace SmartShop.Repository
             connection.Dispose();
         }
 
-        public IEnumerable<ProductName> GetByAll(string code)
+        public IEnumerable<Products> GetByAll(string code)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select ProductName as Name,* from ProductName where ProductCode=@code", new { code = @code });
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"Select ProductName as Name,* from ProductName where ProductCode=@code", new { code = @code });
             connection.Close();
             return returnValue;
         }
-        public IEnumerable<ProductName> Get()
+        public IEnumerable<Products> Get()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName, CategoriesSetup, SupplyerInformation, Brand, Colour, Size, ProductName>(@"Select 
+            IEnumerable<Products> returnValue = connection.Query<Models.Products, CategoriesSetup, SupplyerInformation, Brand, Colour, Size, Products>(@"Select 
             p.ProductCode,            
-            p.ProductName as Name,
+            p.ProductName,
             p.Description,
             p.PurchasePrice,
             p.SellingPrice,
@@ -64,12 +64,12 @@ namespace SmartShop.Repository
             connection.Close();
             return returnValue;
         }
-        public IEnumerable<ProductName> GetAllProductWithStock()
+        public IEnumerable<Products> GetAllProductWithStock()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName, CategoriesSetup, SupplyerInformation,Stock,ProductName>(@"select 
+            IEnumerable<Products> returnValue = connection.Query<Models.Products, CategoriesSetup, SupplyerInformation,Stock,Products>(@"select 
                         p.ProductCode,
-                        p.ProductName as Name,
+                        p.ProductName,
                         p.PurchasePrice,
                         p.SellingPrice ,
                         p.VatPercent,
@@ -98,33 +98,33 @@ namespace SmartShop.Repository
             return returnValue;
         }
 
-        public IEnumerable<ProductName> GetAllProduct()
+        public IEnumerable<Products> GetAllProduct()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select ProductName as Name,* from ProductName ");
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"Select ProductName as Name,* from ProductName ");
             connection.Close();
             return returnValue;
         }
-        public IEnumerable<ProductName> GetByProductCode(string ProductCode)
+        public IEnumerable<Products> GetByProductCode(string ProductCode)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName where ProductCode=@ProductCode",new { ProductCode = @ProductCode });
-            connection.Close();
-            return returnValue;
-        }
-
-        public IEnumerable<ProductName> GetAllItem(string code)
-        {
-            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select SellingPrice from ProductName where ProductCode=@code", new { code = @code });
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"Select * from ProductName where ProductCode=@ProductCode",new { ProductCode = @ProductCode });
             connection.Close();
             return returnValue;
         }
 
-        public IEnumerable<ProductName> GetAllPrice(string code)
+        public IEnumerable<Products> GetAllItem(string code)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<ProductName>(@"Select SellingPrice from ProductName where ProductCode=@code", new { code = @code });
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"Select SellingPrice from ProductName where ProductCode=@code", new { code = @code });
+            connection.Close();
+            return returnValue;
+        }
+
+        public IEnumerable<Products> GetAllPrice(string code)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<Products> returnValue = connection.Query<Products>(@"Select SellingPrice from ProductName where ProductCode=@code", new { code = @code });
             connection.Close();
             return returnValue;
         }
@@ -151,26 +151,26 @@ namespace SmartShop.Repository
             return returnValue;
         }
 
-        public IEnumerable<ProductName> GetAllProductByCategories(string CatagoryId)
+        public IEnumerable<Products> GetAllProductByCategories(string CatagoryId)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"Select * from ProductName where CatagoryId=@CatagoryId", new { @CatagoryId = CatagoryId });
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"Select * from ProductName where CatagoryId=@CatagoryId", new { @CatagoryId = CatagoryId });
             connection.Close();
             return returnValue;
         }
 
-        public ProductName Get(object id)
+        public Products Get(object id)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(ProductName obj)
+        public void Insert(Products obj)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("ProductName_sp", new
             {
-                @Name = obj.Name,
+                @Name = obj.ProductName,
                 @ProductCode = obj.ProductCode,
                 @CategoryId = obj.CategoryId,
                 @CompanyId = obj.CompanyId,
@@ -191,12 +191,12 @@ namespace SmartShop.Repository
             connection.Close();
         }
 
-        public void Update(ProductName obj)
+        public void Update(Products obj)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("ProductName_sp", new
-            {   @Name = obj.Name, 
+            {   @Name = obj.ProductName, 
                 @CategoryId = obj.CategoryId, 
                 @CompanyId = obj.CompanyId, 
                 @ReorderLebel = obj.ReorderLebel, 
@@ -217,13 +217,13 @@ namespace SmartShop.Repository
             connection.Close();
         }
 
-        public void UpdateProducts(ProductName obj)
+        public void UpdateProducts(Products obj)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
             connection.Open();
             connection.Execute("ProductName_sp", new
             {
-                @Name = obj.Name,
+                @Name = obj.ProductName,
                 @CategoryId = obj.CategoryId,
                 @CompanyId = obj.CompanyId,
                 @ReorderLebel = obj.ReorderLebel,
@@ -254,19 +254,19 @@ namespace SmartShop.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ProductName> All(object id)
+        public IEnumerable<Products> All(object id)
         {
             throw new NotImplementedException();
         }
-        public IEnumerable<ProductName> GetByProductCodeName(string name)
+        public IEnumerable<Products> GetByProductCodeName(string name)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(
                     @"select *
                     from
                     (
                     select ProductCode+' '+ProductName as ProCodeName,* from ProductName )a
-                    where a.ProCodeName like('%@ProCodeName%')", new { @ProCodeName = name });
+                    where a.ProCodeName like(@ProCodeName)", new { @ProCodeName = name });
             connection.Close();
             return returnValue;
         }

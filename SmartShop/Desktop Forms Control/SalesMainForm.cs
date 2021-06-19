@@ -297,8 +297,9 @@ namespace SmartShop.Desktop_Forms_Control
 
         private void btnItemOrder_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmResOrderItem frmResOrderItem = new frmResOrderItem();
-            OpenForm(frmResOrderItem);
+            //frmResOrderItem frmResOrderItem = new frmResOrderItem();
+            FrmItemOrder frmItemOrder = new FrmItemOrder();
+            OpenForm(frmItemOrder);
         }
     }
 }

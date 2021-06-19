@@ -116,7 +116,7 @@
             // Name
             // 
             this.Name.Caption = "Name";
-            this.Name.FieldName = "Name";
+            this.Name.FieldName = "ProductName";
             this.Name.MinWidth = 25;
             this.Name.Name = "Name";
             this.Name.Visible = true;
@@ -166,7 +166,7 @@
             // txtBarcodeNo
             // 
             this.txtBarcodeNo.EditValue = "12";
-            this.txtBarcodeNo.Location = new System.Drawing.Point(118, 12);
+            this.txtBarcodeNo.Location = new System.Drawing.Point(119, 12);
             this.txtBarcodeNo.Name = "txtBarcodeNo";
             this.txtBarcodeNo.Properties.Appearance.Options.UseTextOptions = true;
             this.txtBarcodeNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -177,7 +177,7 @@
             this.txtBarcodeNo.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtBarcodeNo.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtBarcodeNo.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtBarcodeNo.Size = new System.Drawing.Size(206, 23);
+            this.txtBarcodeNo.Size = new System.Drawing.Size(205, 23);
             this.txtBarcodeNo.StyleController = this.layoutControl1;
             this.txtBarcodeNo.TabIndex = 4;
             // 
@@ -271,6 +271,7 @@
             this.Controls.Add(this.layoutControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            //this.Name = "frmBarcodeCreate";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barcode Create";

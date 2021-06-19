@@ -129,10 +129,10 @@ namespace SmartShop.Reports.ReportsRepositories
             return returnValue;
         }
 
-        public IEnumerable<ProductName> GetAllProductBarcode()
+        public IEnumerable<Products> GetAllProductBarcode()
         {
             _connection.Open();
-            IEnumerable<ProductName> returnValue = _connection.Query<Models.ProductName>(@"Select * from ProductName ");
+            IEnumerable<Products> returnValue = _connection.Query<Models.Products>(@"Select * from ProductName ");
             _connection.Close();
             return returnValue;
         }
@@ -160,10 +160,10 @@ namespace SmartShop.Reports.ReportsRepositories
             left join BrandTable as b on b.BrandId= s.BrandId
 			inner join SellsParent pr on s.SellsInvoice=pr.SellsInvoice
             where s.SellsInvoice= @SellsInvoice"; 
-            IEnumerable<SellesChild> returnValues = _connection.Query<SellesChild, ProductName, Size, Colour, Brand,SellsParent, SellesChild>(@sql,
+            IEnumerable<SellesChild> returnValues = _connection.Query<SellesChild, Products, Size, Colour, Brand,SellsParent, SellesChild>(@sql,
                 map: (s, p, sz,c,b,pr) =>
                 {
-                    s.ProductName = p;
+                    s.Products = p;
                     s.Size = sz;
                     s.Colour = c;
                     s.Brand = b;
@@ -263,10 +263,10 @@ namespace SmartShop.Reports.ReportsRepositories
             left join BrandTable as b on b.BrandId= s.BrandId
 			inner join SellsParent pr on s.SellsInvoice=pr.SellsInvoice
             where s.SellsInvoice= @SellsInvoice";
-            IEnumerable<SellesChild> returnValues = _connection.Query<SellesChild, ProductName, Size, Colour, Brand, SellsParent, SellesChild>(@sql,
+            IEnumerable<SellesChild> returnValues = _connection.Query<SellesChild, Products, Size, Colour, Brand, SellsParent, SellesChild>(@sql,
                 map: (s, p, sz, c, b, pr) =>
                 {
-                    s.ProductName = p;
+                    s.Products = p;
                     s.Size = sz;
                     s.Colour = c;
                     s.Brand = b;

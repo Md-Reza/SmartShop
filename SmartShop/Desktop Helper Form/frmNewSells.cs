@@ -16,7 +16,7 @@ namespace SmartShop.Desktop_Helper_Form
 {
     public partial class frmNewSells : DevExpress.XtraEditors.XtraForm
     {
-        IBaseRepository<ProductName> baseRepository = new ProductNameRepository();
+        IBaseRepository<Products> baseRepository = new ProductNameRepository();
         public List<SellesChild> SellesChild = new List<SellesChild>();
         SellsRepository _sellsRepository = new SellsRepository();
         ProductNameRepository productNameRepository = new ProductNameRepository();

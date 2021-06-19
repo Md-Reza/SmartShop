@@ -15,8 +15,8 @@ namespace SmartShop.Desktop_Forms_Control
 {
     public partial class frmResOrderItem : DevExpress.XtraEditors.XtraForm
     {
-        public List<ProductName> productName = new List<ProductName>();
-        IBaseRepository<ProductName> baseRepository = new ProductNameRepository();
+        public List<Products> productName = new List<Products>();
+        IBaseRepository<Products> baseRepository = new ProductNameRepository();
         ProductNameRepository productNameRepository = new ProductNameRepository();
         GalleryItemGroup group1 = new GalleryItemGroup();
 
@@ -63,7 +63,7 @@ namespace SmartShop.Desktop_Forms_Control
             {
                 galleryControl1.Gallery.Groups.Add(group1);
                 Image img1 = byteArrayToImage(item.logo);
-                group1.Items.Add(new GalleryItem(img1, item.ProductCode.ToString()+" "+item.Name.ToString(), item.SellingPrice.ToString()));
+                group1.Items.Add(new GalleryItem(img1, item.ProductCode.ToString()+" "+item.ProductName.ToString(), item.SellingPrice.ToString()));
             }
             galleryControl1.MouseClick += MouseClick_MouseClick;
         }
@@ -75,7 +75,7 @@ namespace SmartShop.Desktop_Forms_Control
             for (int i = 0; i <= group1.Items.ToList().Count - 1; i++)
             {
                 var ProInfo = group1;
-                //var list = productNameRepository.GetByProductCodeName(ProInfo).FirstOrDefault();
+               // var list = productNameRepository.GetByProductCodeName(ProInfo).FirstOrDefault();
                 //foreach (var item in list)
                 //{
 

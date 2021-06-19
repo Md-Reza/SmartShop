@@ -55,25 +55,25 @@ namespace SmartShop.Repository
         {
             throw new NotImplementedException();
         }
-        public IEnumerable<ProductName> GetByAll(string ProductCode)
+        public IEnumerable<Products> GetByAll(string ProductCode)
         {
             _connection.Open();
-            IEnumerable<ProductName> returnValue = _connection.Query<Models.ProductName>(@"Select * from ProductName where ProductCode=@ProductCode", new { ProductCode = @ProductCode });
+            IEnumerable<Products> returnValue = _connection.Query<Models.Products>(@"Select * from ProductName where ProductCode=@ProductCode", new { ProductCode = @ProductCode });
             _connection.Close();
             return returnValue;
         }
 
-        public IEnumerable<ProductName> GetByAllSellsProduct(string ProductCode)
+        public IEnumerable<Products> GetByAllSellsProduct(string ProductCode)
         {
             _connection.Open();
-            IEnumerable<ProductName> returnValue = _connection.Query<Models.ProductName>(@"Select id,ProductCode,ProductName as Name,CategoryId,CompanyId,ReorderLebel,logo,PurchasePrice,SellingPrice,VatPercent,Description,ColurId,SizeId,BrandId,DisCountPercent from ProductName where ProductCode=@ProductCode", new { ProductCode = @ProductCode });
+            IEnumerable<Products> returnValue = _connection.Query<Models.Products>(@"Select id,ProductCode,ProductName as Name,CategoryId,CompanyId,ReorderLebel,logo,PurchasePrice,SellingPrice,VatPercent,Description,ColurId,SizeId,BrandId,DisCountPercent from ProductName where ProductCode=@ProductCode", new { ProductCode = @ProductCode });
             _connection.Close();
             return returnValue;
         }
-        public IEnumerable<ProductName> GetByAllSellsProducts()
+        public IEnumerable<Products> GetByAllSellsProducts()
         {
             _connection.Open();
-            IEnumerable<ProductName> returnValue = _connection.Query<Models.ProductName>(@"Select id,ProductCode,ProductName as Name,CategoryId,CompanyId,ReorderLebel,logo,PurchasePrice,SellingPrice,VatPercent,Description,ColurId,SizeId,BrandId,DisCountPercent from ProductName");
+            IEnumerable<Products> returnValue = _connection.Query<Models.Products>(@"Select id,ProductCode,ProductName as Name,CategoryId,CompanyId,ReorderLebel,logo,PurchasePrice,SellingPrice,VatPercent,Description,ColurId,SizeId,BrandId,DisCountPercent from ProductName");
             _connection.Close();
             return returnValue;
         }

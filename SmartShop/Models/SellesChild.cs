@@ -30,7 +30,7 @@ namespace SmartShop.Models
         public int BenfitAmount { get; set; }
         public int ReturnAmt { get; set; }
         public int ReturnQty { get; set; }
-        public ProductName ProductName { get; set; }
+        public Products Products { get; set; }
         public CompanyInformation CompanyInformation { get; set; }
         public SellsParent SellsParent { get; set; }
         public DateTime SellsDate { get; set; }

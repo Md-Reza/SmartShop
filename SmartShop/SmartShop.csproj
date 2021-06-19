@@ -329,6 +329,12 @@
     <Compile Include="Desktop Forms Control\frmExpensesList.Designer.cs">
       <DependentUpon>frmExpensesList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desktop Forms Control\FrmItemOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Forms Control\FrmItemOrder.Designer.cs">
+      <DependentUpon>FrmItemOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desktop Forms Control\frmMonthWiseStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -518,12 +524,6 @@
     <Compile Include="Dtos\PurchaseCreateDto.cs" />
     <Compile Include="FormsHelper\FormsHelperMessageBox.cs" />
     <Compile Include="FormsHelper\SmartShopMessageBoxIcon.cs" />
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface\BankInterface.cs" />
     <Compile Include="Interface\BankTransactionInterface.cs" />
     <Compile Include="Interface\BusinessInterface.cs" />
@@ -575,7 +575,7 @@
     <Compile Include="Models\Designations.cs" />
     <Compile Include="Models\EmployeeInformation.cs" />
     <Compile Include="Models\ItemOrder.cs" />
-    <Compile Include="Models\ProductName.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Speak.cs" />
     <Compile Include="Models\Stock.cs" />
     <Compile Include="Models\SupplyerInformation.cs" />
@@ -767,6 +767,9 @@
     <EmbeddedResource Include="Desktop Forms Control\frmExpensesList.resx">
       <DependentUpon>frmExpensesList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Forms Control\FrmItemOrder.resx">
+      <DependentUpon>FrmItemOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Desktop Forms Control\frmMonthWiseStock.resx">
       <DependentUpon>frmMonthWiseStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -859,9 +862,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmUserRegistrationEntry.resx">
       <DependentUpon>frmUserRegistrationEntry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportsForm\frmReportsParaForm.resx">
       <DependentUpon>frmReportsParaForm.cs</DependentUpon>

@@ -22,7 +22,7 @@ namespace SmartShop.Models
         public string Status { get; set; }
         public string Comments { get; set; }
         public string VatPercent { get; set; }
-        public ProductName ProductName { get; set; }
+        public Products ProductName { get; set; }
         public CategoriesSetup CategoriesSetup { get; set; }
         public SupplyerInformation SupplyerInformation { get; set; }
     }

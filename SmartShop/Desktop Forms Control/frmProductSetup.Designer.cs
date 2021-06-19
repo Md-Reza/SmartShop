@@ -127,7 +127,7 @@
             // gProductName
             // 
             this.gProductName.Caption = "Product Name";
-            this.gProductName.FieldName = "Name";
+            this.gProductName.FieldName = "ProductName";
             this.gProductName.MinWidth = 25;
             this.gProductName.Name = "gProductName";
             this.gProductName.Visible = true;

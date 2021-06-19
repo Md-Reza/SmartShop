@@ -17,7 +17,7 @@ namespace SmartShop.Desktop_Forms_Control
             InitializeComponent();
             layoutControl1.AllowCustomization = false;
         }
-        IBaseRepository<ProductName> baseRepository = new ProductNameRepository();
+        IBaseRepository<Products> baseRepository = new ProductNameRepository();
         private void OpenForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadGrid();

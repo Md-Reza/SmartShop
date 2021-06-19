@@ -11,7 +11,7 @@ namespace SmartShop.SmartReports
         IEnumerable<CompanyInformation> GetCompanyInformation();
         IEnumerable<PurchaseChild> GetPurchaseByDate();
         IEnumerable<PurchaseParent> GetPurchaseHeaderDataByDate(string dateF, string dateT);
-        IEnumerable<ProductName> GetAllProductBarcode();
+        IEnumerable<Products> GetAllProductBarcode();
         IEnumerable<SellesChild> GetAllSellsByChildInvoice(string sellsInvoice);
         IEnumerable<SellsParent> GetAllSellsParentByInvoice(string sellsInvoice);
         IEnumerable<CompanyInformation> GetCompanyProfile();

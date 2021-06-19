@@ -86,7 +86,7 @@ namespace SmartShop.Desktop_Helper_Form
         private void txtProductCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
-            IEnumerable<ProductName> listOfProduct = _sellsRepository.GetByAllSellsProduct(Convert.ToString(txtProductCode.EditValue.ToString()));          
+            IEnumerable<Products> listOfProduct = _sellsRepository.GetByAllSellsProduct(Convert.ToString(txtProductCode.EditValue.ToString()));          
             txtProductCode.EditValue = listOfProduct.ToList();
             if (txtProductCode.EditValue == null)
             {
@@ -120,7 +120,7 @@ namespace SmartShop.Desktop_Helper_Form
             int Qty = Convert.ToInt32(txtQty.EditValue);
             if (totalQty > Qty)
             {
-                IEnumerable<ProductName> purchaseChildren = _sellsRepository.GetByAllSellsProduct(Convert.ToString(txtProductCode.EditValue.ToString()));
+                IEnumerable<Products> purchaseChildren = _sellsRepository.GetByAllSellsProduct(Convert.ToString(txtProductCode.EditValue.ToString()));
                 if (purchaseChildren.Any())
                 {
                     DataRow row = dataTable.NewRow();
@@ -128,7 +128,7 @@ namespace SmartShop.Desktop_Helper_Form
                     row["SellsInvoice"] = txtInvoiceNo.EditValue;
                     row["ProductCode"] = txtProductCode.EditValue.ToString();
                     row["SalesMonth"] = Convert.ToDateTime(txtDate.EditValue).ToString("yyyyMM");
-                    row["Name"] = purchaseChildren.FirstOrDefault().Name;
+                    row["Name"] = purchaseChildren.FirstOrDefault().ProductName;
                     row["ColurId"] = purchaseChildren.FirstOrDefault().ColurId;
                     row["SizeId"] = purchaseChildren.FirstOrDefault().SizeId;
                     row["BrandId"] = purchaseChildren.FirstOrDefault().BrandId;
@@ -434,7 +434,7 @@ namespace SmartShop.Desktop_Helper_Form
 
         private void txtProductCode_TextChanged(object sender, EventArgs e)
         {
-            IEnumerable<ProductName> listOfProduct = _sellsRepository.GetByAllSellsProducts();
+            IEnumerable<Products> listOfProduct = _sellsRepository.GetByAllSellsProducts();
             if (txtProductCode.EditValue == null) return;
             txtProductCode.EditValue = listOfProduct.ToList();
 

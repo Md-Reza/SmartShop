@@ -29,10 +29,10 @@ namespace SmartShop.Repository
             connection.Close();
             return returnValue;
         }
-        public IEnumerable<ProductName> GetItemOrderPrice(string Code)
+        public IEnumerable<Products> GetItemOrderPrice(string Code)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ProductName> returnValue = connection.Query<Models.ProductName>(@"select * from ProductName where code='" + Code + "'");
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"select * from ProductName where code='" + Code + "'");
             connection.Close();
             return returnValue;
         }
@@ -62,7 +62,7 @@ namespace SmartShop.Repository
         public IEnumerable<ItemOrder> GetAllItemOrder()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<ItemOrder> returnValue = connection.Query<Models.ItemOrder, ProductName, CategoriesSetup, SupplyerInformation, ItemOrder>
+            IEnumerable<ItemOrder> returnValue = connection.Query<Models.ItemOrder, Products, CategoriesSetup, SupplyerInformation, ItemOrder>
             (@"select a.* from
             (
             Select 

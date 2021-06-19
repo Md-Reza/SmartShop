@@ -13,7 +13,7 @@ namespace SmartShop.Desktop_Helper_Form
     {
         public Command.DbCommand dbAccess;
         public string code;
-        IBaseRepository<ProductName> baseRepository = new ProductNameRepository();
+        IBaseRepository<Products> baseRepository = new ProductNameRepository();
         IBaseRepository<CategoriesSetup> cateBaseRepository = new CategoriesRepository();
         ProductNameRepository productNameRepository = new ProductNameRepository();
         public frmProductNameEntry()
@@ -46,8 +46,8 @@ namespace SmartShop.Desktop_Helper_Form
 
         public void LoadProductInformation(string code)
         {
-            ProductName list = productNameRepository.GetByAll(code).FirstOrDefault();
-            txtName.EditValue = list.Name;
+            Products list = productNameRepository.GetByAll(code).FirstOrDefault();
+            txtName.EditValue = list.ProductName;
             txtCode.EditValue = list.ProductCode;
             cmbSupplyerName.EditValue = list.CompanyId;
             cmbCategoryName.EditValue = list.CategoryId;
@@ -64,7 +64,7 @@ namespace SmartShop.Desktop_Helper_Form
             pictureEdit1.EditValue = list.logo;
         }
 
-        public void ProductNameUpdate(ProductName code)
+        public void ProductNameUpdate(Products code)
         {
             baseRepository.Update(code);
         }
@@ -95,9 +95,9 @@ namespace SmartShop.Desktop_Helper_Form
 
             if (dbAccess == Command.DbCommand.Create)
             {
-                ProductName product = new ProductName()
+                Products product = new Products()
                 {
-                    Name = txtName.EditValue.ToString(),
+                    ProductName = txtName.EditValue.ToString(),
                     CategoryId = (int)cmbCategoryName.EditValue,
                     CompanyId = (int)cmbSupplyerName.EditValue,
                     ReorderLebel = Convert.ToInt16(txtReorderLevel.EditValue),
@@ -121,9 +121,9 @@ namespace SmartShop.Desktop_Helper_Form
             {
                 try
                 {
-                    ProductName product = new ProductName()
+                    Products product = new Products()
                     {
-                        Name = txtName.EditValue.ToString(),
+                        ProductName = txtName.EditValue.ToString(),
                         ProductCode=txtCode.EditValue.ToString(),
                         CategoryId = (int)cmbCategoryName.EditValue,
                         CompanyId = (int)cmbSupplyerName.EditValue,
@@ -158,9 +158,9 @@ namespace SmartShop.Desktop_Helper_Form
         {
             try
             {
-                ProductNameUpdate(new ProductName()
+                ProductNameUpdate(new Products()
                 {
-                    Name = txtName.EditValue.ToString(),
+                    ProductName = txtName.EditValue.ToString(),
                     CompanyId = Convert.ToInt16(cmbSupplyerName.EditValue),
                     CategoryId = Convert.ToInt16(cmbCategoryName.EditValue),
                     PurchasePrice = Convert.ToDecimal(txtProductPrice.EditValue),

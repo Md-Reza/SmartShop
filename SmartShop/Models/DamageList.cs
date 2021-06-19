@@ -9,7 +9,7 @@ namespace SmartShop.Models
         public SellsParent SellsParent { get; set; }
         public SellesChild SellesChild { get; set; }
         public string ProductCode { get; set; }
-        public ProductName Product { get; set; }
+        public Products Product { get; set; }
         public string ProductName { get; set; }
         public Stock Stock { get; set; }
         public int Qty { get; set; }
