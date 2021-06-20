@@ -190,24 +190,29 @@ namespace SmartShop.Desktop_Forms_Control
             if (buttonIndex == 1)
             {
                 XtraMessageBox.Show("Test...");
-                e.Button.Click += Click_Click;
             }
             else
             {
                 XtraMessageBox.Show("Test...222");
-                //e.Button.Click += Click_Click;
-                editor.Click += editor_Click;
+                int sum = 0;
+                int qty = 0;
+                int vat = 0;
+                int dis = 0;
+                for (int x = 0; x < gridView1.DataRowCount; x++)
+                {
+                    sum += Convert.ToInt32(gridView1.GetListSourceRowCellValue(x, gridView1.Columns["TotalAmount"]));
+                    qty += Convert.ToInt32(gridView1.GetListSourceRowCellValue(x, gridView1.Columns["Qty"]));
+                    vat += Convert.ToInt32(gridView1.GetListSourceRowCellValue(x, gridView1.Columns["VatAmount"]));
+                    dis += Convert.ToInt32(gridView1.GetListSourceRowCellValue(x, gridView1.Columns["DiscountAmount"]));
+
+                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Qty", qty++);
+                    gridView1.RefreshData();
+                    txtAmount.EditValue = sum;
+                    txtTotalQty.EditValue = qty;
+                    txtVatAmount.EditValue = vat;
+                    txtTotalDisCountAmount.EditValue = dis;
+                }
             }
-        }
-
-        private void editor_Click(object sender, EventArgs e)
-        {
-            gridView1.CellValueChanged += CellValueChanged_CellValueChanged;
-        }
-
-        private void Click_Click(object sender, EventArgs e)
-        {
-            gridView1.CellValueChanged += CellValueChanged_CellValueChanged;
         }
 
         private void CellValueChanged_CellValueChanged(object sender, CellValueChangedEventArgs e)
