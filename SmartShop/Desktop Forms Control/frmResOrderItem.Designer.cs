@@ -42,9 +42,10 @@ namespace SmartShop.Desktop_Forms_Control
             // galleryControl1
             // 
             this.galleryControl1.Controls.Add(this.galleryControlClient1);
-            this.galleryControl1.Location = new System.Drawing.Point(12, 12);
+            this.galleryControl1.Location = new System.Drawing.Point(15, 15);
+            this.galleryControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.galleryControl1.Name = "galleryControl1";
-            this.galleryControl1.Size = new System.Drawing.Size(1135, 694);
+            this.galleryControl1.Size = new System.Drawing.Size(1419, 868);
             this.galleryControl1.TabIndex = 0;
             this.galleryControl1.Text = "galleryControl1";
             // 
@@ -52,20 +53,24 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             this.galleryControlClient1.GalleryControl = this.galleryControl1;
             this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
-            this.galleryControlClient1.Size = new System.Drawing.Size(1110, 690);
+            this.galleryControlClient1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.galleryControlClient1.Size = new System.Drawing.Size(1394, 864);
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(1153, 14);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.Location = new System.Drawing.Point(1441, 18);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(543, 441);
+            this.gridControl1.Size = new System.Drawing.Size(679, 551);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 437;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -73,7 +78,7 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1708, 732);
+            this.ClientSize = new System.Drawing.Size(1716, 733);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.galleryControl1);
             this.Name = "frmResOrderItem";
