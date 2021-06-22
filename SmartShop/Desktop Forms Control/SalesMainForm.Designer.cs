@@ -843,7 +843,7 @@
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.BackColor = System.Drawing.Color.SeaGreen;
+            this.groupBox1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.btnCustomer);
             this.groupBox1.Controls.Add(this.btnsales);
@@ -863,17 +863,21 @@
             // 
             // btnCustomer
             // 
+            this.btnCustomer.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Appearance.Options.UseForeColor = true;
             this.btnCustomer.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCustomer.ImageOptions.SvgImage")));
             this.btnCustomer.Location = new System.Drawing.Point(6, 531);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnCustomer.Size = new System.Drawing.Size(115, 67);
+            this.btnCustomer.Size = new System.Drawing.Size(115, 74);
             this.btnCustomer.TabIndex = 1;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnsales
             // 
+            this.btnsales.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnsales.Appearance.Options.UseForeColor = true;
             this.btnsales.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnsales.ImageOptions.SvgImage")));
             this.btnsales.Location = new System.Drawing.Point(8, 81);
             this.btnsales.Name = "btnsales";
@@ -885,6 +889,8 @@
             // 
             // btnReports
             // 
+            this.btnReports.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnReports.Appearance.Options.UseForeColor = true;
             this.btnReports.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnReports.ImageOptions.SvgImage")));
             this.btnReports.Location = new System.Drawing.Point(6, 456);
             this.btnReports.Name = "btnReports";
@@ -896,6 +902,8 @@
             // 
             // btnStock
             // 
+            this.btnStock.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnStock.Appearance.Options.UseForeColor = true;
             this.btnStock.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnStock.ImageOptions.SvgImage")));
             this.btnStock.Location = new System.Drawing.Point(8, 381);
             this.btnStock.Name = "btnStock";
@@ -907,6 +915,8 @@
             // 
             // btnExpenses
             // 
+            this.btnExpenses.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnExpenses.Appearance.Options.UseForeColor = true;
             this.btnExpenses.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExpenses.ImageOptions.SvgImage")));
             this.btnExpenses.Location = new System.Drawing.Point(8, 306);
             this.btnExpenses.Name = "btnExpenses";
@@ -918,6 +928,8 @@
             // 
             // btnProduct
             // 
+            this.btnProduct.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnProduct.Appearance.Options.UseForeColor = true;
             this.btnProduct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnProduct.ImageOptions.SvgImage")));
             this.btnProduct.Location = new System.Drawing.Point(8, 231);
             this.btnProduct.Name = "btnProduct";
@@ -929,6 +941,8 @@
             // 
             // btnBarcode
             // 
+            this.btnBarcode.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnBarcode.Appearance.Options.UseForeColor = true;
             this.btnBarcode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBarcode.ImageOptions.SvgImage")));
             this.btnBarcode.Location = new System.Drawing.Point(8, 156);
             this.btnBarcode.Name = "btnBarcode";
@@ -940,6 +954,8 @@
             // 
             // btnPurchases
             // 
+            this.btnPurchases.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPurchases.Appearance.Options.UseForeColor = true;
             this.btnPurchases.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPurchases.ImageOptions.SvgImage")));
             this.btnPurchases.Location = new System.Drawing.Point(8, 6);
             this.btnPurchases.Name = "btnPurchases";

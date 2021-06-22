@@ -270,5 +270,17 @@ namespace SmartShop.Repository
             connection.Close();
             return returnValue;
         }
+        public IEnumerable<Products> GetByCategoryName(string name)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(
+                    @"select *
+                    from
+                    (
+                    select ProductCode+' '+ProductName as ProCodeName,* from ProductName )a
+                    where a.CategoryId in (Select Id from CategoriesTable where CategoryName like (@CategoryName))", new { @CategoryName = name });
+            connection.Close();
+            return returnValue;
+        }
     }
 }
