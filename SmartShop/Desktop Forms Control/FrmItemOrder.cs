@@ -2,6 +2,7 @@
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraLayout;
 using DevExpress.XtraSplashScreen;
+using SmartShop.Desktop_Helper_Form;
 using SmartShop.Models;
 using SmartShop.Repository;
 using System;
@@ -32,8 +33,8 @@ namespace SmartShop.Desktop_Forms_Control
         {
             listView1.Items.Clear();
             imageList.ImageSize = new System.Drawing.Size(130, 100);
-            
-            var productList = productNameRepository.Get();
+
+                var productList = productNameRepository.Get();
             
             foreach (var item in productList)
             {
@@ -44,11 +45,11 @@ namespace SmartShop.Desktop_Forms_Control
                     g.DrawRectangle(Pens.YellowGreen, 0, 0, img1.Width - 2, img1.Height - 2);
                 }
                 imageList.Images.Add(img1);
-
                 listView1.LargeImageList = imageList;
 
-                listView1.Items.Add(new ListViewItem(item.ProductCode.ToString() + " " + item.ProductName.ToString() + "\n " + item.SellingPrice.ToString(), index));
+                listView1.Items.Add(new ListViewItem(item.ProductCode.ToString() + " " + item.ProductName.ToString(), index));
                 index += 1;
+                Application.DoEvents();  
             }
             repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             gridView1.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
@@ -70,14 +71,16 @@ namespace SmartShop.Desktop_Forms_Control
                 {
                     g.DrawRectangle(Pens.YellowGreen, 0, 0, img1.Width - 2, img1.Height - 2);
 
+                    imageList.Images.Add(img1);
+
+                    listView1.LargeImageList = imageList;
+
+                    listView1.Items.Add(new ListViewItem(item.ProductCode.ToString() + " " + item.ProductName.ToString(), index));
+                    index += 1;
+
                 }
-
-                imageList.Images.Add(img1);
-
-                listView1.LargeImageList = imageList;
-
-                listView1.Items.Add(new ListViewItem(item.ProductCode.ToString() + " " + item.ProductName.ToString(), index));
-                index += 1;
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(50);
             }
             repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             gridView1.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
@@ -347,6 +350,7 @@ namespace SmartShop.Desktop_Forms_Control
                 pen.Alignment = PenAlignment.Center;
                 e.Graphics.DrawRectangle(pen, x, y, w, h);
             }
+            Application.DoEvents();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -357,6 +361,28 @@ namespace SmartShop.Desktop_Forms_Control
             gridControl1.DataSource = null;
             gridView1.RefreshData();
             SplashScreenManager.CloseForm();
+        }
+
+        private void gridControl1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.ToString().ToUpper() == Keys.D.ToString())
+            {
+                Console.Beep(5000, 800);
+                if (XtraMessageBox.Show($"Are you want to delete this item {gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Name) }?", "System Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var itemDelete = sellesChild.Where(x => x.ProductCode == gridView1.GetRowCellValue(gridView1.FocusedRowHandle, ProductCode).ToString()).FirstOrDefault();
+                    sellesChild.Remove(itemDelete);
+                    gridView1.DeleteSelectedRows();
+                    gridView1.RefreshData();
+                    TotalAmountByGrid();
+                }
+            }
+        }
+
+        private void btnQuickOrder_Click(object sender, EventArgs e)
+        {
+            frmCalculator frmCalculator = new frmCalculator();
+            frmCalculator.Show();
         }
     }
 }

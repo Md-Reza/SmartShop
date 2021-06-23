@@ -419,6 +419,12 @@
     <Compile Include="Desktop Helper Form\frmBarcodeCreate.Designer.cs">
       <DependentUpon>frmBarcodeCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desktop Helper Form\frmCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmCalculator.Designer.cs">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desktop Helper Form\frmCategoriesSetupEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -811,6 +817,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmBarcodeCreate.resx">
       <DependentUpon>frmBarcodeCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmCalculator.resx">
+      <DependentUpon>frmCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmCategoriesSetupEntry.resx">
       <DependentUpon>frmCategoriesSetupEntry.cs</DependentUpon>
