@@ -1,12 +1,11 @@
 ﻿using DevExpress.XtraEditors;
-using SmartShop.Models;
-using SmartShop.Repository;
-using SmartShop.Properties;
-using System;
-using static SmartShop.Interface.Interface;
 using SmartShop.Desktop_Forms_Control;
+using SmartShop.Models;
+using SmartShop.Properties;
+using SmartShop.Repository;
+using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
+using static SmartShop.Interface.Interface;
 
 namespace SmartShop.Desktop_Helper_Form
 {
@@ -36,7 +35,7 @@ namespace SmartShop.Desktop_Helper_Form
                                           FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
                         return;
                     }
-                    
+
                     if (userLogin.UserValidation(txtUser.EditValue.ToString(), txtPassword.EditValue.ToString()))
                     {
                         Settings.Default.UserName = txtUser.EditValue.ToString();
@@ -80,9 +79,9 @@ namespace SmartShop.Desktop_Helper_Form
                     Settings.Default.UserName = txtUser.EditValue.ToString();
                     Settings.Default.LoginName = txtUser.EditValue.ToString();
                     Settings.Default.Password = txtPassword.EditValue.ToString();
-                    SalesMainForm mnuSells = new SalesMainForm();
-                    this.Hide();
-                    mnuSells.ShowDialog();
+                    //SalesMainForm mnuSells = new SalesMainForm();
+                    //this.Hide();
+                    //mnuSells.ShowDialog();
                 }
                 else
                 {

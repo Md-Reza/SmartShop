@@ -29,24 +29,24 @@ namespace SmartShop.Desktop_Forms_Control
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmItemOrder));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.searchControl2 = new DevExpress.XtraEditors.SearchControl();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
@@ -72,6 +72,10 @@ namespace SmartShop.Desktop_Forms_Control
             this.btnQuickOrder = new DevExpress.XtraEditors.SimpleButton();
             this.txtVatAmount = new DevExpress.XtraEditors.TextEdit();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.txtInvoiceNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtTime = new DevExpress.XtraEditors.TimeEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.textEdit4 = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -85,12 +89,16 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl2.Properties)).BeginInit();
@@ -104,6 +112,10 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.txtAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalDisCountAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVatAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInvoiceNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -117,12 +129,16 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -139,6 +155,10 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControl1.Controls.Add(this.btnQuickOrder);
             this.layoutControl1.Controls.Add(this.txtVatAmount);
             this.layoutControl1.Controls.Add(this.btnRefresh);
+            this.layoutControl1.Controls.Add(this.txtInvoiceNo);
+            this.layoutControl1.Controls.Add(this.txtTime);
+            this.layoutControl1.Controls.Add(this.textEdit2);
+            this.layoutControl1.Controls.Add(this.textEdit4);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4});
@@ -159,7 +179,8 @@ namespace SmartShop.Desktop_Forms_Control
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this.searchControl2.Size = new System.Drawing.Size(901, 23);
             this.searchControl2.StyleController = this.layoutControl1;
-            this.searchControl2.TabIndex = 17;
+            this.searchControl2.TabIndex = 0;
+            this.searchControl2.TextChanged += new System.EventHandler(this.searchControl2_TextChanged);
             // 
             // searchControl1
             // 
@@ -170,19 +191,19 @@ namespace SmartShop.Desktop_Forms_Control
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this.searchControl1.Size = new System.Drawing.Size(743, 23);
             this.searchControl1.StyleController = this.layoutControl1;
-            this.searchControl1.TabIndex = 16;
+            this.searchControl1.TabIndex = 1;
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(1060, 40);
+            this.gridControl1.Location = new System.Drawing.Point(1060, 95);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDeleteButton,
             this.repositoryItemButtonEdit1,
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(571, 551);
-            this.gridControl1.TabIndex = 5;
+            this.gridControl1.Size = new System.Drawing.Size(571, 496);
+            this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gridControl1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl1_KeyPress);
@@ -260,11 +281,11 @@ namespace SmartShop.Desktop_Forms_Control
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
-            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Add", -1, true, true, true, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sub", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Insert), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Add", -1, true, true, true, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Sub", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Insert), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repositoryItemButtonEdit1.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemButtonEdit1_ButtonPressed);
@@ -296,11 +317,11 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             this.repositoryItemDeleteButton.AutoHeight = false;
             this.repositoryItemDeleteButton.BeepOnError = true;
-            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
-            toolTipItem2.Text = "Are You Want to Sure Delete Item..?";
-            superToolTip2.Items.Add(toolTipItem2);
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            toolTipItem1.Text = "Are You Want to Sure Delete Item..?";
+            superToolTip1.Items.Add(toolTipItem1);
             this.repositoryItemDeleteButton.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "Are You Want to Sure Delete Item..?", null, superToolTip2, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.Delete), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Are You Want to Sure Delete Item..?", null, superToolTip1, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemDeleteButton.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.repositoryItemDeleteButton.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryItemDeleteButton.ContextImageOptions.Image")));
             this.repositoryItemDeleteButton.Name = "repositoryItemDeleteButton";
@@ -329,18 +350,19 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             // listView1
             // 
+            this.listView1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(131, 67);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(901, 646);
-            this.listView1.TabIndex = 4;
+            this.listView1.Size = new System.Drawing.Size(901, 622);
+            this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView1_DrawItem);
             this.listView1.Click += new System.EventHandler(this.listView1_Click);
             // 
             // txtTotalQty
             // 
-            this.txtTotalQty.Location = new System.Drawing.Point(1133, 598);
+            this.txtTotalQty.Location = new System.Drawing.Point(1150, 598);
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtTotalQty.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -348,13 +370,13 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtTotalQty.Properties.Appearance.Options.UseFont = true;
             this.txtTotalQty.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTotalQty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtTotalQty.Size = new System.Drawing.Size(223, 36);
+            this.txtTotalQty.Size = new System.Drawing.Size(206, 36);
             this.txtTotalQty.StyleController = this.layoutControl1;
-            this.txtTotalQty.TabIndex = 8;
+            this.txtTotalQty.TabIndex = 7;
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(1133, 638);
+            this.txtAmount.Location = new System.Drawing.Point(1150, 638);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -362,13 +384,13 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtAmount.Properties.Appearance.Options.UseFont = true;
             this.txtAmount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtAmount.Size = new System.Drawing.Size(223, 36);
+            this.txtAmount.Size = new System.Drawing.Size(206, 36);
             this.txtAmount.StyleController = this.layoutControl1;
             this.txtAmount.TabIndex = 9;
             // 
             // txtTotalDisCountAmount
             // 
-            this.txtTotalDisCountAmount.Location = new System.Drawing.Point(1445, 598);
+            this.txtTotalDisCountAmount.Location = new System.Drawing.Point(1462, 598);
             this.txtTotalDisCountAmount.Name = "txtTotalDisCountAmount";
             this.txtTotalDisCountAmount.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtTotalDisCountAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -376,9 +398,9 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtTotalDisCountAmount.Properties.Appearance.Options.UseFont = true;
             this.txtTotalDisCountAmount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTotalDisCountAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtTotalDisCountAmount.Size = new System.Drawing.Size(198, 36);
+            this.txtTotalDisCountAmount.Size = new System.Drawing.Size(181, 36);
             this.txtTotalDisCountAmount.StyleController = this.layoutControl1;
-            this.txtTotalDisCountAmount.TabIndex = 10;
+            this.txtTotalDisCountAmount.TabIndex = 8;
             // 
             // simpleButton1
             // 
@@ -389,7 +411,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(188, 38);
             this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 12;
+            this.simpleButton1.TabIndex = 13;
             this.simpleButton1.Text = "Place Order";
             // 
             // simpleButton2
@@ -402,25 +424,25 @@ namespace SmartShop.Desktop_Forms_Control
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(211, 38);
             this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 13;
+            this.simpleButton2.TabIndex = 11;
             this.simpleButton2.Text = "Cancel Order";
             // 
             // btnQuickOrder
             // 
             this.btnQuickOrder.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickOrder.Appearance.Options.UseFont = true;
-            this.btnQuickOrder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnQuickOrder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnQuickOrder.ImageOptions.Image")));
             this.btnQuickOrder.Location = new System.Drawing.Point(1263, 678);
             this.btnQuickOrder.Name = "btnQuickOrder";
             this.btnQuickOrder.Size = new System.Drawing.Size(188, 38);
             this.btnQuickOrder.StyleController = this.layoutControl1;
-            this.btnQuickOrder.TabIndex = 14;
+            this.btnQuickOrder.TabIndex = 12;
             this.btnQuickOrder.Text = "Quick Place";
             this.btnQuickOrder.Click += new System.EventHandler(this.btnQuickOrder_Click);
             // 
             // txtVatAmount
             // 
-            this.txtVatAmount.Location = new System.Drawing.Point(1445, 638);
+            this.txtVatAmount.Location = new System.Drawing.Point(1462, 638);
             this.txtVatAmount.Name = "txtVatAmount";
             this.txtVatAmount.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtVatAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -428,9 +450,9 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtVatAmount.Properties.Appearance.Options.UseFont = true;
             this.txtVatAmount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtVatAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtVatAmount.Size = new System.Drawing.Size(198, 36);
+            this.txtVatAmount.Size = new System.Drawing.Size(181, 36);
             this.txtVatAmount.StyleController = this.layoutControl1;
-            this.txtVatAmount.TabIndex = 15;
+            this.txtVatAmount.TabIndex = 10;
             // 
             // btnRefresh
             // 
@@ -441,9 +463,52 @@ namespace SmartShop.Desktop_Forms_Control
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(103, 31);
             this.btnRefresh.StyleController = this.layoutControl1;
-            this.btnRefresh.TabIndex = 18;
+            this.btnRefresh.TabIndex = 14;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // txtInvoiceNo
+            // 
+            this.txtInvoiceNo.Location = new System.Drawing.Point(1162, 68);
+            this.txtInvoiceNo.Name = "txtInvoiceNo";
+            this.txtInvoiceNo.Size = new System.Drawing.Size(193, 23);
+            this.txtInvoiceNo.StyleController = this.layoutControl1;
+            this.txtInvoiceNo.TabIndex = 5;
+            // 
+            // txtTime
+            // 
+            this.txtTime.EditValue = null;
+            this.txtTime.Location = new System.Drawing.Point(1461, 40);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtTime.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtTime.Properties.MaskSettings.Set("mask", "");
+            this.txtTime.Size = new System.Drawing.Size(170, 24);
+            this.txtTime.StyleController = this.layoutControl1;
+            this.txtTime.TabIndex = 4;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Location = new System.Drawing.Point(1162, 40);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit2.Properties.NullText = "";
+            this.textEdit2.Size = new System.Drawing.Size(193, 23);
+            this.textEdit2.StyleController = this.layoutControl1;
+            this.textEdit2.TabIndex = 3;
+            // 
+            // textEdit4
+            // 
+            this.textEdit4.Location = new System.Drawing.Point(1461, 68);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit4.Properties.NullText = "";
+            this.textEdit4.Size = new System.Drawing.Size(170, 23);
+            this.textEdit4.StyleController = this.layoutControl1;
+            this.textEdit4.TabIndex = 5;
             // 
             // layoutControlItem4
             // 
@@ -470,7 +535,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlGroup3,
             this.layoutControlGroup4,
             this.layoutControlItem12,
-            this.emptySpaceItem3});
+            this.emptySpaceItem2});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(1665, 728);
             this.layoutControlGroup1.TextVisible = false;
@@ -490,7 +555,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(312, 40);
             this.layoutControlItem5.Text = "Total Qty";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(81, 16);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(98, 16);
             // 
             // layoutControlItem6
             // 
@@ -499,7 +564,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(312, 40);
             this.layoutControlItem6.Text = "Total Amount";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(81, 16);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(98, 16);
             // 
             // layoutControlItem7
             // 
@@ -508,7 +573,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(287, 40);
             this.layoutControlItem7.Text = "Total Discount";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(81, 16);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(98, 16);
             // 
             // layoutControlItem8
             // 
@@ -544,13 +609,14 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(287, 40);
             this.layoutControlItem3.Text = "Total Vat";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 16);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(98, 16);
             // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
-            this.layoutControlItem11});
+            this.layoutControlItem11,
+            this.emptySpaceItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(107, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 0, 0);
@@ -562,7 +628,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem1.Control = this.listView1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 27);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(905, 650);
+            this.layoutControlItem1.Size = new System.Drawing.Size(905, 626);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -575,28 +641,30 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 653);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(905, 24);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // layoutControlGroup3
             // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem2});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 9, 9);
             this.layoutControlGroup3.Size = new System.Drawing.Size(107, 663);
             this.layoutControlGroup3.Text = "Category List";
             // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(101, 614);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlGroup4
             // 
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.layoutControlItem14,
+            this.layoutControlItem15,
+            this.layoutControlItem16,
+            this.layoutControlItem13});
             this.layoutControlGroup4.Location = new System.Drawing.Point(1036, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
             this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 0, 0);
@@ -606,11 +674,47 @@ namespace SmartShop.Desktop_Forms_Control
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 55);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(575, 555);
+            this.layoutControlItem2.Size = new System.Drawing.Size(575, 500);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.textEdit2;
+            this.layoutControlItem14.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(299, 28);
+            this.layoutControlItem14.Text = "Dine in Customer";
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(98, 16);
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.txtInvoiceNo;
+            this.layoutControlItem15.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(299, 27);
+            this.layoutControlItem15.Text = "Invoice No.";
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(98, 16);
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.textEdit4;
+            this.layoutControlItem16.Location = new System.Drawing.Point(299, 28);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(276, 27);
+            this.layoutControlItem16.Text = "Table";
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(98, 16);
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.txtTime;
+            this.layoutControlItem13.Location = new System.Drawing.Point(299, 0);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(276, 28);
+            this.layoutControlItem13.Text = "Time";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(98, 16);
             // 
             // layoutControlItem12
             // 
@@ -621,13 +725,13 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
-            // emptySpaceItem3
+            // emptySpaceItem2
             // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 663);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(107, 10);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 663);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(107, 10);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // FrmItemOrder
             // 
@@ -651,6 +755,10 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.txtAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalDisCountAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVatAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInvoiceNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -664,12 +772,16 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -720,5 +832,13 @@ namespace SmartShop.Desktop_Forms_Control
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraEditors.TextEdit txtInvoiceNo;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraEditors.TimeEdit txtTime;
+        private DevExpress.XtraEditors.LookUpEdit textEdit2;
+        private DevExpress.XtraEditors.LookUpEdit textEdit4;
     }
 }

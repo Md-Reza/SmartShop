@@ -473,6 +473,12 @@
     <Compile Include="Desktop Helper Form\frmOfficeEntry.Designer.cs">
       <DependentUpon>frmOfficeEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Desktop Helper Form\frmOrderCompletion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop Helper Form\frmOrderCompletion.Designer.cs">
+      <DependentUpon>frmOrderCompletion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Desktop Helper Form\frmProductNameEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -844,6 +850,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmOfficeEntry.resx">
       <DependentUpon>frmOfficeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop Helper Form\frmOrderCompletion.resx">
+      <DependentUpon>frmOrderCompletion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmProductNameEntry.resx">
       <DependentUpon>frmProductNameEntry.cs</DependentUpon>

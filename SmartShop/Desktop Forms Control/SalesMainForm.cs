@@ -301,5 +301,11 @@ namespace SmartShop.Desktop_Forms_Control
             FrmItemOrder frmItemOrder = new FrmItemOrder();
             OpenForm(frmItemOrder);
         }
+
+        private void btnMenuOrder_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmOrderCompletion frmOrderCompletion = new frmOrderCompletion();
+            OpenForm(frmOrderCompletion);
+        }
     }
 }

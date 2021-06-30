@@ -105,6 +105,24 @@ namespace SmartShop.Repository
             return returnValue;
         }
 
+        public IEnumerable<SellesChild> GetAllSales()
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<SellesChild> returnValue = connection.Query<Models.SellesChild>(
+                @"select 
+                    SellsInvoice,
+                    Sum(Qty) as Qty,
+                    sum(VatAmount)as VatAmount,
+                    sum(DiscountAmount)as DiscountAmount,
+                    Sum(TotalAmount)as TotalAmount
+                    from SellesChild as c
+                    inner join ProductName as p on c.ProductCode=p.ProductCode
+                    where SellsParId=0
+                    group by SellsInvoice");
+            connection.Close();
+            return returnValue;
+        }
+
         public IEnumerable<Models.SellsParent> GetParentId(string sellsInvoice)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
@@ -117,6 +135,29 @@ namespace SmartShop.Repository
             foreach (var items in obj2)
             {
                 InsertData(items);
+            }
+        }
+        public void InsertSellsChildByItem(List<SellesChild> obj2)
+        {
+            foreach (var items in obj2)
+            {
+                SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+                connection.Open();
+                connection.Execute("SellsChildByItem_sp", new
+                {
+                    @SellsInvoice = items.SellsInvoice,
+                    @SalesMonth = items.SalesMonth,
+                    @ProductCode = items.ProductCode,
+                    @Qty = items.Qty,
+                    @SellingPrice = items.SellingPrice,
+                    @VatAmount = items.VatAmount,
+                    @DiscountAmount = items.DiscountAmount,
+                    @TotalAmount = items.TotalAmount,
+                    @StatementType = "Create"
+
+                }, commandType: CommandType.StoredProcedure);
+
+                connection.Close();
             }
         }
 

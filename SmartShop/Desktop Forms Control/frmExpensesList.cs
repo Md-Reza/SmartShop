@@ -50,5 +50,10 @@ namespace SmartShop.Desktop_Forms_Control
         {
             LoadExpenseList();
         }
+
+        private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

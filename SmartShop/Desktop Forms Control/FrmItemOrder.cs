@@ -22,6 +22,7 @@ namespace SmartShop.Desktop_Forms_Control
         public List<SellesChild> sellesChild = new List<SellesChild>();
         ProductNameRepository productNameRepository = new ProductNameRepository();
         IBaseRepository<CategoriesSetup> categoryRepository = new CategoriesRepository();
+        GetByAllSequence _getByAllSequence = new GetByAllSequence();
         public List<Image> loadImage = new List<Image>();
         ImageList imageList = new ImageList();
         public int index = 0;
@@ -34,8 +35,8 @@ namespace SmartShop.Desktop_Forms_Control
             listView1.Items.Clear();
             imageList.ImageSize = new System.Drawing.Size(130, 100);
 
-                var productList = productNameRepository.Get();
-            
+            var productList = productNameRepository.Get();
+
             foreach (var item in productList)
             {
                 if (!productList.Any()) return;
@@ -49,7 +50,7 @@ namespace SmartShop.Desktop_Forms_Control
 
                 listView1.Items.Add(new ListViewItem(item.ProductCode.ToString() + " " + item.ProductName.ToString(), index));
                 index += 1;
-                Application.DoEvents();  
+                //Application.DoEvents();
             }
             repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             gridView1.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
@@ -80,7 +81,7 @@ namespace SmartShop.Desktop_Forms_Control
 
                 }
                 Application.DoEvents();
-                System.Threading.Thread.Sleep(50);
+                System.Threading.Thread.Sleep(30);
             }
             repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             gridView1.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
@@ -90,7 +91,7 @@ namespace SmartShop.Desktop_Forms_Control
         private void FrmItemOrder_Load(object sender, EventArgs e)
         {
             LoadImage();
-           
+
             var allCategory = categoryRepository.Get();
             layoutControlGroup3.Clear();
             foreach (var item in allCategory)
@@ -117,6 +118,7 @@ namespace SmartShop.Desktop_Forms_Control
                 layoutControlItem.Control = simpleButton;
                 simpleButton.Click += new EventHandler(Button_Click);
             }
+            txtInvoiceNo.EditValue = DateTime.Now.ToString("yyyyMMdd") + _getByAllSequence.GetByAll().Where(f => f.Code == "SInvoice").FirstOrDefault().StartWith;
         }
         private void Button_Click(object sender, EventArgs e)
         {
@@ -148,8 +150,9 @@ namespace SmartShop.Desktop_Forms_Control
                     if (checkReUse != null)
                     {
                         checkReUse.Qty = checkReUse.Qty + qty;
-
                         checkReUse.TotalAmount = (checkReUse.Qty * Convert.ToInt32(list.SellingPrice));
+                        checkReUse.VatAmount = checkReUse.VatAmount+(checkReUse.Qty * Convert.ToInt32(list.SellingPrice))/100;
+                        checkReUse.DiscountAmount = checkReUse.DiscountAmount+(checkReUse.Qty * Convert.ToInt32(list.SellingPrice)) / 100;
                         TotalAmountByGrid();
                     }
                     else
@@ -160,10 +163,12 @@ namespace SmartShop.Desktop_Forms_Control
                         {
                             ProductCode = list.ProductCode,
                             SellingPrice = Convert.ToInt32(list.SellingPrice),
+                            SalesMonth = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM"),
+                            SellsInvoice = txtInvoiceNo.EditValue.ToString(),
                             Name = list.ProductName,
                             Qty = totQty,
-                            VatAmount = Convert.ToInt32(Math.Round(list.VatPercent * list.SellingPrice)),
-                            DiscountAmount = Convert.ToInt32(Math.Round(list.DisCountPercent * list.SellingPrice)),
+                            VatAmount = Convert.ToInt32(Math.Round(list.VatPercent * list.SellingPrice)/100),
+                            DiscountAmount = Convert.ToInt32(Math.Round(list.DisCountPercent * list.SellingPrice)/100),
                             TotalAmount = totQty * Convert.ToInt32(list.SellingPrice)
                         });
                         TotalAmountByGrid();
@@ -175,10 +180,12 @@ namespace SmartShop.Desktop_Forms_Control
                     {
                         ProductCode = list.ProductCode,
                         SellingPrice = Convert.ToInt32(list.SellingPrice),
+                        SalesMonth = Convert.ToDateTime(DateTime.Now).ToString("yyyyMM"),
+                        SellsInvoice = txtInvoiceNo.EditValue.ToString(),
                         Name = list.ProductName,
                         Qty = totQty + qty,
-                        VatAmount = Convert.ToInt32(Math.Round(list.VatPercent * list.SellingPrice)),
-                        DiscountAmount = Convert.ToInt32(Math.Round(list.DisCountPercent * list.SellingPrice)),
+                        VatAmount = Convert.ToInt32(Math.Round(list.VatPercent * list.SellingPrice)/100),
+                        DiscountAmount = Convert.ToInt32(Math.Round(list.DisCountPercent * list.SellingPrice)/100),
                         TotalAmount = (totQty + qty) * Convert.ToInt32(list.SellingPrice)
                     });
                     TotalAmountByGrid();
@@ -236,11 +243,13 @@ namespace SmartShop.Desktop_Forms_Control
                 int vatAmount = Convert.ToInt32(gridView1.GetListSourceRowCellValue(e.RowHandle, gridView1.Columns["VatAmount"]));
                 int disCountAmount = Convert.ToInt32(gridView1.GetListSourceRowCellValue(e.RowHandle, gridView1.Columns["DiscountAmount"]));
                 int totalAmount = ((qty * sellingPrice) + vatAmount) - disCountAmount;
+                int totalVatAmount = (qty * sellingPrice) / 100;
+                int totalDisAmount = (qty * sellingPrice) / 100;
                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "TotalAmount", totalAmount);
-
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VatAmount", totalVatAmount);
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "DiscountAmount", totalDisAmount);
                 TotalAmountByGrid();
             }
-
             if (e.Column.FieldName == "Qty")
             {
                 int qty = Convert.ToInt32(gridView1.GetListSourceRowCellValue(e.RowHandle, gridView1.Columns["Qty"]));
@@ -248,7 +257,11 @@ namespace SmartShop.Desktop_Forms_Control
                 int vatAmount = Convert.ToInt32(gridView1.GetListSourceRowCellValue(e.RowHandle, gridView1.Columns["VatAmount"]));
                 int disCountAmount = Convert.ToInt32(gridView1.GetListSourceRowCellValue(e.RowHandle, gridView1.Columns["DiscountAmount"]));
                 int totalAmount = ((qty * sellingPrice) + vatAmount) - disCountAmount;
+                int totalVatAmount = (qty * sellingPrice)/100;
+                int totalDisAmount = (qty * sellingPrice) / 100;
                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "TotalAmount", totalAmount);
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VatAmount", totalVatAmount);
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "DiscountAmount", totalDisAmount);
 
                 TotalAmountByGrid();
             }
@@ -331,8 +344,14 @@ namespace SmartShop.Desktop_Forms_Control
                 int disCountAmount = Convert.ToInt32(gridView1.GetListSourceRowCellValue(e.RowHandle, gridView1.Columns["DiscountAmount"]));
                 int totalAmount = ((qty * sellingPrice) + vatAmount) - disCountAmount;
                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "TotalAmount", totalAmount);
+                
+                int totQty = qty++;
 
-                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Qty", qty++);
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Qty", totQty);
+                int totalVatAmount = (totQty * sellingPrice) / 100;
+                int totalDisAmount = (totQty * sellingPrice) / 100;
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "VatAmount", totalVatAmount);
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "DiscountAmount", totalDisAmount);
 
                 TotalAmountByGrid();
             }
@@ -352,7 +371,6 @@ namespace SmartShop.Desktop_Forms_Control
             }
             Application.DoEvents();
         }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             SplashScreenManager.ShowForm(this, typeof(WaitForm1), useFadeIn: true, useFadeOut: true);
@@ -378,11 +396,72 @@ namespace SmartShop.Desktop_Forms_Control
                 }
             }
         }
-
         private void btnQuickOrder_Click(object sender, EventArgs e)
         {
-            frmCalculator frmCalculator = new frmCalculator();
-            frmCalculator.Show();
+            if (gridView1.RowCount > 0)
+            {
+                frmCalculator frmCalculator = new frmCalculator
+                {
+                    totalAmount = Convert.ToInt32(txtAmount.EditValue),
+                    getOrderList = sellesChild.ToList(),
+                    invoice=Convert.ToInt64(txtInvoiceNo.EditValue)
+                };
+                frmCalculator.Show();
+                frmCalculator.FormClosed += OpenForm_FormClosed;
+            }
+            else
+            {
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "No Order Item Found", "System Message", new[] { DialogResult.OK },
+                      FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
+                return;
+            }
+        }
+
+        private void OpenForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            gridControl1.DataSource = null;
+            sellesChild.Clear();
+            gridView1.RefreshData();
+            txtAmount.EditValue = 0;
+            txtTotalQty.EditValue = 0;
+            txtVatAmount.EditValue = 0;
+            txtTotalDisCountAmount.EditValue = 0;
+            txtInvoiceNo.EditValue = DateTime.Now.ToString("yyyyMMdd") + _getByAllSequence.GetByAll().Where(f => f.Code == "SInvoice").FirstOrDefault().StartWith;
+        }
+
+        private void searchControl2_TextChanged(object sender, EventArgs e)
+        {
+            if (searchControl2.EditValue == null)
+            {
+                LoadImage();
+                return;
+            }
+                
+            if (searchControl2.EditValue.ToString() != "")
+            {
+                foreach (ListViewItem item in listView1.Items)
+                {
+                    if (item.Text.ToLower().Contains(searchControl2.EditValue.ToString()))
+                    {
+                        item.Selected = true;
+                        item.BackColor = SystemColors.Highlight;
+                        item.ForeColor = SystemColors.WindowFrame;
+                        item.ForeColor = SystemColors.HighlightText;
+                    }
+                    else
+                    {
+                        listView1.Items.Remove(item);
+                    }
+                }
+                if (listView1.SelectedItems.Count == 1)
+                {
+                    searchControl2.Focus();
+                }
+            }
+            else
+            {
+                LoadImage();
+            }
         }
     }
 }

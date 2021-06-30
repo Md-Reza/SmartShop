@@ -122,6 +122,7 @@
             this.btnProduct = new DevExpress.XtraEditors.SimpleButton();
             this.btnBarcode = new DevExpress.XtraEditors.SimpleButton();
             this.btnPurchases = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMenuOrder = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
@@ -234,9 +235,10 @@
             this.btnBankTransaction,
             this.btnMonthStock,
             this.barButtonItem30,
-            this.btnItemOrder});
+            this.btnItemOrder,
+            this.btnMenuOrder});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 52;
+            this.ribbon.MaxItemId = 53;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.digitalTimer);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -699,6 +701,7 @@
             // ribbonPageGroup14
             // 
             this.ribbonPageGroup14.ItemLinks.Add(this.btnItemOrder);
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnMenuOrder);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             this.ribbonPageGroup14.Text = "Restaurent Product";
             // 
@@ -965,6 +968,15 @@
             this.btnPurchases.Text = "Purchases";
             this.btnPurchases.Click += new System.EventHandler(this.btnPurchases_Click);
             // 
+            // btnMenuOrder
+            // 
+            this.btnMenuOrder.Caption = "Order";
+            this.btnMenuOrder.Id = 52;
+            this.btnMenuOrder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.ImageOptions.Image")));
+            this.btnMenuOrder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.ImageOptions.LargeImage")));
+            this.btnMenuOrder.Name = "btnMenuOrder";
+            this.btnMenuOrder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMenuOrder_ItemClick);
+            // 
             // SalesMainForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -1092,5 +1104,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
         private DevExpress.XtraBars.BarButtonItem btnItemOrder;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem btnMenuOrder;
     }
 }
