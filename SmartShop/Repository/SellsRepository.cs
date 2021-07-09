@@ -108,19 +108,49 @@ namespace SmartShop.Repository
         public IEnumerable<SellesChild> GetAllSales()
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<SellesChild> returnValue = connection.Query<Models.SellesChild>(
-                @"select 
+            IEnumerable<SellesChild> returnValue2 = connection.Query<Models.SellesChild, Products, SellesChild>(@"select 
                     SellsInvoice,
                     Sum(Qty) as Qty,
                     sum(VatAmount)as VatAmount,
                     sum(DiscountAmount)as DiscountAmount,
-                    Sum(TotalAmount)as TotalAmount
+                    Sum(TotalAmount)as TotalAmount,
+                    ProductName
                     from SellesChild as c
                     inner join ProductName as p on c.ProductCode=p.ProductCode
                     where SellsParId=0
-                    group by SellsInvoice");
+                    group by SellsInvoice,ProductName", map: (c,p) =>
+            {
+                c.Products = p;
+                return c;
+            }, splitOn: "ProductName");
             connection.Close();
-            return returnValue;
+            return returnValue2;
+        }
+        public IEnumerable<SellesChild> GetAllPendingSales(long SellsInvoice)
+        {
+            SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
+            IEnumerable<SellesChild> returnValue2 = connection.Query<Models.SellesChild, Products, SellesChild>(@"select 
+                    SellsInvoice,
+                    Qty,
+                    VatAmount,
+                    DiscountAmount,
+                    TotalAmount,
+                    p.ProductName,
+                    p.ProductCode
+                    from SellesChild as c
+                    inner join ProductName as p on c.ProductCode=p.ProductCode
+                    where SellsParId=0 and SellsInvoice=@SellsInvoice", map: (c, p) =>
+            {
+                c.Products = p;
+                return c;
+            },
+            param: new
+            {
+                SellsInvoice= SellsInvoice
+            },
+            splitOn: "ProductName");
+            connection.Close();
+            return returnValue2;
         }
 
         public IEnumerable<Models.SellsParent> GetParentId(string sellsInvoice)

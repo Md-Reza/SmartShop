@@ -534,6 +534,7 @@
       <DependentUpon>frmUserRegistrationEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="Dtos\PurchaseCreateDto.cs" />
+    <Compile Include="FormsHelper\Designer.cs" />
     <Compile Include="FormsHelper\FormsHelperMessageBox.cs" />
     <Compile Include="FormsHelper\SmartShopMessageBoxIcon.cs" />
     <Compile Include="Interface\BankInterface.cs" />
