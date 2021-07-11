@@ -14,7 +14,6 @@ namespace SmartShop.Desktop_Helper_Form
             InitializeComponent();
             Voice.Speech("");
             //speech();
-            PopulateDataGridView();
         }
 
         private void speech()
@@ -72,20 +71,6 @@ namespace SmartShop.Desktop_Helper_Form
 
         private string url = "https://translate.google.com/#view=home&op=translate&sl=auto&tl=bn&text=";
 
-        private void PopulateDataGridView()
-        {
-            string apiUrl = "http://localhost:26404/api/CustomerAPI";
-            string input = "";
-           // Voice.Speech("i am here");
-            string inputJson = "";
-            ;
-            WebClient client = new WebClient();
-            client.Headers["Content-type"] = "application/json";
-            client.Encoding = Encoding.UTF8;
-            string json = client.UploadString(url + "i am here", inputJson);
-            Voice.Speech(json);
-
-        }
     }
 
 }

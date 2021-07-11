@@ -1,15 +1,9 @@
 ﻿using DevExpress.XtraEditors;
-using SmartShop.Desktop_Forms_Control;
 using SmartShop.Models;
 using SmartShop.Repository;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartShop.Desktop_Helper_Form
@@ -101,32 +95,50 @@ namespace SmartShop.Desktop_Helper_Form
 
         private void txtPayAmount_EditValueChanged(object sender, EventArgs e)
         {
-            if (txtPayAmount.EditValue == null)
+            try
             {
-                txtPayAmount.EditValue = 0;
+                if (txtPayAmount.EditValue == null)
+                {
+                    txtPayAmount.EditValue = 0;
+                    return;
+                }
+                if (txtPayAmount.EditValue.ToString() == "")
+                {
+                    txtPayAmount.EditValue = 0;
+                    return;
+                }
+                txtReturnAmount.EditValue = (Convert.ToInt32(txtPayAmount.EditValue) + Convert.ToInt32(txtSpecialAmount.EditValue)) - Convert.ToInt32(txtTotalAmount.EditValue);
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Incorrect amount", "System Message", new[] { DialogResult.OK },
+                        FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
                 return;
             }
-            if (txtPayAmount.EditValue.ToString() == "")
-            {
-                txtPayAmount.EditValue = 0;
-                return;
-            }
-            txtReturnAmount.EditValue = (Convert.ToInt32(txtPayAmount.EditValue) + Convert.ToInt32(txtSpecialAmount.EditValue)) - Convert.ToInt32(txtTotalAmount.EditValue);
         }
 
         private void txtSpecialAmount_EditValueChanged(object sender, EventArgs e)
         {
-            if (txtPayAmount.EditValue == null)
+            try
             {
-                txtPayAmount.EditValue = 0;
+                if (txtPayAmount.EditValue == null)
+                {
+                    txtPayAmount.EditValue = 0;
+                    return;
+                }
+                if (txtPayAmount.EditValue.ToString() == "")
+                {
+                    txtPayAmount.EditValue = 0;
+                    return;
+                }
+                txtReturnAmount.EditValue = (Convert.ToInt32(txtPayAmount.EditValue) + Convert.ToInt32(txtSpecialAmount.EditValue)) - Convert.ToInt32(txtTotalAmount.EditValue);
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Incorrect amount", "System Message", new[] { DialogResult.OK },
+                        FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
                 return;
             }
-            if (txtPayAmount.EditValue.ToString() == "")
-            {
-                txtPayAmount.EditValue = 0;
-                return;
-            }
-            txtReturnAmount.EditValue = (Convert.ToInt32(txtPayAmount.EditValue) + Convert.ToInt32(txtSpecialAmount.EditValue)) - Convert.ToInt32(txtTotalAmount.EditValue);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -139,7 +151,7 @@ namespace SmartShop.Desktop_Helper_Form
             }
             if (XtraMessageBox.Show($"Are you want to confirm this item {invoice2 }?", "System Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                    _sellsRepository.InsertSellsChildByItem(getOrderList);
+                _sellsRepository.InsertSellsChildByItem(getOrderList);
                 this.Close();
             }
 

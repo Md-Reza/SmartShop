@@ -86,6 +86,7 @@
             this.btnMonthStock = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.btnItemOrder = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMenuOrder = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -122,7 +123,6 @@
             this.btnProduct = new DevExpress.XtraEditors.SimpleButton();
             this.btnBarcode = new DevExpress.XtraEditors.SimpleButton();
             this.btnPurchases = new DevExpress.XtraEditors.SimpleButton();
-            this.btnMenuOrder = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
@@ -623,12 +623,22 @@
             // 
             // btnItemOrder
             // 
+            this.btnItemOrder.AccessibleName = "FrmItemOrder";
             this.btnItemOrder.Caption = "New Order";
             this.btnItemOrder.Id = 51;
             this.btnItemOrder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnItemOrder.ImageOptions.Image")));
             this.btnItemOrder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnItemOrder.ImageOptions.LargeImage")));
             this.btnItemOrder.Name = "btnItemOrder";
             this.btnItemOrder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnItemOrder_ItemClick);
+            // 
+            // btnMenuOrder
+            // 
+            this.btnMenuOrder.Caption = "Order";
+            this.btnMenuOrder.Id = 52;
+            this.btnMenuOrder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuOrder.ImageOptions.Image")));
+            this.btnMenuOrder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnMenuOrder.ImageOptions.LargeImage")));
+            this.btnMenuOrder.Name = "btnMenuOrder";
+            this.btnMenuOrder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMenuOrder_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -967,15 +977,6 @@
             this.btnPurchases.TabIndex = 0;
             this.btnPurchases.Text = "Purchases";
             this.btnPurchases.Click += new System.EventHandler(this.btnPurchases_Click);
-            // 
-            // btnMenuOrder
-            // 
-            this.btnMenuOrder.Caption = "Order";
-            this.btnMenuOrder.Id = 52;
-            this.btnMenuOrder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.ImageOptions.Image")));
-            this.btnMenuOrder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.ImageOptions.LargeImage")));
-            this.btnMenuOrder.Name = "btnMenuOrder";
-            this.btnMenuOrder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMenuOrder_ItemClick);
             // 
             // SalesMainForm
             // 

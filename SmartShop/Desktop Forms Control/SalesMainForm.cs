@@ -15,7 +15,6 @@ namespace SmartShop.Desktop_Forms_Control
     public partial class SalesMainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         IBusinessCommand<ObjectCommand> businessCommand = new BusinessCommandRepository();
-        public object JsonConvert { get; private set; }
 
         public SalesMainForm()
         {
@@ -55,7 +54,6 @@ namespace SmartShop.Desktop_Forms_Control
             frmNewSells NewSells = new frmNewSells();
             OpenForm(NewSells);
         }
-
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmPurchases purchases = new frmPurchases();
@@ -135,7 +133,8 @@ namespace SmartShop.Desktop_Forms_Control
         }
         private void OpenForm(Form form)
         {
-            //XtraForm formm = new XtraForm();
+            ////XtraForm formm = new XtraForm();
+
             if (IsFormOPen(form)) return;
             form.MdiParent = this;
             form.Show();

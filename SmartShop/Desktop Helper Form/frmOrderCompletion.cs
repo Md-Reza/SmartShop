@@ -3,6 +3,7 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
 using DevExpress.XtraReports.UI;
+using PagedList;
 using SmartShop.FormsHelper;
 using SmartShop.Models;
 using SmartShop.Repository;
@@ -23,34 +24,26 @@ namespace SmartShop.Desktop_Helper_Form
     {
         SellsRepository _sellsRepository = new SellsRepository();
         rptPosInvoice rptPosInvoice = new rptPosInvoice();
+        int pageNumber = 1;
+        IPagedList<SellesChild>pageList;
         public frmOrderCompletion()
         {
             InitializeComponent();
         }
 
-        private void frmOrderCompletion_Load(object sender, EventArgs e)
+        public async Task<IPagedList<SellesChild>> GetAllPendingOrder(int pageNumber=1,int pageSize = 10)
+        {
+            return await Task.Factory.StartNew(() => _sellsRepository.GetAllSales().ToPagedList(pageNumber, pageSize));
+        }
+        private async void frmOrderCompletion_Load(object sender, EventArgs e)
         {
             Designer.InitLayoutGroup(layoutControlGroup2, "Order List");
-            var allData = _sellsRepository.GetAllSales();
-            gridControl1.DataSource = allData.ToList();
-            foreach (var item in allData)
-            {
-                //MemoEdit memoEdit = new MemoEdit
-                //{
-                //    Text = "Invoice: " + item.SellsInvoice
-                //    + "\r\n" + "Name: " + item.ProductCode
-                //    + "\r\n" + "Qty. " + item.Qty
-                //    + "\r\n" + "Vat." + item.VatAmount
-                //    + "\r\n" + "Dis Amount. " + item.DiscountAmount
-                //    + "\r\n" + "Amount: " + item.TotalAmount,
-                //    BackColor = Color.White,
-                //    Font = new Font("Arial", 10, FontStyle.Bold),
-                //    ReadOnly = true
-                //};
-                //memoEdit.Properties.ScrollBars = ScrollBars.None;
-
-            }
-
+            pageList = await GetAllPendingOrder();
+            btnNext.Enabled = pageList.HasNextPage;
+            btnPrevious.Enabled = pageList.HasPreviousPage;
+            //var allData = _sellsRepository.GetAllSales();
+            gridControl1.DataSource = pageList.ToList();
+            label1.Text = string.Format("Page {0}/{1}", pageNumber, pageList.PageCount);
         }
 
         private void repositoryOperationItem_ButtonPressed(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -100,6 +93,30 @@ namespace SmartShop.Desktop_Helper_Form
         private void layoutControlGroup4_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
         {
             rptPosInvoice.Print();
+        }
+
+        private async void btnNext_Click(object sender, EventArgs e)
+        {
+            if (pageList.HasNextPage)
+            {
+                pageList = await GetAllPendingOrder(++pageNumber);
+                btnNext.Enabled = pageList.HasNextPage;
+                btnPrevious.Enabled = pageList.HasPreviousPage;
+                gridControl1.DataSource = pageList.ToList();
+                label1.Text = string.Format("Page {0}/{1}", pageNumber, pageList.PageCount);
+            }
+        }
+
+        private async void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (pageList.HasPreviousPage)
+            {
+                pageList = await GetAllPendingOrder(--pageNumber);
+                btnNext.Enabled = pageList.HasNextPage;
+                btnPrevious.Enabled = pageList.HasPreviousPage;
+                gridControl1.DataSource = pageList.ToList();
+                label1.Text = string.Format("Page {0}/{1}", pageNumber, pageList.PageCount);
+            }
         }
     }
 }
