@@ -1,8 +1,4 @@
 ﻿using DevExpress.XtraEditors;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraLayout;
-using DevExpress.XtraReports.UI;
 using PagedList;
 using SmartShop.FormsHelper;
 using SmartShop.Models;
@@ -10,13 +6,8 @@ using SmartShop.Repository;
 using SmartShop.SmartReports;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SmartShop.Desktop_Helper_Form
 {
@@ -25,13 +16,13 @@ namespace SmartShop.Desktop_Helper_Form
         SellsRepository _sellsRepository = new SellsRepository();
         rptPosInvoice rptPosInvoice = new rptPosInvoice();
         int pageNumber = 1;
-        IPagedList<SellesChild>pageList;
+        IPagedList<SellesChild> pageList;
         public frmOrderCompletion()
         {
             InitializeComponent();
         }
 
-        public async Task<IPagedList<SellesChild>> GetAllPendingOrder(int pageNumber=1,int pageSize = 10)
+        public async Task<IPagedList<SellesChild>> GetAllPendingOrder(int pageNumber = 1, int pageSize = 10)
         {
             return await Task.Factory.StartNew(() => _sellsRepository.GetAllSales().ToPagedList(pageNumber, pageSize));
         }

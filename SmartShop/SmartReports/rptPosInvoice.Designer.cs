@@ -753,9 +753,9 @@
             this.ExportOptions.Xls.FitToPrintedPageHeight = true;
             this.ExportOptions.Xls.FitToPrintedPageWidth = true;
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margins = new System.Drawing.Printing.Margins(0, 3, 36, 99);
-            this.PageHeight = 600;
-            this.PageWidth = 301;
+            this.Margins = new System.Drawing.Printing.Margins(23, 2, 36, 99);
+            this.PageHeight = 800;
+            this.PageWidth = 332;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.ScriptsSource = "\r\nprivate void Detail_AfterPrint(object sender, System.EventArgs e) {\r\n\r\n}\r\n";
             this.ShowPrintStatusDialog = false;
