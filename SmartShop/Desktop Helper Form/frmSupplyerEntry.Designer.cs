@@ -108,33 +108,33 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(165, 12);
+            this.txtName.Location = new System.Drawing.Point(166, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(274, 23);
+            this.txtName.Size = new System.Drawing.Size(273, 23);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 4;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(165, 39);
+            this.txtAddress.Location = new System.Drawing.Point(166, 39);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(274, 23);
+            this.txtAddress.Size = new System.Drawing.Size(273, 23);
             this.txtAddress.StyleController = this.layoutControl1;
             this.txtAddress.TabIndex = 5;
             // 
             // txtContactPerson
             // 
-            this.txtContactPerson.Location = new System.Drawing.Point(165, 66);
+            this.txtContactPerson.Location = new System.Drawing.Point(166, 66);
             this.txtContactPerson.Name = "txtContactPerson";
-            this.txtContactPerson.Size = new System.Drawing.Size(274, 23);
+            this.txtContactPerson.Size = new System.Drawing.Size(273, 23);
             this.txtContactPerson.StyleController = this.layoutControl1;
             this.txtContactPerson.TabIndex = 6;
             // 
             // txtMobile1
             // 
-            this.txtMobile1.Location = new System.Drawing.Point(165, 93);
+            this.txtMobile1.Location = new System.Drawing.Point(166, 93);
             this.txtMobile1.Name = "txtMobile1";
-            this.txtMobile1.Size = new System.Drawing.Size(274, 23);
+            this.txtMobile1.Size = new System.Drawing.Size(273, 23);
             this.txtMobile1.StyleController = this.layoutControl1;
             this.txtMobile1.TabIndex = 7;
             // 
@@ -152,17 +152,17 @@
             // 
             // txtMobile2
             // 
-            this.txtMobile2.Location = new System.Drawing.Point(165, 120);
+            this.txtMobile2.Location = new System.Drawing.Point(166, 120);
             this.txtMobile2.Name = "txtMobile2";
-            this.txtMobile2.Size = new System.Drawing.Size(400, 23);
+            this.txtMobile2.Size = new System.Drawing.Size(399, 23);
             this.txtMobile2.StyleController = this.layoutControl1;
             this.txtMobile2.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(165, 147);
+            this.txtEmail.Location = new System.Drawing.Point(166, 147);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(400, 23);
+            this.txtEmail.Size = new System.Drawing.Size(399, 23);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 10;
             // 
@@ -180,7 +180,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
             this.btnClose.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnClose.Location = new System.Drawing.Point(475, 238);
             this.btnClose.Name = "btnClose";
@@ -192,7 +192,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnSave.Location = new System.Drawing.Point(382, 238);
             this.btnSave.Name = "btnSave";

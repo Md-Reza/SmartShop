@@ -95,18 +95,18 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(103, 12);
+            this.txtCode.Location = new System.Drawing.Point(104, 12);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(259, 23);
+            this.txtCode.Size = new System.Drawing.Size(258, 23);
             this.txtCode.StyleController = this.layoutControl1;
             this.txtCode.TabIndex = 4;
             // 
             // txtCategoryName
             // 
-            this.txtCategoryName.Location = new System.Drawing.Point(103, 39);
+            this.txtCategoryName.Location = new System.Drawing.Point(104, 39);
             this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(259, 23);
+            this.txtCategoryName.Size = new System.Drawing.Size(258, 23);
             this.txtCategoryName.StyleController = this.layoutControl1;
             this.txtCategoryName.TabIndex = 5;
             // 
@@ -132,7 +132,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnUpdate.Location = new System.Drawing.Point(92, 144);
             this.btnUpdate.Name = "btnUpdate";
@@ -144,7 +144,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
             this.btnClose.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnClose.Location = new System.Drawing.Point(414, 144);
             this.btnClose.Name = "btnClose";
@@ -156,7 +156,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNew.ImageOptions.SvgImage")));
+            this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
             this.btnNew.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnNew.Location = new System.Drawing.Point(12, 144);
             this.btnNew.Name = "btnNew";
@@ -167,7 +167,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnSave.Location = new System.Drawing.Point(328, 144);
             this.btnSave.Name = "btnSave";

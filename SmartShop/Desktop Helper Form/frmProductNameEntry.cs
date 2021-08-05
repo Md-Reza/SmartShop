@@ -175,7 +175,7 @@ namespace SmartShop.Desktop_Helper_Form
                     ColurId = (int)cmbColour.EditValue,
                     SizeId = (int)cmbSize.EditValue,
                     DisCountPercent = Convert.ToDecimal(txtDiscountPercent.EditValue)
-                });
+                }); ;
                 XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Smart Shop Alert:- Product update successfully", "System Message", new[] { DialogResult.OK },
                        FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
                 return;

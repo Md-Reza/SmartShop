@@ -392,12 +392,6 @@
     <Compile Include="Desktop Forms Control\WaitingForm.Designer.cs">
       <DependentUpon>WaitingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Desktop Helper Form\frmAutoGeneratePassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Desktop Helper Form\frmAutoGeneratePassword.Designer.cs">
-      <DependentUpon>frmAutoGeneratePassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="Desktop Helper Form\frmBackup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -812,9 +806,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Forms Control\WaitingForm.resx">
       <DependentUpon>WaitingForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Desktop Helper Form\frmAutoGeneratePassword.resx">
-      <DependentUpon>frmAutoGeneratePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Helper Form\frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>

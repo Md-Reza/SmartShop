@@ -146,7 +146,7 @@ namespace SmartShop.Desktop_Helper_Form
             if (Convert.ToInt32(txtReturnAmount.EditValue) < 0)
             {
                 XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Return Amount is incorrect", "System Message", new[] { DialogResult.OK },
-                       FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
+                       FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
                 return;
             }
             if (XtraMessageBox.Show($"Are you want to confirm this item {invoice2 }?", "System Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

@@ -50,7 +50,7 @@ namespace SmartShop.Desktop_Helper_Form
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.simpleButton19 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
@@ -294,21 +294,21 @@ namespace SmartShop.Desktop_Helper_Form
             this.label4.TabIndex = 20;
             this.label4.Text = "Change Amount";
             // 
-            // simpleButton19
+            // btnClear
             // 
-            this.simpleButton19.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton19.ImageOptions.Image")));
-            this.simpleButton19.Location = new System.Drawing.Point(325, 303);
-            this.simpleButton19.Name = "simpleButton19";
-            this.simpleButton19.Size = new System.Drawing.Size(120, 47);
-            this.simpleButton19.TabIndex = 23;
-            this.simpleButton19.Text = "Clear";
+            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton19.ImageOptions.Image")));
+            this.btnClear.Location = new System.Drawing.Point(317, 303);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(128, 47);
+            this.btnClear.TabIndex = 23;
+            this.btnClear.Text = "Clear";
             // 
             // btnSave
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.Location = new System.Drawing.Point(169, 303);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(149, 47);
+            this.btnSave.Size = new System.Drawing.Size(126, 47);
             this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -478,7 +478,7 @@ namespace SmartShop.Desktop_Helper_Form
             this.Controls.Add(this.lookUpEdit3);
             this.Controls.Add(this.lookUpEdit2);
             this.Controls.Add(this.lookUpEdit1);
-            this.Controls.Add(this.simpleButton19);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -545,7 +545,7 @@ namespace SmartShop.Desktop_Helper_Form
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton19;
+        private DevExpress.XtraEditors.SimpleButton btnClear;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;

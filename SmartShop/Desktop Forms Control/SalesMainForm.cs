@@ -284,8 +284,7 @@ namespace SmartShop.Desktop_Forms_Control
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmAutoGeneratePassword password = new frmAutoGeneratePassword();
-            password.ShowDialog();
+            
         }
 
         private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
@@ -305,6 +304,16 @@ namespace SmartShop.Desktop_Forms_Control
         {
             frmOrderCompletion frmOrderCompletion = new frmOrderCompletion();
             OpenForm(frmOrderCompletion);
+        }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }

@@ -17,6 +17,8 @@ namespace SmartShop.Desktop_Helper_Form
         rptPosInvoice rptPosInvoice = new rptPosInvoice();
         int pageNumber = 1;
         IPagedList<SellesChild> pageList;
+
+        private List<int> pageLoad = new List<int>();
         public frmOrderCompletion()
         {
             InitializeComponent();
@@ -28,11 +30,18 @@ namespace SmartShop.Desktop_Helper_Form
         }
         private async void frmOrderCompletion_Load(object sender, EventArgs e)
         {
+            pageLoad.Add(10);
+            pageLoad.Add(15);
+            pageLoad.Add(20);
+            pageLoad.Add(30);
+            pageLoad.Add(50);
+            pageLoad.Add(100);
+            cmbPageSize.Properties.DataSource = pageLoad.ToList();
+
             Designer.InitLayoutGroup(layoutControlGroup2, "Order List");
             pageList = await GetAllPendingOrder();
             btnNext.Enabled = pageList.HasNextPage;
             btnPrevious.Enabled = pageList.HasPreviousPage;
-            //var allData = _sellsRepository.GetAllSales();
             gridControl1.DataSource = pageList.ToList();
             label1.Text = string.Format("Page {0}/{1}", pageNumber, pageList.PageCount);
         }
@@ -80,12 +89,10 @@ namespace SmartShop.Desktop_Helper_Form
                 XtraMessageBox.Show("Edited");
             }
         }
-
         private void layoutControlGroup4_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
         {
             rptPosInvoice.Print();
         }
-
         private async void btnNext_Click(object sender, EventArgs e)
         {
             if (pageList.HasNextPage)
@@ -108,6 +115,35 @@ namespace SmartShop.Desktop_Helper_Form
                 gridControl1.DataSource = pageList.ToList();
                 label1.Text = string.Format("Page {0}/{1}", pageNumber, pageList.PageCount);
             }
+        }
+
+        private async void cmbPageSize_EditValueChanged(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = null;
+            pageList = await GetAllPendingOrder();
+            await Task.Factory.StartNew(() => _sellsRepository.GetAllSales().ToPagedList(pageNumber,Convert.ToInt32( cmbPageSize.EditValue)));
+            gridControl1.DataSource = pageList.ToList();
+        }
+
+        private async void btnFirst_Click(object sender, EventArgs e)
+        {
+            if (pageList.IsFirstPage)
+            {
+                pageList = await GetAllPendingOrder(pageNumber);
+                btnFirst.Enabled = pageList.IsFirstPage;
+                gridControl1.DataSource = pageList.ToList();
+                label1.Text = string.Format("Page {0}/{1}", pageNumber, pageList.PageCount);
+            }
+        }
+
+        private async void layoutControlGroup2_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        {
+            Designer.InitLayoutGroup(layoutControlGroup2, "Order List");
+            pageList = await GetAllPendingOrder();
+            btnNext.Enabled = pageList.HasNextPage;
+            btnPrevious.Enabled = pageList.HasPreviousPage;
+            gridControl1.DataSource = pageList.ToList();
+            label1.Text = string.Format("Page {0}/{1}", pageNumber, pageList.PageCount);
         }
     }
 }

@@ -101,19 +101,19 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(99, 12);
+            this.txtId.Location = new System.Drawing.Point(100, 12);
             this.txtId.Name = "txtId";
             this.txtId.Properties.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(382, 23);
+            this.txtId.Size = new System.Drawing.Size(381, 23);
             this.txtId.StyleController = this.layoutControl1;
             this.txtId.TabIndex = 4;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(99, 39);
+            this.txtName.Location = new System.Drawing.Point(100, 39);
             this.txtName.Name = "txtName";
             this.txtName.Properties.NullText = "Write expense name";
-            this.txtName.Size = new System.Drawing.Size(382, 23);
+            this.txtName.Size = new System.Drawing.Size(381, 23);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -123,16 +123,16 @@
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(99, 66);
+            this.txtRemarks.Location = new System.Drawing.Point(100, 66);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.NullText = "Remarks";
-            this.txtRemarks.Size = new System.Drawing.Size(382, 53);
+            this.txtRemarks.Size = new System.Drawing.Size(381, 53);
             this.txtRemarks.StyleController = this.layoutControl1;
             this.txtRemarks.TabIndex = 6;
             // 
             // btnClose
             // 
-            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
             this.btnClose.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnClose.Location = new System.Drawing.Point(404, 188);
             this.btnClose.Name = "btnClose";
@@ -144,7 +144,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnSave.Location = new System.Drawing.Point(331, 188);
             this.btnSave.Name = "btnSave";
@@ -156,7 +156,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNew.ImageOptions.SvgImage")));
+            this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
             this.btnNew.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnNew.Location = new System.Drawing.Point(12, 188);
             this.btnNew.Name = "btnNew";

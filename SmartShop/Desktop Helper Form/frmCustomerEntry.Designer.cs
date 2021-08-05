@@ -142,18 +142,18 @@
             // 
             // txtCustId
             // 
-            this.txtCustId.Location = new System.Drawing.Point(127, 12);
+            this.txtCustId.Location = new System.Drawing.Point(128, 12);
             this.txtCustId.Name = "txtCustId";
             this.txtCustId.Properties.ReadOnly = true;
-            this.txtCustId.Size = new System.Drawing.Size(384, 23);
+            this.txtCustId.Size = new System.Drawing.Size(383, 23);
             this.txtCustId.StyleController = this.layoutControl1;
             this.txtCustId.TabIndex = 4;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(127, 39);
+            this.txtName.Location = new System.Drawing.Point(128, 39);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(384, 23);
+            this.txtName.Size = new System.Drawing.Size(383, 23);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -163,9 +163,9 @@
             // 
             // txtContactNo
             // 
-            this.txtContactNo.Location = new System.Drawing.Point(127, 181);
+            this.txtContactNo.Location = new System.Drawing.Point(128, 181);
             this.txtContactNo.Name = "txtContactNo";
-            this.txtContactNo.Size = new System.Drawing.Size(547, 23);
+            this.txtContactNo.Size = new System.Drawing.Size(546, 23);
             this.txtContactNo.StyleController = this.layoutControl1;
             this.txtContactNo.TabIndex = 8;
             conditionValidationRule2.ErrorText = "This field are required";
@@ -173,9 +173,9 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(127, 208);
+            this.txtEmail.Location = new System.Drawing.Point(128, 208);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(547, 23);
+            this.txtEmail.Size = new System.Drawing.Size(546, 23);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 9;
             conditionValidationRule3.ErrorText = "This field are required";
@@ -183,9 +183,9 @@
             // 
             // txtPresentAddress
             // 
-            this.txtPresentAddress.Location = new System.Drawing.Point(127, 66);
+            this.txtPresentAddress.Location = new System.Drawing.Point(128, 66);
             this.txtPresentAddress.Name = "txtPresentAddress";
-            this.txtPresentAddress.Size = new System.Drawing.Size(384, 39);
+            this.txtPresentAddress.Size = new System.Drawing.Size(383, 39);
             this.txtPresentAddress.StyleController = this.layoutControl1;
             this.txtPresentAddress.TabIndex = 6;
             conditionValidationRule4.ErrorText = "This field are required";
@@ -193,9 +193,9 @@
             // 
             // txtPermantAddress
             // 
-            this.txtPermantAddress.Location = new System.Drawing.Point(127, 109);
+            this.txtPermantAddress.Location = new System.Drawing.Point(128, 109);
             this.txtPermantAddress.Name = "txtPermantAddress";
-            this.txtPermantAddress.Size = new System.Drawing.Size(384, 41);
+            this.txtPermantAddress.Size = new System.Drawing.Size(383, 41);
             this.txtPermantAddress.StyleController = this.layoutControl1;
             this.txtPermantAddress.TabIndex = 7;
             conditionValidationRule5.ErrorText = "This field are required";
@@ -203,7 +203,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
             this.btnClose.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnClose.Location = new System.Drawing.Point(603, 324);
             this.btnClose.Name = "btnClose";
@@ -215,7 +215,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnSave.Location = new System.Drawing.Point(526, 324);
             this.btnSave.Name = "btnSave";
@@ -227,7 +227,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNew.ImageOptions.SvgImage")));
+            this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
             this.btnNew.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnNew.Location = new System.Drawing.Point(12, 324);
             this.btnNew.Name = "btnNew";
@@ -238,12 +238,12 @@
             // 
             // cmbGender
             // 
-            this.cmbGender.Location = new System.Drawing.Point(127, 154);
+            this.cmbGender.Location = new System.Drawing.Point(128, 154);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbGender.Properties.PopupSizeable = true;
-            this.cmbGender.Size = new System.Drawing.Size(384, 23);
+            this.cmbGender.Size = new System.Drawing.Size(383, 23);
             this.cmbGender.StyleController = this.layoutControl1;
             this.cmbGender.TabIndex = 10;
             // 

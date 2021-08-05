@@ -53,6 +53,7 @@ namespace SmartShop.Desktop_Helper_Form
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions1 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions buttonImageOptions2 = new DevExpress.XtraEditors.ButtonsPanelControl.ButtonImageOptions();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.documentViewer2 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -66,36 +67,45 @@ namespace SmartShop.Desktop_Helper_Form
             this.Operation = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryOperationItem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.SellingPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbPageSize = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryOperationItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPageSize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -106,6 +116,9 @@ namespace SmartShop.Desktop_Helper_Form
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.btnPrevious);
             this.layoutControl1.Controls.Add(this.btnNext);
+            this.layoutControl1.Controls.Add(this.btnFirst);
+            this.layoutControl1.Controls.Add(this.btnLast);
+            this.layoutControl1.Controls.Add(this.cmbPageSize);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
@@ -117,12 +130,20 @@ namespace SmartShop.Desktop_Helper_Form
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(872, 680);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 27);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+            // 
             // documentViewer2
             // 
             this.documentViewer2.IsMetric = false;
-            this.documentViewer2.Location = new System.Drawing.Point(1031, 60);
+            this.documentViewer2.Location = new System.Drawing.Point(1209, 60);
             this.documentViewer2.Name = "documentViewer2";
-            this.documentViewer2.Size = new System.Drawing.Size(556, 647);
+            this.documentViewer2.Size = new System.Drawing.Size(378, 647);
             this.documentViewer2.TabIndex = 6;
             // 
             // documentViewer1
@@ -140,7 +161,7 @@ namespace SmartShop.Desktop_Helper_Form
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryOperationItem});
-            this.gridControl1.Size = new System.Drawing.Size(1000, 605);
+            this.gridControl1.Size = new System.Drawing.Size(1178, 616);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -280,6 +301,64 @@ namespace SmartShop.Desktop_Helper_Form
             this.SellingPrice.Name = "SellingPrice";
             this.SellingPrice.Width = 94;
             // 
+            // btnPrevious
+            // 
+            this.btnPrevious.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.ImageOptions.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(990, 680);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(105, 27);
+            this.btnPrevious.StyleController = this.layoutControl1;
+            this.btnPrevious.TabIndex = 7;
+            this.btnPrevious.Text = ">> Previous";
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
+            this.btnNext.Location = new System.Drawing.Point(754, 680);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(114, 27);
+            this.btnNext.StyleController = this.layoutControl1;
+            this.btnNext.TabIndex = 8;
+            this.btnNext.Text = "<<< Next";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
+            this.btnFirst.Location = new System.Drawing.Point(627, 680);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(123, 27);
+            this.btnFirst.StyleController = this.layoutControl1;
+            this.btnFirst.TabIndex = 10;
+            this.btnFirst.Text = "First Page";
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
+            // 
+            // btnLast
+            // 
+            this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.ImageOptions.Image")));
+            this.btnLast.Location = new System.Drawing.Point(1099, 680);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(96, 27);
+            this.btnLast.StyleController = this.layoutControl1;
+            this.btnLast.TabIndex = 11;
+            this.btnLast.Text = "Last Page";
+            // 
+            // cmbPageSize
+            // 
+            this.cmbPageSize.Location = new System.Drawing.Point(512, 680);
+            this.cmbPageSize.Name = "cmbPageSize";
+            this.cmbPageSize.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbPageSize.Properties.DropDownRows = 10;
+            this.cmbPageSize.Properties.NullText = "";
+            this.cmbPageSize.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbPageSize.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbPageSize.Size = new System.Drawing.Size(111, 23);
+            this.cmbPageSize.StyleController = this.layoutControl1;
+            this.cmbPageSize.TabIndex = 12;
+            this.cmbPageSize.EditValueChanged += new System.EventHandler(this.cmbPageSize_EditValueChanged);
+            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.documentViewer1;
@@ -309,22 +388,88 @@ namespace SmartShop.Desktop_Helper_Form
             this.layoutControlItem1,
             this.layoutControlItem5,
             this.layoutControlItem4,
-            this.emptySpaceItem1,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem9,
+            this.emptySpaceItem1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1014, 704);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1192, 704);
             this.layoutControlGroup2.Text = "Pending Order List";
+            this.layoutControlGroup2.CustomButtonClick += new DevExpress.XtraBars.Docking2010.BaseButtonEventHandler(this.layoutControlGroup2_CustomButtonClick);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1004, 609);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1182, 620);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnNext;
+            this.layoutControlItem5.Location = new System.Drawing.Point(737, 620);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(118, 31);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.btnPrevious;
+            this.layoutControlItem4.Location = new System.Drawing.Point(973, 620);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(109, 31);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.label1;
+            this.layoutControlItem6.Location = new System.Drawing.Point(855, 620);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(118, 31);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.btnFirst;
+            this.layoutControlItem7.Location = new System.Drawing.Point(610, 620);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(127, 31);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.btnLast;
+            this.layoutControlItem8.Location = new System.Drawing.Point(1082, 620);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(100, 31);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.cmbPageSize;
+            this.layoutControlItem9.Location = new System.Drawing.Point(435, 620);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(175, 31);
+            this.layoutControlItem9.Text = "Page Size";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(56, 16);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 620);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(435, 31);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup4
             // 
@@ -334,10 +479,10 @@ namespace SmartShop.Desktop_Helper_Form
             this.layoutControlGroup4.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText;
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(1014, 0);
+            this.layoutControlGroup4.Location = new System.Drawing.Point(1192, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
             this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup4.Size = new System.Drawing.Size(570, 704);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(392, 704);
             this.layoutControlGroup4.Text = "Order Print";
             this.layoutControlGroup4.CustomButtonClick += new DevExpress.XtraBars.Docking2010.BaseButtonEventHandler(this.layoutControlGroup4_CustomButtonClick);
             // 
@@ -346,7 +491,7 @@ namespace SmartShop.Desktop_Helper_Form
             this.layoutControlItem3.Control = this.documentViewer2;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(560, 651);
+            this.layoutControlItem3.Size = new System.Drawing.Size(382, 651);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -356,71 +501,6 @@ namespace SmartShop.Desktop_Helper_Form
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(583, 704);
             // 
-            // btnPrevious
-            // 
-            this.btnPrevious.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.ImageOptions.Image")));
-            this.btnPrevious.Location = new System.Drawing.Point(903, 669);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(114, 38);
-            this.btnPrevious.StyleController = this.layoutControl1;
-            this.btnPrevious.TabIndex = 7;
-            this.btnPrevious.Text = ">> Previous";
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.btnPrevious;
-            this.layoutControlItem4.Location = new System.Drawing.Point(886, 609);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(118, 42);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
-            this.btnNext.Location = new System.Drawing.Point(661, 669);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(107, 38);
-            this.btnNext.StyleController = this.layoutControl1;
-            this.btnNext.TabIndex = 8;
-            this.btnNext.Text = "<<< Next";
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.btnNext;
-            this.layoutControlItem5.Location = new System.Drawing.Point(644, 609);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(111, 42);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem5.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 609);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(644, 42);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(772, 669);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 38);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
-            // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.label1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(755, 609);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(131, 42);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
             // frmOrderCompletion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -428,24 +508,28 @@ namespace SmartShop.Desktop_Helper_Form
             this.ClientSize = new System.Drawing.Size(1604, 724);
             this.Controls.Add(this.layoutControl1);
             this.Name = "frmOrderCompletion";
-            this.Text = "frmOrderCompletion";
+            this.Text = "Order Completion";
             this.Load += new System.EventHandler(this.frmOrderCompletion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryOperationItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPageSize.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,7 +562,13 @@ namespace SmartShop.Desktop_Helper_Form
         private DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.SimpleButton btnFirst;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraEditors.LookUpEdit cmbPageSize;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }
