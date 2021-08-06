@@ -35,7 +35,7 @@ namespace SmartShop.Repository
         public IEnumerable<PurchaseParent> GetByAllInvoice( string PurchaseDate)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<PurchaseParent> returnValue = connection.Query<Models.PurchaseParent>(@"Select * from PurchaseParentTable where IsApproved=0 and cast(PurchaseDate as date)=cast(@PurchaseDate as date)",new { PurchaseDate = @PurchaseDate });
+            IEnumerable<PurchaseParent> returnValue = connection.Query<Models.PurchaseParent>(@"Select * from PurchaseParentTable where IsApproved=0 and cast(PurchaseDate as date)>=cast(@PurchaseDate as date)",new { PurchaseDate = @PurchaseDate });
             connection.Close();
             return returnValue;
         }

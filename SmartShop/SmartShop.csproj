@@ -350,12 +350,6 @@
     <Compile Include="Desktop Forms Control\frmProductSetup.Designer.cs">
       <DependentUpon>frmProductSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Desktop Forms Control\frmResOrderItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Desktop Forms Control\frmResOrderItem.Designer.cs">
-      <DependentUpon>frmResOrderItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Desktop Forms Control\frmSupplyerInformations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -785,9 +779,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Forms Control\frmProductSetup.resx">
       <DependentUpon>frmProductSetup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Desktop Forms Control\frmResOrderItem.resx">
-      <DependentUpon>frmResOrderItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Desktop Forms Control\frmSupplyerInformations.resx">
       <DependentUpon>frmSupplyerInformations.cs</DependentUpon>

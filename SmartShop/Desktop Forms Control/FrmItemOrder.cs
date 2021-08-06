@@ -4,6 +4,7 @@ using DevExpress.XtraLayout;
 using DevExpress.XtraSplashScreen;
 using SmartShop.Desktop_Helper_Form;
 using SmartShop.Models;
+using SmartShop.Properties;
 using SmartShop.Repository;
 using System;
 using System.Collections.Generic;
@@ -91,6 +92,7 @@ namespace SmartShop.Desktop_Forms_Control
         private void FrmItemOrder_Load(object sender, EventArgs e)
         {
             LoadImage();
+            txtDate.EditValue = DateTime.Now.ToString("dd-MMM-yyyy");
 
             var allCategory = categoryRepository.Get();
             layoutControlGroup3.Clear();
@@ -146,6 +148,7 @@ namespace SmartShop.Desktop_Forms_Control
                 var list = productNameRepository.GetByProductCodeName(text).FirstOrDefault();
                 if (sellesChild.Count > 0)
                 {
+                   
                     var checkReUse = sellesChild.Where(x => x.ProductCode == list.ProductCode).FirstOrDefault();
                     if (checkReUse != null)
                     {
@@ -169,7 +172,10 @@ namespace SmartShop.Desktop_Forms_Control
                             Qty = totQty,
                             VatAmount = Convert.ToInt32(Math.Round(list.VatPercent * list.SellingPrice)/100),
                             DiscountAmount = Convert.ToInt32(Math.Round(list.DisCountPercent * list.SellingPrice)/100),
-                            TotalAmount = totQty * Convert.ToInt32(list.SellingPrice)
+                            TotalAmount = totQty * Convert.ToInt32(list.SellingPrice),
+                            BrandId = list.BrandId.ToString(),
+                            SizeId = list.SizeId.ToString(),
+                            ColurId = list.ColurId.ToString()
                         });
                         TotalAmountByGrid();
                     }
@@ -186,7 +192,10 @@ namespace SmartShop.Desktop_Forms_Control
                         Qty = totQty + qty,
                         VatAmount = Convert.ToInt32(Math.Round(list.VatPercent * list.SellingPrice)/100),
                         DiscountAmount = Convert.ToInt32(Math.Round(list.DisCountPercent * list.SellingPrice)/100),
-                        TotalAmount = (totQty + qty) * Convert.ToInt32(list.SellingPrice)
+                        TotalAmount = (totQty + qty) * Convert.ToInt32(list.SellingPrice),
+                        BrandId = list.BrandId.ToString(),
+                        SizeId = list.SizeId.ToString(),
+                        ColurId = list.ColurId.ToString()
                     });
                     TotalAmountByGrid();
                 }
@@ -403,6 +412,7 @@ namespace SmartShop.Desktop_Forms_Control
                 frmCalculator frmCalculator = new frmCalculator
                 {
                     totalAmount = Convert.ToInt32(txtAmount.EditValue),
+                    salesDate=Convert.ToDateTime( txtDate.EditValue),
                     getOrderList = sellesChild.ToList(),
                     invoice=Convert.ToInt64(txtInvoiceNo.EditValue)
                 };

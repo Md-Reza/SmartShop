@@ -73,9 +73,6 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtVatAmount = new DevExpress.XtraEditors.TextEdit();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.txtInvoiceNo = new DevExpress.XtraEditors.TextEdit();
-            this.txtTime = new DevExpress.XtraEditors.TimeEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.LookUpEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -93,12 +90,11 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.txtDate = new DevExpress.XtraEditors.DateEdit();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl2.Properties)).BeginInit();
@@ -113,9 +109,6 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalDisCountAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVatAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInvoiceNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTime.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -133,12 +126,12 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -156,9 +149,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControl1.Controls.Add(this.txtVatAmount);
             this.layoutControl1.Controls.Add(this.btnRefresh);
             this.layoutControl1.Controls.Add(this.txtInvoiceNo);
-            this.layoutControl1.Controls.Add(this.txtTime);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit4);
+            this.layoutControl1.Controls.Add(this.txtDate);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4});
@@ -195,14 +186,14 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(1060, 95);
+            this.gridControl1.Location = new System.Drawing.Point(1060, 67);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDeleteButton,
             this.repositoryItemButtonEdit1,
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(571, 496);
+            this.gridControl1.Size = new System.Drawing.Size(571, 524);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -362,7 +353,7 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             // txtTotalQty
             // 
-            this.txtTotalQty.Location = new System.Drawing.Point(1150, 598);
+            this.txtTotalQty.Location = new System.Drawing.Point(1133, 598);
             this.txtTotalQty.Name = "txtTotalQty";
             this.txtTotalQty.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtTotalQty.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -370,13 +361,13 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtTotalQty.Properties.Appearance.Options.UseFont = true;
             this.txtTotalQty.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTotalQty.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtTotalQty.Size = new System.Drawing.Size(206, 36);
+            this.txtTotalQty.Size = new System.Drawing.Size(223, 36);
             this.txtTotalQty.StyleController = this.layoutControl1;
             this.txtTotalQty.TabIndex = 7;
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(1150, 638);
+            this.txtAmount.Location = new System.Drawing.Point(1133, 638);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -384,13 +375,13 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtAmount.Properties.Appearance.Options.UseFont = true;
             this.txtAmount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtAmount.Size = new System.Drawing.Size(206, 36);
+            this.txtAmount.Size = new System.Drawing.Size(223, 36);
             this.txtAmount.StyleController = this.layoutControl1;
             this.txtAmount.TabIndex = 9;
             // 
             // txtTotalDisCountAmount
             // 
-            this.txtTotalDisCountAmount.Location = new System.Drawing.Point(1462, 598);
+            this.txtTotalDisCountAmount.Location = new System.Drawing.Point(1445, 598);
             this.txtTotalDisCountAmount.Name = "txtTotalDisCountAmount";
             this.txtTotalDisCountAmount.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtTotalDisCountAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -398,7 +389,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtTotalDisCountAmount.Properties.Appearance.Options.UseFont = true;
             this.txtTotalDisCountAmount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTotalDisCountAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtTotalDisCountAmount.Size = new System.Drawing.Size(181, 36);
+            this.txtTotalDisCountAmount.Size = new System.Drawing.Size(198, 36);
             this.txtTotalDisCountAmount.StyleController = this.layoutControl1;
             this.txtTotalDisCountAmount.TabIndex = 8;
             // 
@@ -442,7 +433,7 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             // txtVatAmount
             // 
-            this.txtVatAmount.Location = new System.Drawing.Point(1462, 638);
+            this.txtVatAmount.Location = new System.Drawing.Point(1445, 638);
             this.txtVatAmount.Name = "txtVatAmount";
             this.txtVatAmount.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
             this.txtVatAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
@@ -450,7 +441,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.txtVatAmount.Properties.Appearance.Options.UseFont = true;
             this.txtVatAmount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtVatAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.txtVatAmount.Size = new System.Drawing.Size(181, 36);
+            this.txtVatAmount.Size = new System.Drawing.Size(198, 36);
             this.txtVatAmount.StyleController = this.layoutControl1;
             this.txtVatAmount.TabIndex = 10;
             // 
@@ -469,46 +460,11 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             // txtInvoiceNo
             // 
-            this.txtInvoiceNo.Location = new System.Drawing.Point(1162, 68);
+            this.txtInvoiceNo.Location = new System.Drawing.Point(1432, 40);
             this.txtInvoiceNo.Name = "txtInvoiceNo";
-            this.txtInvoiceNo.Size = new System.Drawing.Size(193, 23);
+            this.txtInvoiceNo.Size = new System.Drawing.Size(199, 23);
             this.txtInvoiceNo.StyleController = this.layoutControl1;
             this.txtInvoiceNo.TabIndex = 5;
-            // 
-            // txtTime
-            // 
-            this.txtTime.EditValue = null;
-            this.txtTime.Location = new System.Drawing.Point(1461, 40);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTime.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtTime.Properties.MaskSettings.Set("mask", "");
-            this.txtTime.Size = new System.Drawing.Size(170, 24);
-            this.txtTime.StyleController = this.layoutControl1;
-            this.txtTime.TabIndex = 4;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(1162, 40);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit2.Properties.NullText = "";
-            this.textEdit2.Size = new System.Drawing.Size(193, 23);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 3;
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(1461, 68);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit4.Properties.NullText = "";
-            this.textEdit4.Size = new System.Drawing.Size(170, 23);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 5;
             // 
             // layoutControlItem4
             // 
@@ -555,7 +511,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(312, 40);
             this.layoutControlItem5.Text = "Total Qty";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(98, 16);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(81, 16);
             // 
             // layoutControlItem6
             // 
@@ -564,7 +520,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(312, 40);
             this.layoutControlItem6.Text = "Total Amount";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(98, 16);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(81, 16);
             // 
             // layoutControlItem7
             // 
@@ -573,7 +529,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(287, 40);
             this.layoutControlItem7.Text = "Total Discount";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(98, 16);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(81, 16);
             // 
             // layoutControlItem8
             // 
@@ -609,7 +565,7 @@ namespace SmartShop.Desktop_Forms_Control
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(287, 40);
             this.layoutControlItem3.Text = "Total Vat";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(98, 16);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 16);
             // 
             // layoutControlGroup2
             // 
@@ -661,9 +617,7 @@ namespace SmartShop.Desktop_Forms_Control
             // 
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
-            this.layoutControlItem14,
             this.layoutControlItem15,
-            this.layoutControlItem16,
             this.layoutControlItem13});
             this.layoutControlGroup4.Location = new System.Drawing.Point(1036, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
@@ -674,47 +628,20 @@ namespace SmartShop.Desktop_Forms_Control
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 55);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 27);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(575, 500);
+            this.layoutControlItem2.Size = new System.Drawing.Size(575, 528);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // layoutControlItem14
-            // 
-            this.layoutControlItem14.Control = this.textEdit2;
-            this.layoutControlItem14.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(299, 28);
-            this.layoutControlItem14.Text = "Dine in Customer";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(98, 16);
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.txtInvoiceNo;
-            this.layoutControlItem15.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem15.Location = new System.Drawing.Point(287, 0);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(299, 27);
+            this.layoutControlItem15.Size = new System.Drawing.Size(288, 27);
             this.layoutControlItem15.Text = "Invoice No.";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(98, 16);
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.textEdit4;
-            this.layoutControlItem16.Location = new System.Drawing.Point(299, 28);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(276, 27);
-            this.layoutControlItem16.Text = "Table";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(98, 16);
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.txtTime;
-            this.layoutControlItem13.Location = new System.Drawing.Point(299, 0);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(276, 28);
-            this.layoutControlItem13.Text = "Time";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(98, 16);
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(81, 16);
             // 
             // layoutControlItem12
             // 
@@ -732,6 +659,30 @@ namespace SmartShop.Desktop_Forms_Control
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(107, 10);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // txtDate
+            // 
+            this.txtDate.EditValue = null;
+            this.txtDate.Location = new System.Drawing.Point(1145, 40);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Properties.BeepOnError = false;
+            this.txtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDate.Properties.MaskSettings.Set("mask", "yyyy- MM- dd");
+            this.txtDate.Size = new System.Drawing.Size(198, 23);
+            this.txtDate.StyleController = this.layoutControl1;
+            this.txtDate.TabIndex = 15;
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.txtDate;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(287, 27);
+            this.layoutControlItem13.Text = "Sales Date";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(81, 16);
             // 
             // FrmItemOrder
             // 
@@ -756,9 +707,6 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalDisCountAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVatAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInvoiceNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTime.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -776,12 +724,12 @@ namespace SmartShop.Desktop_Forms_Control
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -833,12 +781,8 @@ namespace SmartShop.Desktop_Forms_Control
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraEditors.TextEdit txtInvoiceNo;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraEditors.DateEdit txtDate;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-        private DevExpress.XtraEditors.TimeEdit txtTime;
-        private DevExpress.XtraEditors.LookUpEdit textEdit2;
-        private DevExpress.XtraEditors.LookUpEdit textEdit4;
     }
 }

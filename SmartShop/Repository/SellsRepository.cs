@@ -117,7 +117,6 @@ namespace SmartShop.Repository
                     ProductName
                     from SellesChild as c
                     inner join ProductName as p on c.ProductCode=p.ProductCode
-                    where SellsParId=0
                     group by SellsInvoice,ProductName", map: (c,p) =>
             {
                 c.Products = p;
@@ -139,7 +138,7 @@ namespace SmartShop.Repository
                     p.ProductCode
                     from SellesChild as c
                     inner join ProductName as p on c.ProductCode=p.ProductCode
-                    where SellsParId=0 and SellsInvoice=@SellsInvoice", map: (c, p) =>
+                    where SellsInvoice=@SellsInvoice", map: (c, p) =>
             {
                 c.Products = p;
                 return c;

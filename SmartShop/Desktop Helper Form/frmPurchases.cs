@@ -1,6 +1,5 @@
 ﻿using DevExpress.XtraEditors;
 using SmartShop.Dtos;
-using SmartShop.Interface;
 using SmartShop.Models;
 using SmartShop.Properties;
 using SmartShop.Repository;
@@ -15,40 +14,26 @@ namespace SmartShop.Desktop_Helper_Form
 {
     public partial class frmPurchases : DevExpress.XtraEditors.XtraForm
     {
-        public DataTable dataTable;
         ProductNameRepository productNameRepository = new ProductNameRepository();
-        public List<PurchaseChild> listPurchaseChildren = new List<PurchaseChild>();
         PurchaseRepository purchase = new PurchaseRepository();
         GetByAllSequence _getByAllSequence = new GetByAllSequence();
         PurchaseRepository purchaseRepository = new PurchaseRepository();
         IStockList<Stock> stock = new StockRepository();
-        
+        private List<PurchaseChild> purchaseChild = new List<PurchaseChild>();
+        private List<PurchaseChild> purchaseChildSave = new List<PurchaseChild>();
+
         public frmPurchases()
         {
             InitializeComponent();
-
-            dataTable = new DataTable();
-            dataTable.Columns.Add("serial", typeof(int));
-            dataTable.Columns.Add("ProductCode", typeof(string));
-            dataTable.Columns.Add("PurchaseInvoice", typeof(string));
-            dataTable.Columns.Add("Qty", typeof(int));
-            dataTable.Columns.Add("PurchasePrice", typeof(int));
-            dataTable.Columns.Add("SellingPrice", typeof(int));
-            dataTable.Columns.Add("DiscountPrice", typeof(int));
-            dataTable.Columns.Add("DiscountAmount", typeof(int));
-            dataTable.Columns.Add("TotalAmount", typeof(int));
-            dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["serial"] };
-            layoutControl1.AllowCustomization = false;
         }
-
         private void frmPurchases_Load(object sender, EventArgs e)
         {
             LoadSupplyer();
-            txtDate.EditValue = DateTime.Now;
+            LoadProducts();
+            txtDate.EditValue = DateTime.Now.ToString("yyyy-MM-dd");
             txtInvoice.EditValue = DateTime.Now.ToString("yyyyMMdd") + _getByAllSequence.GetByAll().Where(f => f.Code == "Invoice").FirstOrDefault().StartWith;
             txtUserName.EditValue = Settings.Default.UserName;
             btnSave.Enabled = false;
-            LoadSupplyer();
             LoadInvoice();
             gridControl2.DataSource = purchaseRepository.GetByLastPurchase(txtDate.EditValue.ToString());
             layoutControl1.AllowCustomization = false;
@@ -62,47 +47,19 @@ namespace SmartShop.Desktop_Helper_Form
             txtUserName.EditValue = Settings.Default.UserName;
         }
 
+        private void LoadProducts()
+        {
+            cmbProducts.Properties.DataSource = productNameRepository.GetAllProduct().ToList();
+            cmbProducts.Properties.DisplayMember = "ProductName";
+            cmbProducts.Properties.ValueMember = "ProductCode";
+            txtUserName.EditValue = Settings.Default.UserName;
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode != Keys.Enter) return;
-
-            if (txtCode.EditValue == null)
-            {
-                Console.Beep(5000, 800);
-                XtraMessageBox.Show(this, $" Please scan qr code");
-                txtCode.SelectAll();
-                txtCode.Focus();
-                return;
-            }
-
-            if (!ValidationProvider.Validate()) return;
-            IEnumerable<PurchaseChild> purchaseChildren = purchase.GetByAll(Convert.ToString(txtCode.EditValue.ToString()));
-            if (purchaseChildren.Any())
-            {
-                IEnumerable<Stock> information = stock.GetByStockListProductCode(txtCode.EditValue.ToString());
-                if (information.Any())
-                {
-                    int totalQty = information.FirstOrDefault().QtyBalance;
-                    txtStock.EditValue = totalQty;
-                }
-                else
-                {
-                    txtStock.EditValue = 0;
-                }
-                txtQty.Focus();
-                txtQty.SelectAll();
-            }
-            else
-            {
-                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "No product item here...please check product code.", "System Message", new[] { DialogResult.OK }, FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
-                return;
-            }
-        }
         public void DbOperation()
         {
             if (!ValidationProvider.Validate()) return;
@@ -124,10 +81,9 @@ namespace SmartShop.Desktop_Helper_Form
                 XtraMessageBox.Show(this, $"Please input delivery by .");
                 return;
             }
-
-            if (gridView1.RowCount >= 1)
+            if (!purchaseChild.Any()) return;
             {
-                List<PurchaseChild> purchaseChild = new List<PurchaseChild>();
+                purchaseChildSave.Clear();
                 PurchaseParent purchaseParent = new PurchaseParent()
                 {
                     PurchaseDate = Convert.ToDateTime(txtDate.EditValue),
@@ -142,7 +98,7 @@ namespace SmartShop.Desktop_Helper_Form
                 };
                 for (int i = 0; i < gridView1.DataRowCount; i++)
                 {
-                    purchaseChild.Add(new PurchaseChild()
+                    purchaseChildSave.Add(new PurchaseChild()
                     {
                         PurchaseInvoice = txtInvoice.EditValue.ToString(),
                         ProductCode = gridView1.GetRowCellValue(i, "ProductCode").ToString(),
@@ -153,34 +109,27 @@ namespace SmartShop.Desktop_Helper_Form
                         DiscountPrice = Convert.ToInt32(gridView1.GetRowCellValue(i, "DiscountPrice") == null ? 0 : gridView1.GetRowCellValue(i, "DiscountPrice")),
                         DiscountAmount = Convert.ToInt32(gridView1.GetRowCellValue(i, "DiscountPrice") == null ? 0 : gridView1.GetRowCellValue(i, "DiscountAmount")),
                         TotalAmount = Convert.ToInt32(gridView1.GetRowCellValue(i, "TotalAmount") == null ? 0 : gridView1.GetRowCellValue(i, "TotalAmount")),
-                        BrandId = productNameRepository.GetByProductCode(txtCode.EditValue.ToString()).FirstOrDefault().BrandId,
-                        SizeId = productNameRepository.GetByProductCode(txtCode.EditValue.ToString()).FirstOrDefault().SizeId,
-                        ColourId = productNameRepository.GetByProductCode(txtCode.EditValue.ToString()).FirstOrDefault().ColurId
+                        BrandId = productNameRepository.GetByProductCode(cmbProducts.EditValue.ToString()).FirstOrDefault().BrandId,
+                        SizeId = productNameRepository.GetByProductCode(cmbProducts.EditValue.ToString()).FirstOrDefault().SizeId,
+                        ColourId = productNameRepository.GetByProductCode(cmbProducts.EditValue.ToString()).FirstOrDefault().ColurId
                     });
                 }
                 PurchaseCreateDto purchaseCreateDto = new PurchaseCreateDto()
                 {
                     purchaseParent = purchaseParent,
-                    purchaseChild = purchaseChild
+                    purchaseChild = purchaseChildSave
                 };
-
-                purchaseRepository.InsertPurchaseData(purchaseCreateDto);
-                purchaseRepository.InsertPurchaseChild(purchaseChild);
-
-               XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Purchase save successfully", "System Message", new[] { DialogResult.OK }, FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
-               
-                txtInvoice.EditValue = _getByAllSequence.GetByAll().Where(f => f.Code == "Invoice").FirstOrDefault().StartWith;
-                gridControl2.DataSource = purchaseRepository.GetByLastPurchase(txtDate.EditValue.ToString());
-                gridControl1.DataSource = null;
-                dataTable.Rows.Clear();
-                dataTable.Clear();
-                LoadInvoice();
-            }
-            else
-            {
-                Voice.Speech("Can't performed save into database");
-                Console.Beep(5000, 800);
-                XtraMessageBox.Show("Can't performed save into database");
+                if (purchaseChildSave.Count > 0)
+                {
+                    purchaseRepository.InsertPurchaseData(purchaseCreateDto);
+                    purchaseRepository.InsertPurchaseChild(purchaseChildSave);
+                    XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Purchase save successfully", "System Message", new[] { DialogResult.OK }, FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.SuccessfullGreen()));
+                    txtInvoice.EditValue = _getByAllSequence.GetByAll().Where(f => f.Code == "Invoice").FirstOrDefault().StartWith;
+                    gridControl2.DataSource = purchaseRepository.GetByLastPurchase(txtDate.EditValue.ToString());
+                    gridControl1.DataSource = null;
+                    LoadInvoice();
+                    purchaseChild.Clear();
+                }
             }
         }
         private void LoadInvoice()
@@ -223,7 +172,7 @@ namespace SmartShop.Desktop_Helper_Form
         private void btnSave_Click(object sender, EventArgs e)
         {
             DbOperation();
-            txtInvoice.EditValue = DateTime.Now.ToString("yyyyMMdd")+ _getByAllSequence.GetByAll().Where(f => f.Code == "Invoice").FirstOrDefault().StartWith;
+            txtInvoice.EditValue = DateTime.Now.ToString("yyyyMMdd") + _getByAllSequence.GetByAll().Where(f => f.Code == "Invoice").FirstOrDefault().StartWith;
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -282,11 +231,9 @@ namespace SmartShop.Desktop_Helper_Form
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            dataTable.Rows.Clear();
-            dataTable.Clear();
             chkInvoice.UnCheckAll();
             gridControl1.DataSource = null;
-            txtCode.EditValue = null;
+            cmbProducts.EditValue = null;
             txtCompanyInvoicce.EditValue = null;
             txtDelivaryBy.EditValue = null;
         }
@@ -349,57 +296,154 @@ namespace SmartShop.Desktop_Helper_Form
                 return;
             }
 
-            if (txtCode.EditValue == null)
+            if (cmbProducts.EditValue == null)
             {
                 Console.Beep(5000, 800);
                 XtraMessageBox.Show(this, $" Please scan qr code");
-                txtCode.SelectAll();
-                txtCode.Focus();
+                cmbProducts.SelectAll();
+                cmbProducts.Focus();
                 return;
             }
 
-            if ((from DataRow dr in dataTable.Rows
-                 where (string)dr["ProductCode"] == txtCode.EditValue.ToString()
-                 select (string)dr["ProductCode"]).Any())
-            {
-                Console.Beep(5000, 800);
-                XtraMessageBox.Show(this, $" Already scan this item..try another item");
-                txtCode.SelectAll();
-                txtCode.Focus();
-                return;
-            }
-
-            IEnumerable<PurchaseChild> purchaseChildren = purchase.GetByAll(Convert.ToString(txtCode.EditValue.ToString()));
+            IEnumerable<PurchaseChild> purchaseChildren = purchase.GetByAll(Convert.ToString(cmbProducts.EditValue.ToString()));
             if (purchaseChildren.Any())
             {
-                if ((from DataRow dr in dataTable.Rows where (string)dr["ProductCode"] == purchaseChildren.FirstOrDefault().ProductCode select (string)dr["ProductCode"]).Count() == 0)
+
+                repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+                gridView1.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+                if (purchaseChild.Count > 0)
                 {
-                    DataRow row = dataTable.NewRow();
-                    row["serial"] = DefultSettings.GetNewId(dataTable);
-                    row["ProductCode"] = txtCode.EditValue.ToString();
-                    row["PurchaseInvoice"] = txtInvoice.EditValue;
-                    row["Qty"] = txtQty.EditValue;
-                    row["PurchasePrice"] = purchaseChildren.FirstOrDefault().PurchasePrice;
-                    row["SellingPrice"] = purchaseChildren.FirstOrDefault().SellingPrice;
-                    row["DiscountPrice"] = 0;
-                    row["DiscountAmount"] = 0;
-                    row["TotalAmount"] = purchaseChildren.FirstOrDefault().PurchasePrice * Convert.ToInt16( txtQty.EditValue);
-                    dataTable.Rows.Add(row);
-                    gridControl1.DataSource = dataTable;
-                    txtCode.Focus();
-                    txtCode.SelectAll();
+                    var checkReUse = purchaseChild.Where(x => x.ProductCode == cmbProducts.EditValue.ToString()).FirstOrDefault();
+                    if (checkReUse != null)
+                    {
+                        checkReUse.Qty = checkReUse.Qty + Convert.ToInt32(txtQty.EditValue);
+                        checkReUse.TotalAmount = (checkReUse.Qty * checkReUse.PurchasePrice);
+                        gridControl1.Refresh();
+                        gridView1.RefreshData();
+                    }
+                    else
+                    {
+                        purchaseChild.Add(new PurchaseChild()
+                        {
+                            ProductCode = cmbProducts.EditValue.ToString(),
+                            PurchaseInvoice = txtInvoice.EditValue.ToString(),
+                            Qty = Convert.ToInt32(txtQty.EditValue),
+                            PurchasePrice = purchaseChildren.FirstOrDefault().PurchasePrice,
+                            SellingPrice = purchaseChildren.FirstOrDefault().SellingPrice,
+                            DiscountAmount = 0,
+                            DiscountPrice = 0,
+                            TotalAmount = purchaseChildren.FirstOrDefault().PurchasePrice * Convert.ToInt16(txtQty.EditValue)
+                        });
+                    }
+                    gridControl1.Refresh();
+                    gridView1.RefreshData();
+                    gridControl1.DataSource = purchaseChild;
                     btnSave.Enabled = true;
                 }
                 else
                 {
-                    XtraMessageBox.Show(this, "Duplicate product code please try with different one.");
-                    txtCode.SelectAll();
+                    purchaseChild.Add(new PurchaseChild()
+                    {
+                        ProductCode = cmbProducts.EditValue.ToString(),
+                        PurchaseInvoice = txtInvoice.EditValue.ToString(),
+                        Qty = Convert.ToInt32(txtQty.EditValue),
+                        PurchasePrice = purchaseChildren.FirstOrDefault().PurchasePrice,
+                        SellingPrice = purchaseChildren.FirstOrDefault().SellingPrice,
+                        DiscountAmount = 0,
+                        DiscountPrice = 0,
+                        TotalAmount = purchaseChildren.FirstOrDefault().PurchasePrice * Convert.ToInt16(txtQty.EditValue)
+                    });
                 }
+                gridControl1.Refresh();
+                gridView1.RefreshData();
+                gridControl1.DataSource = purchaseChild;
+                btnSave.Enabled = true;
             }
             else
             {
                 Console.Beep(5000, 800);
                 XtraMessageBox.Show(this, "Product No not found. Please try with a different product code.");
+            }
+        }
+
+        private void cmbProducts_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+
+            if (cmbProducts.EditValue == null)
+            {
+                Console.Beep(5000, 800);
+                XtraMessageBox.Show(this, $" Please scan qr code");
+                cmbProducts.SelectAll();
+                cmbProducts.Focus();
+                return;
+            }
+
+            if (!ValidationProvider.Validate()) return;
+            IEnumerable<PurchaseChild> purchaseChildren = purchase.GetByAll(Convert.ToString(cmbProducts.EditValue.ToString()));
+            if (purchaseChildren.Any())
+            {
+                IEnumerable<Stock> information = stock.GetByStockListProductCode(cmbProducts.EditValue.ToString());
+                if (information.Any())
+                {
+                    int totalQty = information.FirstOrDefault().QtyBalance;
+                    txtStock.EditValue = totalQty;
+                }
+                else
+                {
+                    txtStock.EditValue = 0;
+                }
+                txtQty.Focus();
+                txtQty.SelectAll();
+            }
+            else
+            {
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "No product item here...please check product code.", "System Message", new[] { DialogResult.OK }, FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                return;
+            }
+        }
+
+        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
+        {
+            Console.Beep(5000, 800);
+            if (XtraMessageBox.Show($"Are you want to delete this item {gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Name) }?", "System Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var itemDelete = purchaseChild.Where(x => x.ProductCode == gridView1.GetRowCellValue(gridView1.FocusedRowHandle, ProductCode).ToString()).FirstOrDefault();
+                purchaseChild.Remove(itemDelete);
+                gridView1.DeleteSelectedRows();
+                gridView1.RefreshData();
+            }
+        }
+
+        private void repositoryItemButtonEdit3_ButtonPressed(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            ButtonEdit editor = (ButtonEdit)sender;
+            int buttonIndex = editor.Properties.Buttons.IndexOf(e.Button);
+            if (buttonIndex == 0)
+            {
+                int totQty = 0;
+                int GridQtySum = 0;
+
+                GridQtySum = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Qty));
+                totQty = GridQtySum + 1;
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Qty", totQty);
+                gridView1.RefreshData();
+            }
+            else
+            {
+                int totQty = 0;
+                int GridQtySum = 0;
+
+                GridQtySum = Convert.ToInt32(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, Qty));
+                totQty = GridQtySum - 1;
+                if (totQty <= 0)
+                {
+                    totQty = 0;
+                    gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "TotalAmount", 0);
+                }
+
+                gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Qty", totQty);
+                gridView1.RefreshData();
             }
         }
     }

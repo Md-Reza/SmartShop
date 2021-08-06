@@ -66,6 +66,16 @@ namespace SmartShop.Desktop_Helper_Form
             this.simpleButton15 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton17 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton20 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOpen = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbCustomerName = new DevExpress.XtraEditors.LookUpEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtContactNo = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtDueAmount = new DevExpress.XtraEditors.TextEdit();
+            this.label12 = new System.Windows.Forms.Label();
+            this.chkIsDue = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReturnAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPayAmount.Properties)).BeginInit();
@@ -74,6 +84,11 @@ namespace SmartShop.Desktop_Helper_Form
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCustomerName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsDue.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -210,7 +225,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             // txtReturnAmount
             // 
-            this.txtReturnAmount.Location = new System.Drawing.Point(169, 256);
+            this.txtReturnAmount.Location = new System.Drawing.Point(154, 328);
             this.txtReturnAmount.Name = "txtReturnAmount";
             this.txtReturnAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReturnAmount.Properties.Appearance.Options.UseFont = true;
@@ -220,7 +235,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(169, 149);
+            this.txtTotalAmount.Location = new System.Drawing.Point(154, 202);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalAmount.Properties.Appearance.Options.UseFont = true;
@@ -232,7 +247,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             // txtPayAmount
             // 
-            this.txtPayAmount.Location = new System.Drawing.Point(169, 184);
+            this.txtPayAmount.Location = new System.Drawing.Point(154, 233);
             this.txtPayAmount.Name = "txtPayAmount";
             this.txtPayAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPayAmount.Properties.Appearance.Options.UseFont = true;
@@ -244,7 +259,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             // txtSpecialAmount
             // 
-            this.txtSpecialAmount.Location = new System.Drawing.Point(169, 220);
+            this.txtSpecialAmount.Location = new System.Drawing.Point(154, 264);
             this.txtSpecialAmount.Name = "txtSpecialAmount";
             this.txtSpecialAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSpecialAmount.Properties.Appearance.Options.UseFont = true;
@@ -258,7 +273,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 144);
+            this.label1.Location = new System.Drawing.Point(13, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 19);
             this.label1.TabIndex = 20;
@@ -268,7 +283,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 222);
+            this.label2.Location = new System.Drawing.Point(37, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 19);
             this.label2.TabIndex = 20;
@@ -278,17 +293,17 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 186);
+            this.label3.Location = new System.Drawing.Point(56, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 19);
+            this.label3.Size = new System.Drawing.Size(85, 19);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Customer Pay Amount";
+            this.label3.Text = "Pay Amount";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 263);
+            this.label4.Location = new System.Drawing.Point(35, 333);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 19);
             this.label4.TabIndex = 20;
@@ -296,8 +311,8 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             // btnClear
             // 
-            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton19.ImageOptions.Image")));
-            this.btnClear.Location = new System.Drawing.Point(317, 303);
+            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.ImageOptions.Image")));
+            this.btnClear.Location = new System.Drawing.Point(302, 361);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(128, 47);
             this.btnClear.TabIndex = 23;
@@ -306,7 +321,7 @@ namespace SmartShop.Desktop_Helper_Form
             // btnSave
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(169, 303);
+            this.btnSave.Location = new System.Drawing.Point(154, 361);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(126, 47);
             this.btnSave.TabIndex = 23;
@@ -315,40 +330,46 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             // lookUpEdit1
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(169, 5);
+            this.lookUpEdit1.Location = new System.Drawing.Point(154, 67);
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
             this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.DropDownRows = 10;
+            this.lookUpEdit1.Properties.NullText = "";
+            this.lookUpEdit1.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.lookUpEdit1.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.lookUpEdit1.Size = new System.Drawing.Size(276, 28);
             this.lookUpEdit1.TabIndex = 24;
             // 
             // lookUpEdit2
             // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(169, 40);
+            this.lookUpEdit2.Location = new System.Drawing.Point(154, 99);
             this.lookUpEdit2.Name = "lookUpEdit2";
             this.lookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpEdit2.Properties.Appearance.Options.UseFont = true;
             this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit2.Properties.NullText = "";
             this.lookUpEdit2.Size = new System.Drawing.Size(276, 28);
             this.lookUpEdit2.TabIndex = 24;
             // 
             // lookUpEdit3
             // 
-            this.lookUpEdit3.Location = new System.Drawing.Point(169, 74);
+            this.lookUpEdit3.Location = new System.Drawing.Point(154, 133);
             this.lookUpEdit3.Name = "lookUpEdit3";
             this.lookUpEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpEdit3.Properties.Appearance.Options.UseFont = true;
             this.lookUpEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit3.Properties.NullText = "";
             this.lookUpEdit3.Size = new System.Drawing.Size(276, 28);
             this.lookUpEdit3.TabIndex = 24;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(169, 110);
+            this.textEdit1.Location = new System.Drawing.Point(154, 169);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
@@ -361,7 +382,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 8);
+            this.label7.Location = new System.Drawing.Point(50, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 19);
             this.label7.TabIndex = 20;
@@ -371,7 +392,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(67, 43);
+            this.label8.Location = new System.Drawing.Point(52, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 19);
             this.label8.TabIndex = 20;
@@ -381,7 +402,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(82, 80);
+            this.label9.Location = new System.Drawing.Point(67, 139);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 19);
             this.label9.TabIndex = 20;
@@ -391,7 +412,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(81, 113);
+            this.label10.Location = new System.Drawing.Point(66, 173);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 19);
             this.label10.TabIndex = 20;
@@ -463,11 +484,126 @@ namespace SmartShop.Desktop_Helper_Form
             this.simpleButton20.Text = "100";
             this.simpleButton20.Click += new System.EventHandler(this.button_click);
             // 
+            // btnOpen
+            // 
+            this.btnOpen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton16.ImageOptions.Image")));
+            this.btnOpen.Location = new System.Drawing.Point(431, 5);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(27, 28);
+            this.btnOpen.TabIndex = 32;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // cmbCustomerName
+            // 
+            this.cmbCustomerName.Location = new System.Drawing.Point(154, 4);
+            this.cmbCustomerName.Name = "cmbCustomerName";
+            this.cmbCustomerName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCustomerName.Properties.Appearance.Options.UseFont = true;
+            this.cmbCustomerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
+            this.cmbCustomerName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CustId", "Id"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CustomerName", "Customer Name")});
+            this.cmbCustomerName.Properties.DropDownRows = 10;
+            this.cmbCustomerName.Properties.NullText = "";
+            this.cmbCustomerName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbCustomerName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbCustomerName.Size = new System.Drawing.Size(276, 28);
+            this.cmbCustomerName.TabIndex = 33;
+            this.cmbCustomerName.EditValueChanged += new System.EventHandler(this.cmbCustomerName_EditValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(36, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 19);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Customer Name";
+            // 
+            // txtContactNo
+            // 
+            this.txtContactNo.Location = new System.Drawing.Point(155, 38);
+            this.txtContactNo.Name = "txtContactNo";
+            this.txtContactNo.Properties.ReadOnly = true;
+            this.txtContactNo.Size = new System.Drawing.Size(144, 23);
+            this.txtContactNo.TabIndex = 35;
+            // 
+            // textEdit3
+            // 
+            this.textEdit3.Location = new System.Drawing.Point(339, 39);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.ReadOnly = true;
+            this.textEdit3.Size = new System.Drawing.Size(91, 23);
+            this.textEdit3.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(60, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 19);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Contact No.";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(302, 40);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 19);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Due";
+            // 
+            // txtDueAmount
+            // 
+            this.txtDueAmount.Location = new System.Drawing.Point(154, 296);
+            this.txtDueAmount.Name = "txtDueAmount";
+            this.txtDueAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDueAmount.Properties.Appearance.Options.UseFont = true;
+            this.txtDueAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtDueAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtDueAmount.Properties.ReadOnly = true;
+            this.txtDueAmount.Size = new System.Drawing.Size(176, 28);
+            this.txtDueAmount.TabIndex = 39;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(57, 302);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 19);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Due Amount";
+            // 
+            // chkIsDue
+            // 
+            this.chkIsDue.Location = new System.Drawing.Point(336, 298);
+            this.chkIsDue.Name = "chkIsDue";
+            this.chkIsDue.Properties.Caption = "Is Due";
+            this.chkIsDue.Size = new System.Drawing.Size(94, 20);
+            this.chkIsDue.TabIndex = 41;
+            this.chkIsDue.EditValueChanged += new System.EventHandler(this.chkIsDue_EditValueChanged);
+            // 
             // frmCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 382);
+            this.ClientSize = new System.Drawing.Size(850, 421);
+            this.Controls.Add(this.chkIsDue);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtDueAmount);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textEdit3);
+            this.Controls.Add(this.txtContactNo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cmbCustomerName);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.simpleButton15);
             this.Controls.Add(this.simpleButton17);
             this.Controls.Add(this.simpleButton20);
@@ -518,6 +654,11 @@ namespace SmartShop.Desktop_Helper_Form
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCustomerName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContactNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDueAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkIsDue.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,5 +702,15 @@ namespace SmartShop.Desktop_Helper_Form
         private DevExpress.XtraEditors.SimpleButton simpleButton15;
         private DevExpress.XtraEditors.SimpleButton simpleButton17;
         private DevExpress.XtraEditors.SimpleButton simpleButton20;
+        private DevExpress.XtraEditors.SimpleButton btnOpen;
+        private DevExpress.XtraEditors.LookUpEdit cmbCustomerName;
+        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.TextEdit txtContactNo;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private DevExpress.XtraEditors.TextEdit txtDueAmount;
+        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.CheckEdit chkIsDue;
     }
 }
