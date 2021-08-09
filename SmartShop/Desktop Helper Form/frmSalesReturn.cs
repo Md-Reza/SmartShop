@@ -29,7 +29,9 @@ namespace SmartShop.Desktop_Helper_Form
         private void textEdit1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
-            var list= salesReturn.GetByInvoice(txtInvoiceNo.EditValue.ToString());
+            gridControl1.DataSource = null;
+            gridView1.RefreshData();
+            var list = salesReturn.GetByInvoice(txtInvoiceNo.EditValue.ToString());
             if (list.Any())
             {
                 gridControl1.DataSource = null;
@@ -38,24 +40,15 @@ namespace SmartShop.Desktop_Helper_Form
             else
             {
                 gridControl1.DataSource = null;
-                XtraMessageBox.Show("No data here try different invoice");
+                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "No return found", "System Message", new[] { DialogResult.OK },
+                    FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+
                 return;
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //DateTime dateTime = DateTime.Now;
-            //DateTime answer = dateTime.AddDays(365);
-            //DateTime answer2 = dateTime.AddMonths(1);
-            //XtraMessageBox.Show(answer.ToString()+ answer2);
-            if (gridView1.SelectedRowsCount <= 0)
-            {
-                XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Please select at least one item to return.", "System Message", new[] { DialogResult.OK },
-                       FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
-
-                return;
-            }
             DbOperation();
         }
         private void TotalSummary()
@@ -71,28 +64,51 @@ namespace SmartShop.Desktop_Helper_Form
                 txtQty.EditValue = qty;
             }
         }
-        
+
         private void DbOperation()
         {
+            var list = salesReturn.GetByReturnInvoice(txtInvoiceNo.EditValue.ToString());
             int[] selectedRowHandles = gridView1.GetSelectedRows();
             foreach (var items in selectedRowHandles)
             {
-                salesReturns.Add(new SalesReturn() 
+                if (!list.Any())
                 {
-                    SellsDate =Convert.ToDateTime( gridView1.GetRowCellValue(items, SellsDate)),
-                    SalesMonth= Convert.ToDateTime(gridView1.GetRowCellValue(items, SellsDate)).ToString("yyyyMM"),
-                    SellsInvoice=txtInvoiceNo.EditValue.ToString(),
-                    ProductCode= gridView1.GetRowCellValue(items, ProductCode).ToString(),
-                    Qty=Convert.ToInt32(gridView1.GetRowCellValue(items, Qty)),
-                    SellingPrice = Convert.ToInt32(gridView1.GetRowCellValue(items, SellingPrice)),
-                    TotalAmount= Convert.ToInt32(gridView1.GetRowCellValue(items, TotalAmount)),
-                    SellsBy= Settings.Default.LoginName,
-                    PcName =System.Environment.MachineName
-                });
+                    XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "No item to return.", "System Message", new[] { DialogResult.OK },
+                       FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                    return;
+                }
+                else
+                {
+                    var code = list.FirstOrDefault().ProductCode.ToString();
+                    if (code != null)
+                    {
+                        XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, $@"Already return {code}", "System Message", new[] { DialogResult.OK },
+                        FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+                        return;
+                    }
+                    salesReturns.Add(new SalesReturn()
+                    {
+                        SellsDate = Convert.ToDateTime(gridView1.GetRowCellValue(items, SellsDate)),
+                        SalesMonth = Convert.ToDateTime(gridView1.GetRowCellValue(items, SellsDate)).ToString("yyyyMM"),
+                        SellsInvoice = txtInvoiceNo.EditValue.ToString(),
+                        ProductCode = gridView1.GetRowCellValue(items, ProductCode).ToString(),
+                        Qty = Convert.ToInt32(gridView1.GetRowCellValue(items, Qty)),
+                        SellingPrice = Convert.ToInt32(gridView1.GetRowCellValue(items, SellingPrice)),
+                        TotalAmount = Convert.ToInt32(gridView1.GetRowCellValue(items, TotalAmount)),
+                        SellsBy = Settings.Default.LoginName,
+                        PcName = System.Environment.MachineName
+                    });
+                }
+
                 TotalSummary();
             }
             salesReturnRepository.InsertSalesReturn(salesReturns);
-            XtraMessageBox.Show("Sales return successfully");
+            gridControl1.DataSource = null;
+            gridView1.RefreshData();
+            XtraMessageBox.Show(FormsHelper.FormsHelperMessageBox.Show(this, "Return has been successfully", "System Message", new[] { DialogResult.OK },
+                        FormsHelper.FormsHelperMessageBox.SFMessageBoxIcon.InformationRed()));
+
+            return;
         }
 
         private void gridView1_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)

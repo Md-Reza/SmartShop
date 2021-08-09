@@ -68,5 +68,15 @@ namespace SmartShop.Repository
             _connection.Close();
             return returnValue;
         }
+
+        public IEnumerable<SalesReturn> GetByReturnInvoice(string SellsInvoice)
+        {
+            _connection.Open();
+            IEnumerable<SalesReturn> returnValue = _connection.Query<Models.SalesReturn>($@"select *
+                  From SalesReturn
+               where SellsInvoice= '{SellsInvoice}'");
+            _connection.Close();
+            return returnValue;
+        }
     }
 }

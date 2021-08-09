@@ -154,7 +154,7 @@ namespace SmartShop.Repository
         public IEnumerable<Products> GetAllProductByCategories(string CatagoryId)
         {
             SqlConnection connection = new SqlConnection(Connection.GetConnectionString());
-            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"Select * from ProductName where CatagoryId=@CatagoryId", new { @CatagoryId = CatagoryId });
+            IEnumerable<Products> returnValue = connection.Query<Models.Products>(@"Select * from ProductName where CategoryId=@CatagoryId", new { @CatagoryId = CatagoryId });
             connection.Close();
             return returnValue;
         }

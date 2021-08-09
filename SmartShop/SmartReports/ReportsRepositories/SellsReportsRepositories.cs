@@ -37,12 +37,11 @@ namespace SmartShop.SmartReports.ReportsRepositories
 
         public IEnumerable<SellsParent> GetAllSalesParentPosInvoice(string SellsInvoice)
         {
-            //_connection.Open();
-            //IEnumerable<SellsParent> returnValues = _connection.Query<SellsParent>(@" select * from SellsParent s
-            //where s.SellsInvoice= @SellsInvoice", new { SellsInvoioce = SellsInvoice });
-            //_connection.Close();
-            //return returnValues;
-            throw new NotImplementedException();
+            _connection.Open();
+            IEnumerable<SellsParent> returnValues = _connection.Query<SellsParent>(@" select * from SellsParent s
+            where s.SellsInvoice= @SellsInvoice", new { SellsInvoioce = SellsInvoice });
+            _connection.Close();
+            return returnValues;
         }
 
         public IEnumerable<SellesChild> GetAllSellsByChildInvoice(string sellsInvoice)

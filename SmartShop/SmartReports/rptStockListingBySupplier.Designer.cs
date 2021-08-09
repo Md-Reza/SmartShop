@@ -251,7 +251,6 @@
             this.label21 = new DevExpress.XtraReports.UI.XRLabel();
             this.label23 = new DevExpress.XtraReports.UI.XRLabel();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTableCell52 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell51 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow16 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -1258,7 +1257,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(360.8334F, 110.8057F);
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(360.8334F, 62.80571F);
             this.label1.Name = "label1";
             this.label1.SizeF = new System.Drawing.SizeF(662.1666F, 24.19434F);
             this.label1.StyleName = "Title";
@@ -1266,15 +1265,6 @@
             this.label1.StylePriority.UseTextAlignment = false;
             this.label1.Text = "Stock Listing";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[Logo]")});
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(78.2639F, 47.99999F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // xrTableCell52
             // 
@@ -1303,7 +1293,7 @@
             // xrTable16
             // 
             this.xrTable16.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 128F);
+            this.xrTable16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 80.00002F);
             this.xrTable16.Name = "xrTable16";
             this.xrTable16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable16.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -1338,7 +1328,7 @@
             // xrTable15
             // 
             this.xrTable15.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 109.6667F);
+            this.xrTable15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.66671F);
             this.xrTable15.Name = "xrTable15";
             this.xrTable15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable15.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -1373,7 +1363,7 @@
             // xrTable14
             // 
             this.xrTable14.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable14.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 91.33334F);
+            this.xrTable14.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 43.33335F);
             this.xrTable14.Name = "xrTable14";
             this.xrTable14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable14.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -1408,7 +1398,7 @@
             // xrTable13
             // 
             this.xrTable13.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable13.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 72.99999F);
+            this.xrTable13.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 25F);
             this.xrTable13.Name = "xrTable13";
             this.xrTable13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable13.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -1443,7 +1433,7 @@
             // xrTable9
             // 
             this.xrTable9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 57.99999F);
+            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 10F);
             this.xrTable9.Name = "xrTable9";
             this.xrTable9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable9.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -1459,9 +1449,8 @@
             this.xrTable14,
             this.xrTable15,
             this.xrTable16,
-            this.xrPictureBox1,
             this.label1});
-            this.ReportHeader.HeightF = 156.3333F;
+            this.ReportHeader.HeightF = 109.5F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // sqlDataSource2
@@ -1556,7 +1545,7 @@
             this.GrandTotalData1,
             this.GrandTotalBackground1,
             this.PageInfo});
-            this.Version = "19.2";
+            this.Version = "21.1";
             ((System.ComponentModel.ISupportInitialize)(this.table1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table3)).EndInit();
@@ -1642,7 +1631,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel label1;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell52;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell51;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow16;

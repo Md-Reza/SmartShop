@@ -100,7 +100,6 @@
             this.xrTableRow16 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell51 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell52 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
@@ -644,7 +643,7 @@
             // xrLabel13
             // 
             this.xrLabel13.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(645.1666F, 118.8333F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(645.1666F, 70.83331F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -675,15 +674,14 @@
             this.xrTable14,
             this.xrTable15,
             this.xrTable16,
-            this.xrPictureBox1,
             this.xrLabel13});
-            this.ReportHeader1.HeightF = 160.5F;
+            this.ReportHeader1.HeightF = 110.5F;
             this.ReportHeader1.Name = "ReportHeader1";
             // 
             // xrTable9
             // 
             this.xrTable9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 57.99999F);
+            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 10F);
             this.xrTable9.Name = "xrTable9";
             this.xrTable9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable9.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -718,7 +716,7 @@
             // xrTable13
             // 
             this.xrTable13.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable13.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 72.99999F);
+            this.xrTable13.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 25F);
             this.xrTable13.Name = "xrTable13";
             this.xrTable13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable13.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -753,7 +751,7 @@
             // xrTable14
             // 
             this.xrTable14.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable14.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 91.33334F);
+            this.xrTable14.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 43.33335F);
             this.xrTable14.Name = "xrTable14";
             this.xrTable14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable14.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -788,7 +786,7 @@
             // xrTable15
             // 
             this.xrTable15.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 109.6667F);
+            this.xrTable15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.66671F);
             this.xrTable15.Name = "xrTable15";
             this.xrTable15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable15.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -823,7 +821,7 @@
             // xrTable16
             // 
             this.xrTable16.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 128F);
+            this.xrTable16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 80.00002F);
             this.xrTable16.Name = "xrTable16";
             this.xrTable16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable16.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -854,15 +852,6 @@
             this.xrTableCell52.Name = "xrTableCell52";
             this.xrTableCell52.Text = "Email";
             this.xrTableCell52.Weight = 1.675D;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[Logo]")});
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(78.2639F, 47.99999F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // ReportFooter
             // 
@@ -955,7 +944,7 @@
             this.Margins = new System.Drawing.Printing.Margins(41, 38, 12, 37);
             this.PageHeight = 850;
             this.PageWidth = 1100;
-            this.Version = "20.2";
+            this.Version = "21.1";
             this.ParametersRequestSubmit += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.rptStockList_ParametersRequestSubmit);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
@@ -1028,7 +1017,6 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow16;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell51;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell52;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;

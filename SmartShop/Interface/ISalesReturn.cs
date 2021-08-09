@@ -8,7 +8,9 @@ namespace SmartShop.Interface
         {
             IEnumerable<T> GetAllInvoice();
             IEnumerable<T> GetByInvoice( string T);
+            IEnumerable<T> GetByReturnInvoice(string T);
             void ExecuteSalesReturnEntry(T obj);
+
         }
     }
 }

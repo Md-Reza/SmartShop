@@ -57,7 +57,7 @@ namespace SmartShop.SmartReports.ReportsRepositories
                     --sc.TotalAmount - pn.PurchasePrice * sc.Qty AS BenfitAmount, 
                     isnull(ret.Qty,0) as ReturnQty,
                     isnull(ret.TotalAmount,0) as ReturnAmt,
-                    CONCAT(pn.ProductCode,', ', pn.ProductName) As Name, 
+                    CONCAT(pn.ProductCode,', ', pn.ProductName) As ProductName, 
                     sp.DueAmount, 
                     CAST(sp.SellsDate AS date) AS SellsDate
                     FROM     dbo.SellesChild AS sc 
@@ -73,7 +73,7 @@ namespace SmartShop.SmartReports.ReportsRepositories
                         sc.Products = pn;
                         sc.SellsParent = sp;
                         return sc;
-                    }, splitOn: "ReturnQty,Name,DueAmount");
+                    }, splitOn: "ReturnQty,ProductName,DueAmount");
 
             _connection.Close();
             return returnValue;

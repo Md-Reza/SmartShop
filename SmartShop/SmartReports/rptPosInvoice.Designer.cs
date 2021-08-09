@@ -85,7 +85,6 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -596,7 +595,6 @@
             this.xrLabel10,
             this.xrLabel9,
             this.xrLabel7,
-            this.xrPictureBox1,
             this.xrLabel6,
             this.xrLabel5,
             this.xrLabel4,
@@ -624,11 +622,11 @@
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SellsDate]")});
             this.xrLabel12.Font = new System.Drawing.Font("Arial", 7.8F);
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(56.88619F, 128.8529F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(56.8862F, 128.8529F);
             this.xrLabel12.Multiline = true;
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(240.114F, 23.00003F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(250.1138F, 23.00003F);
             this.xrLabel12.StylePriority.UseFont = false;
             this.xrLabel12.Text = "SellsDate";
             this.xrLabel12.TextFormatString = "{0:dd-MMM-yy hh:mm tt}";
@@ -672,25 +670,16 @@
             this.xrLabel7.Text = "Dhaka, Bangladesh";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox1.ImageUrl = "Resources\\mango_logo.png";
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(10F, 0.3138097F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(34.16423F, 37.18619F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
-            // 
             // xrLabel6
             // 
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Settings].[Default].[UserName]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SellsBy]")});
             this.xrLabel6.Font = new System.Drawing.Font("Arial", 7.8F);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(204.3335F, 105.8529F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(92.66669F, 23.00002F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(102.6665F, 23.00002F);
             this.xrLabel6.StylePriority.UseFont = false;
             this.xrLabel6.Text = "sellsBy";
             // 
@@ -753,14 +742,15 @@
             this.ExportOptions.Xls.FitToPrintedPageHeight = true;
             this.ExportOptions.Xls.FitToPrintedPageWidth = true;
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margins = new System.Drawing.Printing.Margins(23, 2, 36, 99);
+            this.Margins = new System.Drawing.Printing.Margins(12, 2, 36, 99);
             this.PageHeight = 800;
-            this.PageWidth = 332;
+            this.PageWidth = 338;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.ScriptsSource = "\r\nprivate void Detail_AfterPrint(object sender, System.EventArgs e) {\r\n\r\n}\r\n";
             this.ShowPrintStatusDialog = false;
             this.SnapGridStepCount = 1;
             this.Version = "21.1";
+            this.ParametersRequestSubmit += new System.EventHandler<DevExpress.XtraReports.Parameters.ParametersRequestEventArgs>(this.rptPosInvoice_ParametersRequestSubmit);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
@@ -816,7 +806,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLine xrLine3;
         private DevExpress.XtraReports.UI.XRTable xrTable7;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow7;

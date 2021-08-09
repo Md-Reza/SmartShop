@@ -8,6 +8,10 @@ namespace SmartShop.SmartReports
         {
             InitializeComponent();
         }
-    }
-    
+
+        private void rptPosInvoice_ParametersRequestSubmit(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)
+        {
+            this.DataSource = SmartShopReports.GetAllSalesParentPosInvoice(Parameters["PosInvoice"].Value.ToString());
+        }
+    }  
 }

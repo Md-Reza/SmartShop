@@ -76,7 +76,6 @@
             this.xrTableRow15 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell49 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell50 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
@@ -422,7 +421,7 @@
             // xrTable9
             // 
             this.xrTable9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 57.99999F);
+            this.xrTable9.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 10F);
             this.xrTable9.Name = "xrTable9";
             this.xrTable9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable9.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -457,7 +456,7 @@
             // xrTable14
             // 
             this.xrTable14.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable14.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 91.33334F);
+            this.xrTable14.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 43.33335F);
             this.xrTable14.Name = "xrTable14";
             this.xrTable14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable14.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -492,7 +491,7 @@
             // xrTable13
             // 
             this.xrTable13.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable13.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 72.99999F);
+            this.xrTable13.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 25F);
             this.xrTable13.Name = "xrTable13";
             this.xrTable13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable13.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -527,7 +526,7 @@
             // xrTable16
             // 
             this.xrTable16.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 128F);
+            this.xrTable16.LocationFloat = new DevExpress.Utils.PointFloat(0F, 80.00001F);
             this.xrTable16.Name = "xrTable16";
             this.xrTable16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable16.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -562,7 +561,7 @@
             // xrTable15
             // 
             this.xrTable15.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.xrTable15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 109.6667F);
+            this.xrTable15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.66671F);
             this.xrTable15.Name = "xrTable15";
             this.xrTable15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable15.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -593,15 +592,6 @@
             this.xrTableCell50.Name = "xrTableCell50";
             this.xrTableCell50.Text = "ContactNo";
             this.xrTableCell50.Weight = 1.675D;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[Logo]")});
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(3.814697E-05F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(78.2639F, 47.99999F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // DetailReport
             // 
@@ -664,7 +654,7 @@
             // xrTableCell2
             // 
             this.xrTableCell2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ProductName.Name]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Products.ProductName]")});
             this.xrTableCell2.Multiline = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Text = "Name";
@@ -1386,13 +1376,12 @@
             this.xrBarCode1,
             this.xrLabel2,
             this.xrPageInfo1,
-            this.xrPictureBox1,
             this.xrTable16,
             this.xrTable15,
             this.xrTable14,
             this.xrTable13,
             this.xrTable9});
-            this.ReportHeader3.HeightF = 157.1669F;
+            this.ReportHeader3.HeightF = 114.8335F;
             this.ReportHeader3.Name = "ReportHeader3";
             // 
             // xrBarCode1
@@ -1407,6 +1396,7 @@
             this.xrBarCode1.ShowText = false;
             this.xrBarCode1.SizeF = new System.Drawing.SizeF(87.74988F, 83.99999F);
             this.xrBarCode1.StylePriority.UseFont = false;
+            qrCodeGenerator1.Version = DevExpress.XtraPrinting.BarCode.QRCodeVersion.Version1;
             this.xrBarCode1.Symbology = qrCodeGenerator1;
             // 
             // xrLabel2
@@ -1446,7 +1436,7 @@
             this.Margins = new System.Drawing.Printing.Margins(31, 30, 55, 100);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.SellsInvoice});
-            this.Version = "20.2";
+            this.Version = "21.1";
             this.Watermark.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Italic);
             this.Watermark.Text = "Sells Invoice";
             this.Watermark.TextTransparency = 215;
@@ -1537,7 +1527,6 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow6;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell31;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell32;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRTable xrTable9;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell37;

@@ -445,6 +445,6 @@ namespace SmartShop.Desktop_Helper_Form
                 gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Qty", totQty);
                 gridView1.RefreshData();
             }
-        }
+        }  
     }
 }

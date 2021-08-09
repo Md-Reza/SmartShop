@@ -146,7 +146,7 @@ namespace SmartShop.Reports.ReportsRepositories
                 s.DiscountPercent,
                 s.DiscountAmount,
                 s.TotalAmount,
-                p.ProductName as Name,
+                p.ProductName as ProductName,
                 sz.SizeName ,
                 c.ColourName,
                 b.BrandName,
@@ -169,7 +169,7 @@ namespace SmartShop.Reports.ReportsRepositories
                     s.Brand = b;
                     s.SellsParent = pr;
                     return s;
-                }, splitOn: "Name, SizeName, ColourName, BrandName,TotalAmount", param: new
+                }, splitOn: "ProductName, SizeName, ColourName, BrandName,TotalAmount", param: new
                 {
                     @SellsInvoice = SellsInvoice
                 });

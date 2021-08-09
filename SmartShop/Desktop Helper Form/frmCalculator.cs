@@ -74,6 +74,7 @@ namespace SmartShop.Desktop_Helper_Form
             txtReturnAmount.EditValue = totalAmount;
             getAddOrderList = getOrderList.ToList();
             invoice2 = invoice;
+            LoadCustomer();
         }
 
         private void txtPayAmount_EditValueChanged(object sender, EventArgs e)
@@ -203,7 +204,7 @@ namespace SmartShop.Desktop_Helper_Form
             try
             {
                 txtContactNo.EditValue = _custRepository.GetAllCustomer().Where(f => Convert.ToString(f.CustId) == cmbCustomerName.EditValue.ToString()).FirstOrDefault().ContactNo;
-                txtDueAmount.EditValue = _custRepository.GetAllCustomerArrear(cmbCustomerName.EditValue.ToString()).FirstOrDefault().DueAmount;
+                txtCustomerDue.EditValue = _custRepository.GetAllCustomerArrear(cmbCustomerName.EditValue.ToString()).FirstOrDefault().DueAmount;
             }
             catch (Exception exception)
             {

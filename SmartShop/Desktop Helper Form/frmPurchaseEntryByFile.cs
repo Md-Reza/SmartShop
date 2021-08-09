@@ -21,18 +21,7 @@ namespace SmartShop.Desktop_Helper_Form
         PurchaseRepository purchaseRepository = new PurchaseRepository();
         public frmPurchaseEntryByFile()
         {
-            InitializeComponent();
-            //Voice.Speech("Attention Please," +
-            //             "A1 Line efficiency dropped by 10%, " +
-            //             "B1 Line efficiency dropped by 10%, " +
-            //             "C1 Line efficiency dropped by 20%, " +
-            //             "D1 Line efficiency dropped by 30%, " +
-            //             "A2 Line efficiency dropped by 2%, " +
-            //             "B2 Line efficiency dropped by 5%, " +
-            //             "C2 Line efficiency dropped by 20%, " +
-            //             "D2 Line efficiency dropped by30%,  " +
-            //             "Attention Please, " +
-            //             " A1 Line input delay, Please add more bundles");
+            InitializeComponent();   
         }
 
         private void btnFileUpload_Click(object sender, EventArgs e)

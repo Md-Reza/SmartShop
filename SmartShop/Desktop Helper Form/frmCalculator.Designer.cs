@@ -70,7 +70,7 @@ namespace SmartShop.Desktop_Helper_Form
             this.cmbCustomerName = new DevExpress.XtraEditors.LookUpEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.txtContactNo = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCustomerDue = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDueAmount = new DevExpress.XtraEditors.TextEdit();
@@ -86,7 +86,7 @@ namespace SmartShop.Desktop_Helper_Form
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCustomerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerDue.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsDue.Properties)).BeginInit();
             this.SuspendLayout();
@@ -486,7 +486,7 @@ namespace SmartShop.Desktop_Helper_Form
             // 
             // btnOpen
             // 
-            this.btnOpen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton16.ImageOptions.Image")));
+            this.btnOpen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.ImageOptions.Image")));
             this.btnOpen.Location = new System.Drawing.Point(431, 5);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(27, 28);
@@ -530,13 +530,13 @@ namespace SmartShop.Desktop_Helper_Form
             this.txtContactNo.Size = new System.Drawing.Size(144, 23);
             this.txtContactNo.TabIndex = 35;
             // 
-            // textEdit3
+            // txtCustomerDue
             // 
-            this.textEdit3.Location = new System.Drawing.Point(339, 39);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.ReadOnly = true;
-            this.textEdit3.Size = new System.Drawing.Size(91, 23);
-            this.textEdit3.TabIndex = 36;
+            this.txtCustomerDue.Location = new System.Drawing.Point(339, 39);
+            this.txtCustomerDue.Name = "txtCustomerDue";
+            this.txtCustomerDue.Properties.ReadOnly = true;
+            this.txtCustomerDue.Size = new System.Drawing.Size(91, 23);
+            this.txtCustomerDue.TabIndex = 36;
             // 
             // label6
             // 
@@ -599,7 +599,7 @@ namespace SmartShop.Desktop_Helper_Form
             this.Controls.Add(this.txtDueAmount);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textEdit3);
+            this.Controls.Add(this.txtCustomerDue);
             this.Controls.Add(this.txtContactNo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbCustomerName);
@@ -656,7 +656,7 @@ namespace SmartShop.Desktop_Helper_Form
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCustomerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerDue.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDueAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkIsDue.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -706,7 +706,7 @@ namespace SmartShop.Desktop_Helper_Form
         private DevExpress.XtraEditors.LookUpEdit cmbCustomerName;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.TextEdit txtContactNo;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtCustomerDue;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.TextEdit txtDueAmount;

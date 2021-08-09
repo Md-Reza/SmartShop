@@ -68,9 +68,6 @@ namespace SmartShop.Desktop_Helper_Form
             language.Add("English", "en");
 
         }
-
-        private string url = "https://translate.google.com/#view=home&op=translate&sl=auto&tl=bn&text=";
-
     }
 
 }
