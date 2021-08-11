@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductNameEntry));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductNameEntry));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
@@ -181,51 +181,53 @@
             this.txtName.Size = new System.Drawing.Size(373, 23);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
-            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
-            conditionValidationRule6.ErrorText = "Name is required field";
-            conditionValidationRule6.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
-            this.ValidationProvider.SetValidationRule(this.txtName, conditionValidationRule6);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
+            conditionValidationRule1.ErrorText = "Name is required field";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
+            this.ValidationProvider.SetValidationRule(this.txtName, conditionValidationRule1);
             // 
             // cmbCategoryName
             // 
             this.cmbCategoryName.Location = new System.Drawing.Point(419, 137);
             this.cmbCategoryName.Name = "cmbCategoryName";
             this.cmbCategoryName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbCategoryName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id", "Id", 5, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CategoryName", "Name")});
             this.cmbCategoryName.Properties.DropDownRows = 10;
             this.cmbCategoryName.Properties.NullText = "";
             this.cmbCategoryName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbCategoryName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.cmbCategoryName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbCategoryName.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbCategoryName.Size = new System.Drawing.Size(166, 23);
             this.cmbCategoryName.StyleController = this.layoutControl1;
             this.cmbCategoryName.TabIndex = 6;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
-            conditionValidationRule1.ErrorText = "Category name is required field";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
-            this.ValidationProvider.SetValidationRule(this.cmbCategoryName, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
+            conditionValidationRule2.ErrorText = "Category name is required field";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
+            this.ValidationProvider.SetValidationRule(this.cmbCategoryName, conditionValidationRule2);
             // 
             // cmbSupplyerName
             // 
             this.cmbSupplyerName.Location = new System.Drawing.Point(104, 137);
             this.cmbSupplyerName.Name = "cmbSupplyerName";
             this.cmbSupplyerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbSupplyerName.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 5, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplyerName", "Name")});
             this.cmbSupplyerName.Properties.NullText = "";
             this.cmbSupplyerName.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbSupplyerName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.cmbSupplyerName.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbSupplyerName.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbSupplyerName.Size = new System.Drawing.Size(187, 23);
             this.cmbSupplyerName.StyleController = this.layoutControl1;
             this.cmbSupplyerName.TabIndex = 7;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
-            conditionValidationRule2.ErrorText = "Supplyer name is required field";
-            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
-            this.ValidationProvider.SetValidationRule(this.cmbSupplyerName, conditionValidationRule2);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
+            conditionValidationRule3.ErrorText = "Supplyer name is required field";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
+            this.ValidationProvider.SetValidationRule(this.cmbSupplyerName, conditionValidationRule3);
             // 
             // txtDescription
             // 
@@ -314,10 +316,10 @@
             this.txtProductPrice.Size = new System.Drawing.Size(113, 24);
             this.txtProductPrice.StyleController = this.layoutControl1;
             this.txtProductPrice.TabIndex = 9;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
-            conditionValidationRule3.ErrorText = "Price is required field";
-            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
-            this.ValidationProvider.SetValidationRule(this.txtProductPrice, conditionValidationRule3);
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
+            conditionValidationRule4.ErrorText = "Price is required field";
+            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
+            this.ValidationProvider.SetValidationRule(this.txtProductPrice, conditionValidationRule4);
             // 
             // txtSellingPrice
             // 
@@ -335,10 +337,10 @@
             this.txtSellingPrice.Size = new System.Drawing.Size(94, 24);
             this.txtSellingPrice.StyleController = this.layoutControl1;
             this.txtSellingPrice.TabIndex = 10;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
-            conditionValidationRule4.ErrorText = "Price is required field";
-            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
-            this.ValidationProvider.SetValidationRule(this.txtSellingPrice, conditionValidationRule4);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
+            conditionValidationRule5.ErrorText = "Price is required field";
+            conditionValidationRule5.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.User1;
+            this.ValidationProvider.SetValidationRule(this.txtSellingPrice, conditionValidationRule5);
             // 
             // txtVat
             // 
@@ -383,14 +385,15 @@
             this.cmbBrand.Location = new System.Drawing.Point(104, 168);
             this.cmbBrand.Name = "cmbBrand";
             this.cmbBrand.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbBrand.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BrandId", "BrandId", 5, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BrandName", "BrandName")});
             this.cmbBrand.Properties.DropDownRows = 10;
             this.cmbBrand.Properties.NullText = "";
             this.cmbBrand.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbBrand.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.cmbBrand.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbBrand.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbBrand.Size = new System.Drawing.Size(481, 23);
             this.cmbBrand.StyleController = this.layoutControl1;
             this.cmbBrand.TabIndex = 21;
@@ -400,13 +403,14 @@
             this.cmbSize.Location = new System.Drawing.Point(104, 199);
             this.cmbSize.Name = "cmbSize";
             this.cmbSize.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbSize.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SizeId", "SizeId", 5, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SizeName", "SizeName")});
             this.cmbSize.Properties.NullText = "";
             this.cmbSize.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbSize.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.cmbSize.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbSize.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbSize.Size = new System.Drawing.Size(208, 23);
             this.cmbSize.StyleController = this.layoutControl1;
             this.cmbSize.TabIndex = 20;
@@ -416,13 +420,14 @@
             this.cmbColour.Location = new System.Drawing.Point(408, 199);
             this.cmbColour.Name = "cmbColour";
             this.cmbColour.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbColour.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ColourId", "ColourId", 5, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ColourName", "ColourName")});
             this.cmbColour.Properties.NullText = "";
             this.cmbColour.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.cmbColour.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.cmbColour.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbColour.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.cmbColour.Size = new System.Drawing.Size(209, 23);
             this.cmbColour.StyleController = this.layoutControl1;
             this.cmbColour.TabIndex = 22;

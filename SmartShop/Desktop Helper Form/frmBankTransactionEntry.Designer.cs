@@ -204,9 +204,9 @@
             // 
             // txtAccountNo
             // 
-            this.txtAccountNo.Location = new System.Drawing.Point(114, 40);
+            this.txtAccountNo.Location = new System.Drawing.Point(115, 40);
             this.txtAccountNo.Name = "txtAccountNo";
-            this.txtAccountNo.Size = new System.Drawing.Size(212, 23);
+            this.txtAccountNo.Size = new System.Drawing.Size(211, 23);
             this.txtAccountNo.StyleController = this.layoutControl1;
             this.txtAccountNo.TabIndex = 4;
             this.txtAccountNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAccountNo_KeyDown);
@@ -240,13 +240,13 @@
             0,
             0,
             0});
-            this.txtDebitAmt.Location = new System.Drawing.Point(114, 67);
+            this.txtDebitAmt.Location = new System.Drawing.Point(115, 67);
             this.txtDebitAmt.Name = "txtDebitAmt";
             this.txtDebitAmt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDebitAmt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtDebitAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtDebitAmt.Size = new System.Drawing.Size(212, 24);
+            this.txtDebitAmt.Size = new System.Drawing.Size(211, 24);
             this.txtDebitAmt.StyleController = this.layoutControl1;
             this.txtDebitAmt.TabIndex = 8;
             // 
@@ -257,13 +257,13 @@
             0,
             0,
             0});
-            this.txtCreditAmt.Location = new System.Drawing.Point(432, 67);
+            this.txtCreditAmt.Location = new System.Drawing.Point(433, 67);
             this.txtCreditAmt.Name = "txtCreditAmt";
             this.txtCreditAmt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtCreditAmt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtCreditAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtCreditAmt.Size = new System.Drawing.Size(173, 24);
+            this.txtCreditAmt.Size = new System.Drawing.Size(172, 24);
             this.txtCreditAmt.StyleController = this.layoutControl1;
             this.txtCreditAmt.TabIndex = 9;
             // 
@@ -274,23 +274,23 @@
             0,
             0,
             0});
-            this.txtMiscAmt.Location = new System.Drawing.Point(711, 67);
+            this.txtMiscAmt.Location = new System.Drawing.Point(712, 67);
             this.txtMiscAmt.Name = "txtMiscAmt";
             this.txtMiscAmt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtMiscAmt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtMiscAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtMiscAmt.Size = new System.Drawing.Size(146, 24);
+            this.txtMiscAmt.Size = new System.Drawing.Size(145, 24);
             this.txtMiscAmt.StyleController = this.layoutControl1;
             this.txtMiscAmt.TabIndex = 6;
             // 
             // txtTransDate
             // 
             this.txtTransDate.EditValue = null;
-            this.txtTransDate.Location = new System.Drawing.Point(114, 12);
+            this.txtTransDate.Location = new System.Drawing.Point(115, 12);
             this.txtTransDate.Name = "txtTransDate";
             this.txtTransDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.txtTransDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtTransDate.Properties.DisplayFormat.FormatString = "";
@@ -299,18 +299,18 @@
             this.txtTransDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtTransDate.Properties.Mask.EditMask = "";
             this.txtTransDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtTransDate.Size = new System.Drawing.Size(491, 23);
+            this.txtTransDate.Size = new System.Drawing.Size(490, 23);
             this.txtTransDate.StyleController = this.layoutControl1;
             this.txtTransDate.TabIndex = 11;
             // 
             // cmbTransType
             // 
-            this.cmbTransType.Location = new System.Drawing.Point(711, 40);
+            this.cmbTransType.Location = new System.Drawing.Point(712, 40);
             this.cmbTransType.Name = "cmbTransType";
             this.cmbTransType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTransType.Properties.PopupSizeable = true;
-            this.cmbTransType.Size = new System.Drawing.Size(146, 23);
+            this.cmbTransType.Size = new System.Drawing.Size(145, 23);
             this.cmbTransType.StyleController = this.layoutControl1;
             this.cmbTransType.TabIndex = 10;
             this.cmbTransType.EditValueChanged += new System.EventHandler(this.cmbTransType_EditValueChanged);
@@ -322,22 +322,22 @@
             0,
             0,
             0});
-            this.txtOpeningAmount.Location = new System.Drawing.Point(711, 12);
+            this.txtOpeningAmount.Location = new System.Drawing.Point(712, 12);
             this.txtOpeningAmount.Name = "txtOpeningAmount";
             this.txtOpeningAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtOpeningAmount.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtOpeningAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtOpeningAmount.Size = new System.Drawing.Size(146, 24);
+            this.txtOpeningAmount.Size = new System.Drawing.Size(145, 24);
             this.txtOpeningAmount.StyleController = this.layoutControl1;
             this.txtOpeningAmount.TabIndex = 7;
             // 
             // txtBranceName
             // 
-            this.txtBranceName.Location = new System.Drawing.Point(432, 40);
+            this.txtBranceName.Location = new System.Drawing.Point(433, 40);
             this.txtBranceName.Name = "txtBranceName";
             this.txtBranceName.Properties.ReadOnly = true;
-            this.txtBranceName.Size = new System.Drawing.Size(173, 23);
+            this.txtBranceName.Size = new System.Drawing.Size(172, 23);
             this.txtBranceName.StyleController = this.layoutControl1;
             this.txtBranceName.TabIndex = 14;
             // 

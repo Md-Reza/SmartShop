@@ -247,8 +247,7 @@ namespace SmartShop.Desktop_Forms_Control
 
         private void btnDashboard_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmDashBoard frmDashBoard = new frmDashBoard();
-            OpenForm(frmDashBoard);
+            
         }
 
         private void btnUserAccess_ItemClick(object sender, ItemClickEventArgs e)

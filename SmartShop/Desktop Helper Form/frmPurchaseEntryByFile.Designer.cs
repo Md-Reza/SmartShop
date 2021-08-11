@@ -311,7 +311,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(1084, 47);
+            this.txtUserName.Location = new System.Drawing.Point(1083, 47);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(62, 23);
@@ -329,32 +329,32 @@
             // 
             // txtCompanyInvoice
             // 
-            this.txtCompanyInvoice.Location = new System.Drawing.Point(639, 47);
+            this.txtCompanyInvoice.Location = new System.Drawing.Point(640, 47);
             this.txtCompanyInvoice.Name = "txtCompanyInvoice";
-            this.txtCompanyInvoice.Size = new System.Drawing.Size(129, 23);
+            this.txtCompanyInvoice.Size = new System.Drawing.Size(128, 23);
             this.txtCompanyInvoice.StyleController = this.layoutControl1;
             this.txtCompanyInvoice.TabIndex = 7;
             // 
             // txtInvoice
             // 
-            this.txtInvoice.Location = new System.Drawing.Point(1102, 74);
+            this.txtInvoice.Location = new System.Drawing.Point(1103, 74);
             this.txtInvoice.Name = "txtInvoice";
             this.txtInvoice.Properties.ReadOnly = true;
-            this.txtInvoice.Size = new System.Drawing.Size(222, 23);
+            this.txtInvoice.Size = new System.Drawing.Size(221, 23);
             this.txtInvoice.StyleController = this.layoutControl1;
             this.txtInvoice.TabIndex = 8;
             // 
             // btnFileUpload
             // 
             this.btnFileUpload.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.btnFileUpload.Location = new System.Drawing.Point(639, 74);
+            this.btnFileUpload.Location = new System.Drawing.Point(640, 74);
             this.btnFileUpload.Name = "btnFileUpload";
             editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnFileUpload.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnFileUpload.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFileUpload.Properties.ContextImageOptions.Image")));
             this.btnFileUpload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnFileUpload.Size = new System.Drawing.Size(347, 23);
+            this.btnFileUpload.Size = new System.Drawing.Size(346, 23);
             this.btnFileUpload.StyleController = this.layoutControl1;
             this.btnFileUpload.TabIndex = 10;
             this.btnFileUpload.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnFileUpload_ButtonClick);
@@ -362,15 +362,18 @@
             // 
             // cmbSupplyer
             // 
-            this.cmbSupplyer.Location = new System.Drawing.Point(297, 74);
+            this.cmbSupplyer.Location = new System.Drawing.Point(298, 74);
             this.cmbSupplyer.Name = "cmbSupplyer";
             this.cmbSupplyer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbSupplyer.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 15, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SupplyerName", "Supplyer Name")});
             this.cmbSupplyer.Properties.NullText = "";
-            this.cmbSupplyer.Size = new System.Drawing.Size(226, 23);
+            this.cmbSupplyer.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbSupplyer.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbSupplyer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbSupplyer.Size = new System.Drawing.Size(225, 23);
             this.cmbSupplyer.StyleController = this.layoutControl1;
             this.cmbSupplyer.TabIndex = 9;
             // 
@@ -424,16 +427,16 @@
             // 
             // txtDelivaryBy
             // 
-            this.txtDelivaryBy.Location = new System.Drawing.Point(884, 47);
+            this.txtDelivaryBy.Location = new System.Drawing.Point(885, 47);
             this.txtDelivaryBy.Name = "txtDelivaryBy";
-            this.txtDelivaryBy.Size = new System.Drawing.Size(84, 23);
+            this.txtDelivaryBy.Size = new System.Drawing.Size(81, 23);
             this.txtDelivaryBy.StyleController = this.layoutControl1;
             this.txtDelivaryBy.TabIndex = 18;
             // 
             // txtPurchaseDate
             // 
             this.txtPurchaseDate.EditValue = null;
-            this.txtPurchaseDate.Location = new System.Drawing.Point(297, 47);
+            this.txtPurchaseDate.Location = new System.Drawing.Point(298, 47);
             this.txtPurchaseDate.Name = "txtPurchaseDate";
             this.txtPurchaseDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -445,7 +448,7 @@
             this.txtPurchaseDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtPurchaseDate.Properties.Mask.EditMask = "";
             this.txtPurchaseDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtPurchaseDate.Size = new System.Drawing.Size(226, 23);
+            this.txtPurchaseDate.Size = new System.Drawing.Size(225, 23);
             this.txtPurchaseDate.StyleController = this.layoutControl1;
             this.txtPurchaseDate.TabIndex = 5;
             // 
@@ -500,9 +503,9 @@
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtUserName;
-            this.layoutControlItem1.Location = new System.Drawing.Point(950, 0);
+            this.layoutControlItem1.Location = new System.Drawing.Point(948, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(178, 27);
+            this.layoutControlItem1.Size = new System.Drawing.Size(179, 27);
             this.layoutControlItem1.Text = "User Name";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(109, 16);
             // 
@@ -627,16 +630,16 @@
             this.layoutControlItem15.Control = this.txtDelivaryBy;
             this.layoutControlItem15.Location = new System.Drawing.Point(750, 0);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(200, 27);
+            this.layoutControlItem15.Size = new System.Drawing.Size(198, 27);
             this.layoutControlItem15.Text = "Delivary By";
             this.layoutControlItem15.TextSize = new System.Drawing.Size(109, 16);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtComputerName;
-            this.layoutControlItem3.Location = new System.Drawing.Point(1128, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(1127, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(178, 27);
+            this.layoutControlItem3.Size = new System.Drawing.Size(179, 27);
             this.layoutControlItem3.Text = "PC Name";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(109, 16);
             // 

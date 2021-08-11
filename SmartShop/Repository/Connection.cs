@@ -13,8 +13,7 @@ namespace SmartShop.Repository
 
     public class Connection
     {
-
-        // public static readonly string ServerName = "CMABLVK-ITD08";
+        // DESKTOP-JNH73DR public static readonly string ServerName = "CMABLVK-ITD08";
         public static readonly string ServerName = Settings.Default.DataBaseName;
         public static readonly string DatabaseName = "shop";
         public static readonly string LoginName = "sa";

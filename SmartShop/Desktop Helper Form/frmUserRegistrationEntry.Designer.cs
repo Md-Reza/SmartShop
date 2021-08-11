@@ -214,27 +214,27 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(127, 12);
+            this.txtId.Location = new System.Drawing.Point(128, 12);
             this.txtId.Name = "txtId";
             this.txtId.Properties.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(509, 23);
+            this.txtId.Size = new System.Drawing.Size(508, 23);
             this.txtId.StyleController = this.layoutControl1;
             this.txtId.TabIndex = 4;
             // 
             // txtAccountCode
             // 
-            this.txtAccountCode.Location = new System.Drawing.Point(441, 39);
+            this.txtAccountCode.Location = new System.Drawing.Point(442, 39);
             this.txtAccountCode.Name = "txtAccountCode";
             this.txtAccountCode.Properties.ReadOnly = true;
-            this.txtAccountCode.Size = new System.Drawing.Size(195, 23);
+            this.txtAccountCode.Size = new System.Drawing.Size(194, 23);
             this.txtAccountCode.StyleController = this.layoutControl1;
             this.txtAccountCode.TabIndex = 5;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(127, 39);
+            this.txtUserName.Location = new System.Drawing.Point(128, 39);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(195, 23);
+            this.txtUserName.Size = new System.Drawing.Size(194, 23);
             this.txtUserName.StyleController = this.layoutControl1;
             this.txtUserName.TabIndex = 6;
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -244,17 +244,17 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(127, 66);
+            this.txtEmail.Location = new System.Drawing.Point(128, 66);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(195, 23);
+            this.txtEmail.Size = new System.Drawing.Size(194, 23);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 7;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(127, 93);
+            this.txtFirstName.Location = new System.Drawing.Point(128, 93);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(195, 23);
+            this.txtFirstName.Size = new System.Drawing.Size(194, 23);
             this.txtFirstName.StyleController = this.layoutControl1;
             this.txtFirstName.TabIndex = 8;
             conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -265,27 +265,27 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(441, 93);
+            this.txtLastName.Location = new System.Drawing.Point(442, 93);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(195, 23);
+            this.txtLastName.Size = new System.Drawing.Size(194, 23);
             this.txtLastName.StyleController = this.layoutControl1;
             this.txtLastName.TabIndex = 9;
             this.txtLastName.EditValueChanged += new System.EventHandler(this.txtLastName_EditValueChanged);
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(127, 120);
+            this.txtFullName.Location = new System.Drawing.Point(128, 120);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.ReadOnly = true;
-            this.txtFullName.Size = new System.Drawing.Size(509, 23);
+            this.txtFullName.Size = new System.Drawing.Size(508, 23);
             this.txtFullName.StyleController = this.layoutControl1;
             this.txtFullName.TabIndex = 10;
             // 
             // txtMobileNo
             // 
-            this.txtMobileNo.Location = new System.Drawing.Point(441, 66);
+            this.txtMobileNo.Location = new System.Drawing.Point(442, 66);
             this.txtMobileNo.Name = "txtMobileNo";
-            this.txtMobileNo.Size = new System.Drawing.Size(195, 23);
+            this.txtMobileNo.Size = new System.Drawing.Size(194, 23);
             this.txtMobileNo.StyleController = this.layoutControl1;
             this.txtMobileNo.TabIndex = 14;
             conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -295,53 +295,59 @@
             // 
             // txtDeviceName
             // 
-            this.txtDeviceName.Location = new System.Drawing.Point(660, 329);
+            this.txtDeviceName.Location = new System.Drawing.Point(661, 329);
             this.txtDeviceName.Name = "txtDeviceName";
-            this.txtDeviceName.Size = new System.Drawing.Size(106, 23);
+            this.txtDeviceName.Size = new System.Drawing.Size(105, 23);
             this.txtDeviceName.StyleController = this.layoutControl1;
             this.txtDeviceName.TabIndex = 15;
             // 
             // txtImeiNo
             // 
-            this.txtImeiNo.Location = new System.Drawing.Point(127, 329);
+            this.txtImeiNo.Location = new System.Drawing.Point(128, 329);
             this.txtImeiNo.Name = "txtImeiNo";
-            this.txtImeiNo.Size = new System.Drawing.Size(226, 23);
+            this.txtImeiNo.Size = new System.Drawing.Size(225, 23);
             this.txtImeiNo.StyleController = this.layoutControl1;
             this.txtImeiNo.TabIndex = 17;
             // 
             // cmbDesiganation
             // 
-            this.cmbDesiganation.Location = new System.Drawing.Point(127, 275);
+            this.cmbDesiganation.Location = new System.Drawing.Point(128, 275);
             this.cmbDesiganation.Name = "cmbDesiganation";
             this.cmbDesiganation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbDesiganation.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DesiCode", "Desi Code"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DesiName", "Name")});
             this.cmbDesiganation.Properties.NullText = "";
-            this.cmbDesiganation.Size = new System.Drawing.Size(226, 23);
+            this.cmbDesiganation.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbDesiganation.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbDesiganation.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbDesiganation.Size = new System.Drawing.Size(225, 23);
             this.cmbDesiganation.StyleController = this.layoutControl1;
             this.cmbDesiganation.TabIndex = 20;
             // 
             // cmbDepartment
             // 
-            this.cmbDepartment.Location = new System.Drawing.Point(472, 275);
+            this.cmbDepartment.Location = new System.Drawing.Point(473, 275);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbDepartment.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentCode", "Code"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentName", "DepartmentName")});
             this.cmbDepartment.Properties.NullText = "";
-            this.cmbDepartment.Size = new System.Drawing.Size(294, 23);
+            this.cmbDepartment.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbDepartment.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbDepartment.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbDepartment.Size = new System.Drawing.Size(293, 23);
             this.cmbDepartment.StyleController = this.layoutControl1;
             this.cmbDepartment.TabIndex = 19;
             // 
             // txtPresentAddress
             // 
-            this.txtPresentAddress.Location = new System.Drawing.Point(127, 174);
+            this.txtPresentAddress.Location = new System.Drawing.Point(128, 174);
             this.txtPresentAddress.Name = "txtPresentAddress";
-            this.txtPresentAddress.Size = new System.Drawing.Size(639, 48);
+            this.txtPresentAddress.Size = new System.Drawing.Size(638, 48);
             this.txtPresentAddress.StyleController = this.layoutControl1;
             this.txtPresentAddress.TabIndex = 11;
             conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -351,9 +357,9 @@
             // 
             // txtPermanentAddress
             // 
-            this.txtPermanentAddress.Location = new System.Drawing.Point(127, 226);
+            this.txtPermanentAddress.Location = new System.Drawing.Point(128, 226);
             this.txtPermanentAddress.Name = "txtPermanentAddress";
-            this.txtPermanentAddress.Size = new System.Drawing.Size(639, 45);
+            this.txtPermanentAddress.Size = new System.Drawing.Size(638, 45);
             this.txtPermanentAddress.StyleController = this.layoutControl1;
             this.txtPermanentAddress.TabIndex = 12;
             conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -375,15 +381,18 @@
             // 
             // cmbRepotingPerson
             // 
-            this.cmbRepotingPerson.Location = new System.Drawing.Point(127, 302);
+            this.cmbRepotingPerson.Location = new System.Drawing.Point(128, 302);
             this.cmbRepotingPerson.Name = "cmbRepotingPerson";
             this.cmbRepotingPerson.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.cmbRepotingPerson.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AccountCode", "AccountCode"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("FullName", "FullName")});
             this.cmbRepotingPerson.Properties.NullText = "";
-            this.cmbRepotingPerson.Size = new System.Drawing.Size(639, 23);
+            this.cmbRepotingPerson.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.cmbRepotingPerson.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
+            this.cmbRepotingPerson.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbRepotingPerson.Size = new System.Drawing.Size(638, 23);
             this.cmbRepotingPerson.StyleController = this.layoutControl1;
             this.cmbRepotingPerson.TabIndex = 13;
             // 
@@ -394,13 +403,13 @@
             0,
             0,
             0});
-            this.txtQty.Location = new System.Drawing.Point(472, 329);
+            this.txtQty.Location = new System.Drawing.Point(473, 329);
             this.txtQty.Name = "txtQty";
             this.txtQty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtQty.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtQty.Properties.Mask.EditMask = "n";
-            this.txtQty.Size = new System.Drawing.Size(69, 24);
+            this.txtQty.Size = new System.Drawing.Size(68, 24);
             this.txtQty.StyleController = this.layoutControl1;
             this.txtQty.TabIndex = 16;
             // 
@@ -443,13 +452,13 @@
             0,
             0,
             0});
-            this.txtHouseRent.Location = new System.Drawing.Point(127, 390);
+            this.txtHouseRent.Location = new System.Drawing.Point(128, 390);
             this.txtHouseRent.Name = "txtHouseRent";
             this.txtHouseRent.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtHouseRent.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtHouseRent.Properties.Mask.EditMask = "n";
-            this.txtHouseRent.Size = new System.Drawing.Size(226, 24);
+            this.txtHouseRent.Size = new System.Drawing.Size(225, 24);
             this.txtHouseRent.StyleController = this.layoutControl1;
             this.txtHouseRent.TabIndex = 22;
             // 
@@ -460,13 +469,13 @@
             0,
             0,
             0});
-            this.txtDainingAllowance.Location = new System.Drawing.Point(127, 418);
+            this.txtDainingAllowance.Location = new System.Drawing.Point(128, 418);
             this.txtDainingAllowance.Name = "txtDainingAllowance";
             this.txtDainingAllowance.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDainingAllowance.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtDainingAllowance.Properties.Mask.EditMask = "n";
-            this.txtDainingAllowance.Size = new System.Drawing.Size(226, 24);
+            this.txtDainingAllowance.Size = new System.Drawing.Size(225, 24);
             this.txtDainingAllowance.StyleController = this.layoutControl1;
             this.txtDainingAllowance.TabIndex = 24;
             // 
@@ -477,13 +486,13 @@
             0,
             0,
             0});
-            this.txtBasicSalary.Location = new System.Drawing.Point(472, 390);
+            this.txtBasicSalary.Location = new System.Drawing.Point(473, 390);
             this.txtBasicSalary.Name = "txtBasicSalary";
             this.txtBasicSalary.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtBasicSalary.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtBasicSalary.Properties.Mask.EditMask = "n";
-            this.txtBasicSalary.Size = new System.Drawing.Size(294, 24);
+            this.txtBasicSalary.Size = new System.Drawing.Size(293, 24);
             this.txtBasicSalary.StyleController = this.layoutControl1;
             this.txtBasicSalary.TabIndex = 21;
             // 
@@ -494,22 +503,22 @@
             0,
             0,
             0});
-            this.txtMedicalAllowance.Location = new System.Drawing.Point(472, 418);
+            this.txtMedicalAllowance.Location = new System.Drawing.Point(473, 418);
             this.txtMedicalAllowance.Name = "txtMedicalAllowance";
             this.txtMedicalAllowance.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtMedicalAllowance.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
             this.txtMedicalAllowance.Properties.Mask.EditMask = "n";
-            this.txtMedicalAllowance.Size = new System.Drawing.Size(294, 24);
+            this.txtMedicalAllowance.Size = new System.Drawing.Size(293, 24);
             this.txtMedicalAllowance.StyleController = this.layoutControl1;
             this.txtMedicalAllowance.TabIndex = 23;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(127, 147);
+            this.txtPassword.Location = new System.Drawing.Point(128, 147);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(195, 23);
+            this.txtPassword.Size = new System.Drawing.Size(194, 23);
             this.txtPassword.StyleController = this.layoutControl1;
             this.txtPassword.TabIndex = 28;
             conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
@@ -519,10 +528,10 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(441, 147);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(442, 147);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Properties.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(325, 23);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(324, 23);
             this.txtConfirmPassword.StyleController = this.layoutControl1;
             this.txtConfirmPassword.TabIndex = 29;
             conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;

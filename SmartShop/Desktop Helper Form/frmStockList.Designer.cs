@@ -42,10 +42,14 @@
             this.CategoryName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PurchaseQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SalesQty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DamageQty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReturnQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.QtyBalance = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BalanceQtyWithReturn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.PurchasesAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SalesAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.BalanceQtyWithReturn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ReturnAmt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DamageAmt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SalesAmountWithReturn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BrandName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SizeName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -69,10 +73,6 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.SaveFileDialog = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
-            this.DamageQty = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReturnQty = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ReturnAmt = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DamageAmt = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -206,6 +206,26 @@
             this.SalesQty.VisibleIndex = 5;
             this.SalesQty.Width = 94;
             // 
+            // DamageQty
+            // 
+            this.DamageQty.Caption = "Damage Qty";
+            this.DamageQty.FieldName = "DamageQty";
+            this.DamageQty.MinWidth = 25;
+            this.DamageQty.Name = "DamageQty";
+            this.DamageQty.Visible = true;
+            this.DamageQty.VisibleIndex = 6;
+            this.DamageQty.Width = 94;
+            // 
+            // ReturnQty
+            // 
+            this.ReturnQty.Caption = "Return Qty";
+            this.ReturnQty.FieldName = "ReturnQty";
+            this.ReturnQty.MinWidth = 25;
+            this.ReturnQty.Name = "ReturnQty";
+            this.ReturnQty.Visible = true;
+            this.ReturnQty.VisibleIndex = 7;
+            this.ReturnQty.Width = 94;
+            // 
             // QtyBalance
             // 
             this.QtyBalance.Caption = "Qty Balance";
@@ -217,6 +237,16 @@
             this.QtyBalance.Visible = true;
             this.QtyBalance.VisibleIndex = 8;
             this.QtyBalance.Width = 94;
+            // 
+            // BalanceQtyWithReturn
+            // 
+            this.BalanceQtyWithReturn.Caption = "Balance Qty WithReturn";
+            this.BalanceQtyWithReturn.FieldName = "BalanceQtyWithReturn";
+            this.BalanceQtyWithReturn.MinWidth = 25;
+            this.BalanceQtyWithReturn.Name = "BalanceQtyWithReturn";
+            this.BalanceQtyWithReturn.Visible = true;
+            this.BalanceQtyWithReturn.VisibleIndex = 9;
+            this.BalanceQtyWithReturn.Width = 94;
             // 
             // PurchasesAmount
             // 
@@ -246,15 +276,25 @@
             this.SalesAmount.VisibleIndex = 11;
             this.SalesAmount.Width = 94;
             // 
-            // BalanceQtyWithReturn
+            // ReturnAmt
             // 
-            this.BalanceQtyWithReturn.Caption = "Balance Qty WithReturn";
-            this.BalanceQtyWithReturn.FieldName = "BalanceQtyWithReturn";
-            this.BalanceQtyWithReturn.MinWidth = 25;
-            this.BalanceQtyWithReturn.Name = "BalanceQtyWithReturn";
-            this.BalanceQtyWithReturn.Visible = true;
-            this.BalanceQtyWithReturn.VisibleIndex = 9;
-            this.BalanceQtyWithReturn.Width = 94;
+            this.ReturnAmt.Caption = "Return Amt";
+            this.ReturnAmt.FieldName = "ReturnAmt";
+            this.ReturnAmt.MinWidth = 25;
+            this.ReturnAmt.Name = "ReturnAmt";
+            this.ReturnAmt.Visible = true;
+            this.ReturnAmt.VisibleIndex = 12;
+            this.ReturnAmt.Width = 94;
+            // 
+            // DamageAmt
+            // 
+            this.DamageAmt.Caption = "Damage Amt";
+            this.DamageAmt.FieldName = "DamageAmt";
+            this.DamageAmt.MinWidth = 25;
+            this.DamageAmt.Name = "DamageAmt";
+            this.DamageAmt.Visible = true;
+            this.DamageAmt.VisibleIndex = 13;
+            this.DamageAmt.Width = 94;
             // 
             // SalesAmountWithReturn
             // 
@@ -341,7 +381,8 @@
             // 
             this.repocmbCategory.AutoHeight = false;
             this.repocmbCategory.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
+            this.repocmbCategory.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.repocmbCategory.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("id", "Id", 15, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CategoryName", "CategoryName")});
@@ -349,6 +390,7 @@
             this.repocmbCategory.Name = "repocmbCategory";
             this.repocmbCategory.NullText = "";
             this.repocmbCategory.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.repocmbCategory.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSearch;
             this.repocmbCategory.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             // 
             // btnView
@@ -482,46 +524,6 @@
             // SaveFileDialog
             // 
             this.SaveFileDialog.FileName = "xtraSaveFileDialog1";
-            // 
-            // DamageQty
-            // 
-            this.DamageQty.Caption = "Damage Qty";
-            this.DamageQty.FieldName = "DamageQty";
-            this.DamageQty.MinWidth = 25;
-            this.DamageQty.Name = "DamageQty";
-            this.DamageQty.Visible = true;
-            this.DamageQty.VisibleIndex = 6;
-            this.DamageQty.Width = 94;
-            // 
-            // ReturnQty
-            // 
-            this.ReturnQty.Caption = "Return Qty";
-            this.ReturnQty.FieldName = "ReturnQty";
-            this.ReturnQty.MinWidth = 25;
-            this.ReturnQty.Name = "ReturnQty";
-            this.ReturnQty.Visible = true;
-            this.ReturnQty.VisibleIndex = 7;
-            this.ReturnQty.Width = 94;
-            // 
-            // ReturnAmt
-            // 
-            this.ReturnAmt.Caption = "Return Amt";
-            this.ReturnAmt.FieldName = "ReturnAmt";
-            this.ReturnAmt.MinWidth = 25;
-            this.ReturnAmt.Name = "ReturnAmt";
-            this.ReturnAmt.Visible = true;
-            this.ReturnAmt.VisibleIndex = 12;
-            this.ReturnAmt.Width = 94;
-            // 
-            // DamageAmt
-            // 
-            this.DamageAmt.Caption = "Damage Amt";
-            this.DamageAmt.FieldName = "DamageAmt";
-            this.DamageAmt.MinWidth = 25;
-            this.DamageAmt.Name = "DamageAmt";
-            this.DamageAmt.Visible = true;
-            this.DamageAmt.VisibleIndex = 13;
-            this.DamageAmt.Width = 94;
             // 
             // frmStockList
             // 
